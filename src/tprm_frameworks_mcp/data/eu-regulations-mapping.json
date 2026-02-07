@@ -1,0 +1,274 @@
+{
+  "dora": {
+    "article_6": {
+      "title": "ICT risk management framework",
+      "category": "ICT Risk Management",
+      "full_text": "Financial entities shall have in place a sound, comprehensive and well-documented ICT risk management framework as part of their overall risk management system.",
+      "question_templates": [
+        "Do you have an ICT risk management framework aligned with DORA requirements?",
+        "Does your ICT risk management framework cover identification, protection, detection, response, and recovery capabilities?",
+        "Is your ICT risk management framework documented and regularly reviewed?"
+      ],
+      "scf_controls": ["RSK-01", "RSK-02", "RSK-03", "GOV-01"],
+      "required_evidence": [
+        "ICT Risk Management Framework document",
+        "Risk assessment methodology",
+        "Risk register"
+      ],
+      "related_articles": ["article_8", "article_28"]
+    },
+    "article_11": {
+      "title": "ICT business continuity policy and ICT response and recovery plans",
+      "category": "Business Continuity",
+      "full_text": "Financial entities shall have in place a sound ICT business continuity policy and ICT response and recovery plans.",
+      "question_templates": [
+        "Can you demonstrate ICT business continuity and disaster recovery capabilities with defined RTOs and RPOs?",
+        "Do you have documented ICT response and recovery plans?",
+        "Are your business continuity plans tested regularly?",
+        "Have you identified critical ICT services and their dependencies?"
+      ],
+      "scf_controls": ["BCD-01", "BCD-02", "BCD-03", "BCD-06", "BCD-07"],
+      "required_evidence": [
+        "ICT Business Continuity Plan",
+        "Disaster Recovery Plan",
+        "RTO/RPO documentation",
+        "Test results and reports"
+      ],
+      "related_articles": ["article_12", "article_13"]
+    },
+    "article_19": {
+      "title": "Classification of ICT-related incidents and cyber threats",
+      "category": "Incident Management",
+      "full_text": "Financial entities shall classify ICT-related incidents and determine their impact based on criticality criteria.",
+      "question_templates": [
+        "Do you have processes to detect, report, and escalate ICT-related incidents in accordance with DORA timelines?",
+        "Can you classify ICT incidents by severity and impact?",
+        "Do you maintain records of all ICT-related incidents?",
+        "Are major incidents reported within 4 hours initially and 72 hours for intermediate reports?"
+      ],
+      "scf_controls": ["IRO-01", "IRO-02", "IRO-03", "IRO-08", "IRO-09"],
+      "required_evidence": [
+        "Incident classification procedure",
+        "Incident response plan",
+        "Incident reporting templates",
+        "Incident logs and records"
+      ],
+      "related_articles": ["article_17", "article_20"]
+    },
+    "article_28": {
+      "title": "General principles on the use of ICT third-party service providers",
+      "category": "ICT Third-Party Risk",
+      "full_text": "Financial entities shall manage ICT third-party risk as an integral component of ICT risk within their ICT risk management framework.",
+      "question_templates": [
+        "Do you have a documented third-party risk management process for ICT services?",
+        "Are all ICT third-party service providers subject to due diligence before engagement?",
+        "Do you maintain a register of all ICT third-party service providers?",
+        "Are third-party contracts reviewed for DORA compliance?"
+      ],
+      "scf_controls": ["TPM-01", "TPM-02", "TPM-03", "TPM-06", "GOV-01"],
+      "required_evidence": [
+        "Third-party risk management policy",
+        "Third-party register",
+        "Due diligence procedures",
+        "Contract templates"
+      ],
+      "related_articles": ["article_29", "article_30"]
+    },
+    "article_29": {
+      "title": "Preliminary assessment of ICT concentration risk at entity level",
+      "category": "ICT Third-Party Risk",
+      "full_text": "Financial entities shall assess ICT concentration risk in relation to the use of ICT third-party service providers.",
+      "question_templates": [
+        "Do you assess and monitor ICT concentration risk with third-party providers?",
+        "Have you identified critical or important ICT third-party service providers?",
+        "Do you have contingency plans for concentration risk scenarios?",
+        "Are alternative providers identified for critical ICT services?"
+      ],
+      "scf_controls": ["TPM-04", "TPM-05", "RSK-06"],
+      "required_evidence": [
+        "Concentration risk assessment",
+        "Critical provider analysis",
+        "Alternative provider documentation"
+      ],
+      "related_articles": ["article_28", "article_30"]
+    },
+    "article_30": {
+      "title": "Key contractual provisions",
+      "category": "ICT Third-Party Risk",
+      "full_text": "Contractual arrangements on the use of ICT services shall include at minimum specified provisions.",
+      "question_templates": [
+        "Do your ICT third-party contracts include all mandatory DORA provisions?",
+        "Are data access, portability, and deletion rights specified in contracts?",
+        "Do contracts include audit rights and right to terminate?",
+        "Are service level agreements clearly defined with measurable targets?"
+      ],
+      "scf_controls": ["TPM-03", "TPM-07", "TPM-08"],
+      "required_evidence": [
+        "Sample contracts with mandatory provisions",
+        "SLA documentation",
+        "Audit rights documentation"
+      ],
+      "related_articles": ["article_28", "article_29"]
+    },
+    "article_8": {
+      "title": "Identification",
+      "category": "ICT Risk Management",
+      "full_text": "Financial entities shall identify, classify and adequately document all ICT-supported business functions, roles and responsibilities.",
+      "question_templates": [
+        "Have you identified and documented all ICT-supported business functions?",
+        "Are ICT assets classified based on criticality and sensitivity?",
+        "Do you maintain an inventory of all ICT assets and dependencies?"
+      ],
+      "scf_controls": ["AST-01", "AST-02", "AST-03", "DCH-01"],
+      "required_evidence": [
+        "ICT asset inventory",
+        "Business function mapping",
+        "Data classification policy"
+      ],
+      "related_articles": ["article_6", "article_9"]
+    },
+    "article_15": {
+      "title": "Testing of ICT business continuity plans and ICT response and recovery plans",
+      "category": "Testing",
+      "full_text": "Financial entities shall test at appropriate intervals, and at least yearly, their ICT business continuity plans and ICT response and recovery plans.",
+      "question_templates": [
+        "Are ICT business continuity and disaster recovery plans tested at least annually?",
+        "Do you conduct advanced testing such as threat-led penetration testing?",
+        "Are test results documented and used to improve plans?"
+      ],
+      "scf_controls": ["BCD-11", "PRM-01", "PRM-02"],
+      "required_evidence": [
+        "Test schedules and plans",
+        "Test reports and results",
+        "Remediation documentation"
+      ],
+      "related_articles": ["article_11", "article_26"]
+    },
+    "article_26": {
+      "title": "Digital operational resilience testing",
+      "category": "Testing",
+      "full_text": "Financial entities shall establish a sound testing programme for ICT tools, systems and processes.",
+      "question_templates": [
+        "Do you have a comprehensive digital operational resilience testing programme?",
+        "Are vulnerability assessments conducted regularly?",
+        "Do you perform threat-led penetration testing on critical systems?"
+      ],
+      "scf_controls": ["PRM-01", "PRM-02", "PRM-03", "THR-01"],
+      "required_evidence": [
+        "Testing programme documentation",
+        "Vulnerability assessment reports",
+        "Penetration test results"
+      ],
+      "related_articles": ["article_15", "article_27"]
+    }
+  },
+  "nis2": {
+    "article_20": {
+      "title": "Governance",
+      "category": "Governance",
+      "full_text": "Member States shall ensure that management bodies of essential and important entities approve cybersecurity risk-management measures.",
+      "question_templates": [
+        "Does your management body approve and oversee cybersecurity risk management measures?",
+        "Are cybersecurity risks regularly reported to management?",
+        "Has management received appropriate training on cybersecurity risk management?"
+      ],
+      "scf_controls": ["GOV-01", "GOV-02", "GOV-03", "CPL-01"],
+      "required_evidence": [
+        "Board approval documentation",
+        "Risk reporting procedures",
+        "Training records"
+      ],
+      "related_articles": ["article_21"]
+    },
+    "article_21": {
+      "title": "Cybersecurity risk-management measures",
+      "category": "Risk Management",
+      "full_text": "Essential and important entities shall take appropriate and proportionate technical, operational and organisational measures to manage cybersecurity risks.",
+      "question_templates": [
+        "Have you implemented comprehensive cybersecurity risk management measures?",
+        "Do you have policies for risk analysis and information system security?",
+        "Are incident handling and business continuity measures in place?",
+        "Do you manage supply chain security risks?"
+      ],
+      "scf_controls": ["RSK-01", "RSK-02", "IRO-01", "BCD-01", "TPM-01"],
+      "required_evidence": [
+        "Cybersecurity policy",
+        "Risk assessment documentation",
+        "Incident response plan",
+        "Business continuity plan"
+      ],
+      "related_articles": ["article_20", "article_22", "article_23"]
+    },
+    "article_22": {
+      "title": "Supply chain security",
+      "category": "Supply Chain",
+      "full_text": "Essential and important entities shall take appropriate measures to address cybersecurity risks arising from the supply chain.",
+      "question_templates": [
+        "Do you assess and manage cybersecurity risks in your supply chain?",
+        "Are security requirements included in supplier contracts?",
+        "Do you evaluate the overall quality of products and cybersecurity practices of suppliers?",
+        "Are critical suppliers subject to enhanced due diligence?"
+      ],
+      "scf_controls": ["TPM-01", "TPM-02", "TPM-06", "TPM-09"],
+      "required_evidence": [
+        "Supply chain risk assessment",
+        "Supplier security requirements",
+        "Vendor evaluation procedures"
+      ],
+      "related_articles": ["article_21", "article_23"]
+    },
+    "article_23": {
+      "title": "Reporting obligations",
+      "category": "Incident Reporting",
+      "full_text": "Essential and important entities shall notify the relevant CSIRT or competent authority of any significant incident.",
+      "question_templates": [
+        "Do you have processes to notify authorities of significant cybersecurity incidents?",
+        "Can you provide early warning within 24 hours of becoming aware of a significant incident?",
+        "Do you submit incident notification within 72 hours?",
+        "Is a final report provided within one month of notification?"
+      ],
+      "scf_controls": ["IRO-01", "IRO-02", "IRO-08", "IRO-09"],
+      "required_evidence": [
+        "Incident notification procedures",
+        "Incident reporting templates",
+        "Communication protocols"
+      ],
+      "related_articles": ["article_21", "article_24"]
+    },
+    "article_24": {
+      "title": "Use of European cybersecurity certification schemes",
+      "category": "Certification",
+      "full_text": "Essential and important entities may use European cybersecurity certification schemes to demonstrate compliance.",
+      "question_templates": [
+        "Do you hold any European cybersecurity certifications?",
+        "Are you pursuing certification under EU cybersecurity schemes?",
+        "Do your ICT products and services have relevant certifications?"
+      ],
+      "scf_controls": ["CPL-02", "CPL-03"],
+      "required_evidence": [
+        "Certification documentation",
+        "Certification roadmap"
+      ],
+      "related_articles": ["article_21"]
+    }
+  },
+  "deadlines": {
+    "dora": "2025-01-17",
+    "nis2": "2024-10-17"
+  },
+  "category_mapping": {
+    "dora": {
+      "ICT_third_party": ["article_28", "article_29", "article_30"],
+      "ICT_risk": ["article_6", "article_8"],
+      "business_continuity": ["article_11", "article_12", "article_13"],
+      "incident_management": ["article_17", "article_19", "article_20"],
+      "testing": ["article_15", "article_26", "article_27"]
+    },
+    "nis2": {
+      "supply_chain": ["article_22"],
+      "risk_management": ["article_21"],
+      "governance": ["article_20"],
+      "incident_response": ["article_23"]
+    }
+  }
+}

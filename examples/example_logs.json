@@ -1,0 +1,128 @@
+[
+  {
+    "timestamp": "2026-02-07T09:24:00.000000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "INFO",
+    "message": "TPRM Frameworks MCP Server starting",
+    "version": "0.1.0",
+    "frameworks_loaded": 6,
+    "tools_available": 13,
+    "protocol": "stdio",
+    "port": 8309,
+    "status": "starting"
+  },
+  {
+    "timestamp": "2026-02-07T09:24:00.100000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "INFO",
+    "message": "Frameworks loaded",
+    "loaded_count": 6,
+    "frameworks": ["sig_lite", "sig_full", "caiq_v4", "vsa", "dora_ict_tpp", "nis2_supply_chain"],
+    "tools_available": 13
+  },
+  {
+    "timestamp": "2026-02-07T09:24:00.200000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "INFO",
+    "message": "Storage initialized successfully",
+    "database_path": "/Users/user/.tprm/tprm.db",
+    "total_questionnaires": 5,
+    "total_assessments": 12,
+    "total_vendors": 8,
+    "database_size_mb": 2.5
+  },
+  {
+    "timestamp": "2026-02-07T09:24:15.500000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "INFO",
+    "message": "Tool invocation started",
+    "tool_name": "generate_questionnaire",
+    "request_id": "a1b2c3d4",
+    "arguments": {
+      "framework": "sig_lite",
+      "scope": "full",
+      "entity_type": "saas_provider"
+    }
+  },
+  {
+    "timestamp": "2026-02-07T09:24:15.750000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "INFO",
+    "message": "Tool invocation completed",
+    "tool_name": "generate_questionnaire",
+    "request_id": "a1b2c3d4",
+    "duration_ms": 250.5,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-02-07T09:24:20.100000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "INFO",
+    "message": "Tool invocation started",
+    "tool_name": "evaluate_response",
+    "request_id": "e5f6g7h8",
+    "arguments": {
+      "questionnaire_id": "q-12345",
+      "vendor_name": "Acme Corp",
+      "responses": []
+    }
+  },
+  {
+    "timestamp": "2026-02-07T09:24:22.500000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "INFO",
+    "message": "Tool invocation completed",
+    "tool_name": "evaluate_response",
+    "request_id": "e5f6g7h8",
+    "duration_ms": 2400.0,
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-02-07T09:24:25.000000+00:00",
+    "logger": "tprm_frameworks_mcp.storage",
+    "level": "INFO",
+    "message": "Assessment saved",
+    "assessment_id": 15,
+    "vendor_name": "Acme Corp",
+    "overall_score": 75.5,
+    "risk_level": "medium"
+  },
+  {
+    "timestamp": "2026-02-07T09:24:30.000000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "ERROR",
+    "message": "Tool invocation failed",
+    "tool_name": "generate_questionnaire",
+    "request_id": "i9j0k1l2",
+    "duration_ms": 50.2,
+    "error": "Framework 'invalid_framework' not found",
+    "status": "error",
+    "exc_info": "Traceback (most recent call last):\n  File \"server.py\", line 555..."
+  },
+  {
+    "timestamp": "2026-02-07T09:24:35.000000+00:00",
+    "logger": "tprm_frameworks_mcp",
+    "level": "WARNING",
+    "message": "Storage initialization warning",
+    "error": "Database file permissions need adjustment"
+  },
+  {
+    "timestamp": "2026-02-07T09:24:40.000000+00:00",
+    "logger": "tprm_frameworks_mcp.evaluator",
+    "level": "DEBUG",
+    "message": "Evaluating question response",
+    "question_id": "SIG-1.1",
+    "answer_status": "acceptable",
+    "score": 100.0,
+    "rubric_match": "yes_pattern"
+  },
+  {
+    "timestamp": "2026-02-07T09:24:45.000000+00:00",
+    "logger": "tprm_frameworks_mcp.data_loader",
+    "level": "INFO",
+    "message": "Framework data loaded",
+    "framework": "caiq_v4",
+    "questions_loaded": 284,
+    "categories": 17
+  }
+]

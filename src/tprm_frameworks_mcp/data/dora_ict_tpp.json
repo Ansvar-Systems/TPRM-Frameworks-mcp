@@ -1,0 +1,3817 @@
+{
+  "metadata": {
+    "name": "DORA ICT Third-Party Provider Assessment",
+    "version": "1.0",
+    "regulation": "EU 2022/2554",
+    "deadline": "2025-01-17",
+    "total_questions": 72,
+    "status": "production",
+    "description": "Comprehensive assessment questionnaire for ICT third-party service providers under DORA (Digital Operational Resilience Act) - Articles 28-30",
+    "categories": [
+      "ICT Third-Party Risk Management (Article 28)",
+      "Key Contractual Provisions (Article 29)",
+      "Register of Information (Article 30)",
+      "Due Diligence",
+      "Risk Assessment",
+      "Contractual Arrangements",
+      "Exit Strategies",
+      "Service Level Agreements",
+      "Audit Rights",
+      "Subcontracting"
+    ],
+    "estimated_completion_time": "8-10 hours",
+    "scope": "Financial entities and ICT third-party service providers",
+    "focus_articles": [
+      "Article 28",
+      "Article 29",
+      "Article 30"
+    ]
+  },
+  "questions": [
+    {
+      "id": "DORA-28.1.1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Due Diligence - Risk Management Framework",
+      "question_text": "Has your organization established and implemented comprehensive ICT third-party risk management processes in accordance with DORA Article 28(1)?",
+      "description": "DORA requires financial entities to manage ICT third-party risk as an integral part of their ICT risk management framework. Verify documented processes for identifying, assessing, and managing ICT third-party risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-21.1"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "TPM-02",
+        "GOV-01",
+        "RSK-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*documented.*processes",
+          "implemented.*dora.*article 28",
+          "established.*risk management.*ict.*third-party",
+          "comprehensive.*framework.*third-party.*risk"
+        ],
+        "partially_acceptable": [
+          "in progress.*implementation",
+          "draft.*policy.*exists",
+          "framework.*partially.*implemented"
+        ],
+        "unacceptable": [
+          "no.*processes",
+          "not.*implemented",
+          "no.*framework"
+        ],
+        "required_keywords": [
+          "risk management",
+          "ICT",
+          "third-party"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT risk management policy document",
+        "Third-party risk assessment reports",
+        "Risk register showing ICT third-party risks",
+        "Board approval of risk management framework",
+        "ISO 27001 certification or equivalent",
+        "Industry-specific certifications"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      },
+      "nis2_crossreference": "NIS2-21.1"
+    },
+    {
+      "id": "DORA-28.1.2",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Due Diligence - Identification",
+      "question_text": "Do you maintain a comprehensive process for identifying all ICT services provided to financial entities, including categorization by criticality?",
+      "description": "DORA Article 28(1) requires: Financial entities must identify and categorize all ICT third-party dependencies, distinguishing between critical and non-critical services.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "AST-01",
+        "GOV-02"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*process",
+          "maintain.*inventory.*categorization",
+          "identify.*critical.*non-critical"
+        ],
+        "partially_acceptable": [
+          "process exists.*incomplete",
+          "categorization.*in progress"
+        ],
+        "unacceptable": [
+          "no.*process",
+          "no.*categorization"
+        ],
+        "required_keywords": [
+          "identification",
+          "categorization",
+          "critical"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT service provider register/inventory",
+        "Service categorization documentation",
+        "Critical service provider list",
+        "Service dependency mapping"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-28.2.1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Risk Assessment - Initial Assessment",
+      "question_text": "Do you conduct comprehensive risk assessments before entering into contractual arrangements for ICT services with financial entities?",
+      "description": "DORA Article 28(2) requires thorough risk assessment before engaging ICT third-party service providers, covering operational, security, and compliance risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-21.1"
+      ],
+      "scf_control_mappings": [
+        "TPM-03",
+        "RSK-01",
+        "RSK-02"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*risk assessment",
+          "conduct.*assessment.*before.*contract",
+          "thorough.*due diligence.*pre-engagement"
+        ],
+        "partially_acceptable": [
+          "basic.*assessment",
+          "limited.*risk review"
+        ],
+        "unacceptable": [
+          "no.*assessment",
+          "assess.*after.*contract"
+        ],
+        "required_keywords": [
+          "risk assessment",
+          "pre-engagement"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT risk management policy document",
+        "Third-party risk assessment reports",
+        "Risk register showing ICT third-party risks",
+        "Board approval of risk management framework",
+        "ISO 27001 certification or equivalent",
+        "Industry-specific certifications"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "2"
+      },
+      "nis2_crossreference": "NIS2-21.1"
+    },
+    {
+      "id": "DORA-28.2.2",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Risk Assessment - Ongoing Monitoring",
+      "question_text": "Have you established processes for ongoing monitoring and periodic reassessment of ICT third-party risks throughout the contractual relationship?",
+      "description": "Risk assessment is not a one-time activity. DORA requires continuous monitoring and periodic reassessment of third-party risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-02",
+        "MON-01",
+        "RSK-04"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*ongoing.*monitoring",
+          "periodic.*reassessment.*established",
+          "continuous.*risk monitoring"
+        ],
+        "partially_acceptable": [
+          "monitoring.*not.*periodic",
+          "ad hoc.*reassessment"
+        ],
+        "unacceptable": [
+          "no.*ongoing.*monitoring",
+          "one-time.*assessment only"
+        ],
+        "required_keywords": [
+          "ongoing",
+          "monitoring",
+          "reassessment"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT risk management policy document",
+        "Third-party risk assessment reports",
+        "Risk register showing ICT third-party risks",
+        "Board approval of risk management framework"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "2"
+      }
+    },
+    {
+      "id": "DORA-28.2.3",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Risk Assessment - Concentration Risk",
+      "question_text": "Do you assess and report concentration risk arising from dependencies on single or multiple ICT third-party service providers?",
+      "description": "DORA Article 28(2) requires: Financial entities must identify and manage concentration risks, including dependencies on the same provider or interconnected providers.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-03",
+        "RSK-06",
+        "BCD-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*concentration.*risk.*assessment",
+          "identify.*dependencies.*multiple.*providers",
+          "assess.*report.*concentration"
+        ],
+        "partially_acceptable": [
+          "assess.*concentration.*not.*reported",
+          "basic.*dependency.*analysis"
+        ],
+        "unacceptable": [
+          "no.*concentration.*assessment",
+          "not.*track.*dependencies"
+        ],
+        "required_keywords": [
+          "concentration",
+          "dependencies"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT risk management policy document",
+        "Third-party risk assessment reports",
+        "Risk register showing ICT third-party risks",
+        "Board approval of risk management framework"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "2"
+      }
+    },
+    {
+      "id": "DORA-28.3.1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Contractual Arrangements - Written Agreements",
+      "question_text": "Are all ICT service arrangements with financial entities formalized through comprehensive written contractual agreements?",
+      "description": "DORA Article 28(3) mandates written contractual arrangements for all ICT services, clearly defining rights, obligations, and responsibilities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-22.1"
+      ],
+      "scf_control_mappings": [
+        "TPM-04",
+        "GOV-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*all.*written.*contracts",
+          "comprehensive.*contractual.*agreements",
+          "formalized.*written.*arrangements"
+        ],
+        "partially_acceptable": [
+          "most.*written.*contracts",
+          "some.*verbal.*agreements"
+        ],
+        "unacceptable": [
+          "no.*written.*contracts",
+          "primarily.*verbal.*arrangements"
+        ],
+        "required_keywords": [
+          "written",
+          "contract",
+          "agreement"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "3"
+      },
+      "nis2_crossreference": "NIS2-22.1"
+    },
+    {
+      "id": "DORA-28.3.2",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Contractual Arrangements - Roles and Responsibilities",
+      "question_text": "Do your contracts clearly define the roles, rights, and responsibilities of both parties, including data ownership and processing obligations?",
+      "description": "Contracts must explicitly define all parties' roles, responsibilities, data ownership, and processing obligations under GDPR and DORA.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-04",
+        "PRI-01",
+        "DCH-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*clearly.*defined.*roles.*responsibilities",
+          "explicit.*data.*ownership.*processing",
+          "comprehensive.*role.*definition"
+        ],
+        "partially_acceptable": [
+          "roles.*defined.*not.*comprehensive",
+          "data.*ownership.*unclear"
+        ],
+        "unacceptable": [
+          "no.*defined.*roles",
+          "unclear.*responsibilities"
+        ],
+        "required_keywords": [
+          "roles",
+          "responsibilities",
+          "data ownership"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "3"
+      }
+    },
+    {
+      "id": "DORA-28.4.1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Exit Strategies - Exit Planning",
+      "question_text": "Have you established comprehensive exit strategies and transition plans for all ICT services provided to financial entities?",
+      "description": "DORA Article 28(4) requires detailed exit strategies to ensure business continuity and orderly transition in case of contract termination.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-05",
+        "BCD-01",
+        "BCD-02"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*exit.*strategies",
+          "established.*transition.*plans",
+          "detailed.*exit.*planning"
+        ],
+        "partially_acceptable": [
+          "basic.*exit.*plan",
+          "exit.*strategy.*incomplete"
+        ],
+        "unacceptable": [
+          "no.*exit.*strategy",
+          "no.*transition.*plan"
+        ],
+        "required_keywords": [
+          "exit strategy",
+          "transition"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "4"
+      }
+    },
+    {
+      "id": "DORA-28.4.2",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Exit Strategies - Data Portability",
+      "question_text": "Do your exit strategies include provisions for complete data extraction, transfer, and deletion in commonly used formats?",
+      "description": "DORA Article 28(4) requires: Exit plans must ensure data can be extracted and transferred in standard formats, with complete deletion after transition.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-05",
+        "DCH-10",
+        "PRI-08"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*data.*extraction.*transfer.*deletion",
+          "commonly.*used.*formats.*supported",
+          "complete.*data.*portability"
+        ],
+        "partially_acceptable": [
+          "data.*extraction.*proprietary.*format",
+          "deletion.*not.*certified"
+        ],
+        "unacceptable": [
+          "no.*data.*portability",
+          "no.*deletion.*process"
+        ],
+        "required_keywords": [
+          "data extraction",
+          "transfer",
+          "deletion"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "4"
+      }
+    },
+    {
+      "id": "DORA-28.4.3",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Exit Strategies - Service Continuity",
+      "question_text": "Do your exit plans ensure continuity of service during transition periods without disruption to financial entity operations?",
+      "description": "DORA Article 28(4) requires: Exit strategies must minimize disruption and ensure operational continuity during provider transitions.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "BCD-02",
+        "BCD-08",
+        "TPM-05"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*continuity.*ensured.*transition",
+          "no.*disruption.*exit.*process",
+          "parallel.*operation.*supported"
+        ],
+        "partially_acceptable": [
+          "continuity.*best.*effort",
+          "minimal.*disruption.*expected"
+        ],
+        "unacceptable": [
+          "no.*continuity.*plan",
+          "service.*interruption.*expected"
+        ],
+        "required_keywords": [
+          "continuity",
+          "transition"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "4"
+      }
+    },
+    {
+      "id": "DORA-29.1.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Mandatory Clauses - Service Description",
+      "question_text": "Do your contracts include clear and complete descriptions of ICT services, including service levels, locations, and functions?",
+      "description": "DORA Article 29(1)(a) requires detailed service descriptions including locations, service levels, and specific functions performed.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-04",
+        "GOV-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*clear.*complete.*description",
+          "detailed.*service.*levels.*locations",
+          "comprehensive.*service.*specification"
+        ],
+        "partially_acceptable": [
+          "description.*incomplete",
+          "service.*levels.*not.*detailed"
+        ],
+        "unacceptable": [
+          "no.*service.*description",
+          "vague.*unclear.*services"
+        ],
+        "required_keywords": [
+          "service description",
+          "locations"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(a)"
+      }
+    },
+    {
+      "id": "DORA-29.1.2",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Mandatory Clauses - Location Disclosure",
+      "question_text": "Do you disclose all locations where data is processed and stored, including subcontractor locations, in compliance with DORA requirements?",
+      "description": "DORA Article 29(1) requires: Contracts must specify all processing and storage locations, including those of subcontractors and cloud providers.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-04",
+        "PRI-01",
+        "DCH-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*all.*locations.*disclosed",
+          "comprehensive.*location.*documentation",
+          "including.*subcontractor.*locations"
+        ],
+        "partially_acceptable": [
+          "primary.*locations.*disclosed.*not.*subcontractors",
+          "location.*disclosure.*incomplete"
+        ],
+        "unacceptable": [
+          "no.*location.*disclosure",
+          "refuse.*disclose.*locations"
+        ],
+        "required_keywords": [
+          "locations",
+          "processing",
+          "storage"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Data processing agreements",
+        "Data location documentation",
+        "Data protection impact assessments",
+        "Cross-border transfer mechanisms"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(b)"
+      }
+    },
+    {
+      "id": "DORA-29.1.3",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Service Level Agreements - Performance Metrics",
+      "question_text": "Have you defined quantitative and qualitative service level targets with associated measurement mechanisms and reporting?",
+      "description": "DORA Article 29(1)(c) requires clear SLAs with measurable targets, monitoring mechanisms, and regular reporting.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-06",
+        "MON-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*quantitative.*qualitative.*targets",
+          "defined.*sla.*measurement.*reporting",
+          "measurable.*service.*levels"
+        ],
+        "partially_acceptable": [
+          "sla.*defined.*no.*measurement",
+          "qualitative.*only.*targets"
+        ],
+        "unacceptable": [
+          "no.*sla",
+          "no.*service.*targets"
+        ],
+        "required_keywords": [
+          "SLA",
+          "service level",
+          "metrics"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service level agreements (SLAs)",
+        "Performance metrics documentation",
+        "Service availability reports",
+        "SLA breach and remediation records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(c)"
+      }
+    },
+    {
+      "id": "DORA-29.1.4",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Service Level Agreements - Availability Requirements",
+      "question_text": "Do your SLAs specify minimum availability requirements, including RTO (Recovery Time Objective) and RPO (Recovery Point Objective)?",
+      "description": "DORA Article 29(1) requires: SLAs must define availability commitments and recovery objectives aligned with financial entity requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "BCD-01",
+        "BCD-06",
+        "TPM-06"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*rto.*rpo.*specified",
+          "availability.*requirements.*defined",
+          "recovery.*objectives.*documented"
+        ],
+        "partially_acceptable": [
+          "availability.*defined.*no.*rto.*rpo",
+          "rto.*rpo.*approximate"
+        ],
+        "unacceptable": [
+          "no.*availability.*requirements",
+          "no.*recovery.*objectives"
+        ],
+        "required_keywords": [
+          "availability",
+          "RTO",
+          "RPO"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service level agreements (SLAs)",
+        "Performance metrics documentation",
+        "Service availability reports",
+        "SLA breach and remediation records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(c)"
+      }
+    },
+    {
+      "id": "DORA-29.1.5",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Audit Rights - Access and Inspection",
+      "question_text": "Do you grant financial entities and their competent authorities full access and audit rights to assess ICT risk management and service delivery?",
+      "description": "DORA Article 29(1)(d) mandates comprehensive audit rights for financial entities and their supervisory authorities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-07",
+        "CPL-02",
+        "MON-05"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*full.*audit.*rights.*granted",
+          "unlimited.*access.*financial.*entities.*authorities",
+          "comprehensive.*inspection.*rights"
+        ],
+        "partially_acceptable": [
+          "audit.*rights.*limited.*scope",
+          "notice.*period.*required"
+        ],
+        "unacceptable": [
+          "no.*audit.*rights",
+          "refuse.*access.*authorities"
+        ],
+        "required_keywords": [
+          "audit rights",
+          "access",
+          "authorities"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Contractual audit rights clauses",
+        "Audit reports and findings",
+        "Access control documentation",
+        "Right-to-audit exercise records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(e)"
+      }
+    },
+    {
+      "id": "DORA-29.1.6",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Audit Rights - Third-Party Certifications",
+      "question_text": "Do you provide evidence of independent third-party audits and certifications (e.g., SOC 2, ISO 27001) to demonstrate compliance with security standards?",
+      "description": "DORA Article 29(1) requires: Financial entities may require evidence of independent audits and certifications as part of their oversight.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "CPL-01",
+        "CPL-02",
+        "TPM-07"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*iso.*27001.*soc.*2",
+          "independent.*audits.*certifications.*provided",
+          "current.*valid.*certifications"
+        ],
+        "partially_acceptable": [
+          "certifications.*expired",
+          "limited.*certifications"
+        ],
+        "unacceptable": [
+          "no.*certifications",
+          "no.*independent.*audits"
+        ],
+        "required_keywords": [
+          "certification",
+          "audit"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ISO 27001 certification or equivalent",
+        "SOC 2 Type II report",
+        "Independent third-party audit reports",
+        "Security certifications (e.g., ISO 27017, ISO 27018)",
+        "Compliance attestations",
+        "Penetration test results from qualified assessors"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(f)"
+      }
+    },
+    {
+      "id": "DORA-29.1.7",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Subcontracting - Prior Approval",
+      "question_text": "Do your contracts require prior written approval from financial entities before subcontracting critical ICT services?",
+      "description": "DORA Article 29(1)(e) requires financial entities to approve subcontracting arrangements for critical or important functions.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-22.1"
+      ],
+      "scf_control_mappings": [
+        "TPM-08",
+        "TPM-02"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*prior.*written.*approval.*required",
+          "subcontracting.*requires.*consent",
+          "financial.*entity.*approval.*mandatory"
+        ],
+        "partially_acceptable": [
+          "notification.*required.*not.*approval",
+          "approval.*for.*some.*subcontracting"
+        ],
+        "unacceptable": [
+          "no.*approval.*required",
+          "subcontract.*without.*consent"
+        ],
+        "required_keywords": [
+          "approval",
+          "subcontracting"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Subcontracting policy and approval process",
+        "List of approved subcontractors",
+        "Subcontractor risk assessments",
+        "Contractual flow-down provisions"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(g)"
+      },
+      "nis2_crossreference": "NIS2-22.1"
+    },
+    {
+      "id": "DORA-29.1.8",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Subcontracting - Flow-Down Requirements",
+      "question_text": "Do you ensure that subcontractors are bound by the same contractual obligations and security requirements as apply to you?",
+      "description": "DORA Article 29(1) requires: All subcontracting arrangements must include flow-down clauses ensuring equivalent protection and obligations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-08",
+        "TPM-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*equivalent.*obligations.*subcontractors",
+          "flow-down.*requirements.*enforced",
+          "same.*security.*standards.*apply"
+        ],
+        "partially_acceptable": [
+          "some.*requirements.*flow-down",
+          "subcontractors.*similar.*not.*identical"
+        ],
+        "unacceptable": [
+          "no.*flow-down",
+          "subcontractors.*not.*bound"
+        ],
+        "required_keywords": [
+          "flow-down",
+          "subcontractor",
+          "obligations"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Subcontracting policy and approval process",
+        "List of approved subcontractors",
+        "Subcontractor risk assessments",
+        "Contractual flow-down provisions"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(g)"
+      }
+    },
+    {
+      "id": "DORA-29.1.9",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Incident Notification - Reporting Obligations",
+      "question_text": "Do your contracts include provisions for immediate notification of ICT-related incidents to financial entities?",
+      "description": "DORA Article 29(1)(f) requires prompt incident notification, including details on impact, root cause, and remediation.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "IRO-02",
+        "IRO-08",
+        "TPM-09"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*immediate.*notification.*provisions",
+          "prompt.*incident.*reporting.*required",
+          "notification.*timeline.*defined"
+        ],
+        "partially_acceptable": [
+          "notification.*required.*not.*immediate",
+          "incident.*reporting.*delayed"
+        ],
+        "unacceptable": [
+          "no.*notification.*requirement",
+          "no.*incident.*reporting"
+        ],
+        "required_keywords": [
+          "incident",
+          "notification",
+          "reporting"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Information security requirements in contracts",
+        "Incident notification procedures",
+        "Security incident response plans",
+        "Incident notification records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(d)"
+      }
+    },
+    {
+      "id": "DORA-29.1.10",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Incident Notification - Incident Classification",
+      "question_text": "Have you established incident classification criteria aligned with DORA requirements to determine reporting thresholds?",
+      "description": "DORA Article 29(1) requires: Incidents must be classified by severity and impact to determine appropriate notification timelines.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "IRO-01",
+        "IRO-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*classification.*criteria.*established",
+          "severity.*thresholds.*defined",
+          "dora-aligned.*classification"
+        ],
+        "partially_acceptable": [
+          "classification.*exists.*not.*dora-aligned",
+          "basic.*severity.*levels"
+        ],
+        "unacceptable": [
+          "no.*classification",
+          "no.*thresholds"
+        ],
+        "required_keywords": [
+          "classification",
+          "severity",
+          "threshold"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Information security requirements in contracts",
+        "Incident notification procedures",
+        "Security incident response plans",
+        "Incident notification records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(d)"
+      }
+    },
+    {
+      "id": "DORA-29.1.11",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Exit Clauses - Termination Rights",
+      "question_text": "Do your contracts include provisions allowing financial entities to terminate for cause, including regulatory compliance failures?",
+      "description": "DORA Article 29(1)(g) requires termination clauses that protect financial entity interests, including regulatory non-compliance.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-05",
+        "CPL-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*termination.*for.*cause",
+          "regulatory.*compliance.*failure.*grounds",
+          "termination.*rights.*defined"
+        ],
+        "partially_acceptable": [
+          "termination.*limited.*grounds",
+          "termination.*restrictive.*conditions"
+        ],
+        "unacceptable": [
+          "no.*termination.*for.*cause",
+          "no.*regulatory.*grounds"
+        ],
+        "required_keywords": [
+          "termination",
+          "cause"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Exit strategy documentation",
+        "Data return/deletion procedures",
+        "Service transition plans",
+        "Business continuity plans for provider exit"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(h)"
+      }
+    },
+    {
+      "id": "DORA-29.1.12",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Exit Clauses - Transition Assistance",
+      "question_text": "Do your contracts commit to providing comprehensive transition assistance during and after contract termination?",
+      "description": "DORA Article 29(1) requires: Exit clauses must include obligations to assist with orderly transition, knowledge transfer, and data migration.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-05",
+        "BCD-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*transition.*assistance",
+          "knowledge.*transfer.*data.*migration.*support",
+          "post-termination.*support.*committed"
+        ],
+        "partially_acceptable": [
+          "basic.*transition.*support",
+          "limited.*assistance.*period"
+        ],
+        "unacceptable": [
+          "no.*transition.*assistance",
+          "no.*support.*after.*termination"
+        ],
+        "required_keywords": [
+          "transition",
+          "assistance",
+          "support"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Exit strategy documentation",
+        "Data return/deletion procedures",
+        "Service transition plans",
+        "Business continuity plans for provider exit"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(h)"
+      }
+    },
+    {
+      "id": "DORA-29.1.13",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Data Security - Protection Requirements",
+      "question_text": "Do your contracts specify comprehensive data security and protection requirements, including encryption and access controls?",
+      "description": "DORA Article 29(1)(h) mandates detailed security requirements for data protection throughout the service lifecycle.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "DCH-05",
+        "CRY-01",
+        "IAC-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*security.*requirements",
+          "encryption.*access.*controls.*specified",
+          "data.*protection.*detailed"
+        ],
+        "partially_acceptable": [
+          "basic.*security.*requirements",
+          "security.*not.*comprehensive"
+        ],
+        "unacceptable": [
+          "no.*security.*requirements",
+          "no.*data.*protection.*standards"
+        ],
+        "required_keywords": [
+          "security",
+          "encryption",
+          "protection"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Data processing agreements",
+        "Data location documentation",
+        "Data protection impact assessments",
+        "Cross-border transfer mechanisms"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(a)"
+      }
+    },
+    {
+      "id": "DORA-29.1.14",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Data Security - Data Segregation",
+      "question_text": "Do you implement logical and/or physical data segregation to protect financial entity data from other customers?",
+      "description": "DORA Article 29(1) requires: Data belonging to different financial entities must be appropriately segregated to prevent unauthorized access or co-mingling.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "DCH-09",
+        "IAC-21",
+        "PES-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*logical.*physical.*segregation",
+          "data.*isolated.*between.*customers",
+          "multi-tenancy.*controls.*implemented"
+        ],
+        "partially_acceptable": [
+          "logical.*segregation.*only",
+          "segregation.*partial"
+        ],
+        "unacceptable": [
+          "no.*segregation",
+          "shared.*data.*environment"
+        ],
+        "required_keywords": [
+          "segregation",
+          "isolation"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Data processing agreements",
+        "Data location documentation",
+        "Data protection impact assessments",
+        "Cross-border transfer mechanisms"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "1(b)"
+      }
+    },
+    {
+      "id": "DORA-29.2.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Performance Monitoring - Reporting",
+      "question_text": "Do you provide regular performance reports to financial entities, including SLA compliance and service metrics?",
+      "description": "DORA Article 29(2) requires ongoing performance monitoring and reporting to demonstrate compliance with contractual obligations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "MON-01",
+        "TPM-06"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regular.*performance.*reports",
+          "sla.*compliance.*metrics.*reported",
+          "monthly.*quarterly.*reporting"
+        ],
+        "partially_acceptable": [
+          "reports.*on.*request.*only",
+          "limited.*metrics.*reported"
+        ],
+        "unacceptable": [
+          "no.*performance.*reporting",
+          "no.*regular.*reports"
+        ],
+        "required_keywords": [
+          "reporting",
+          "performance",
+          "metrics"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "2"
+      }
+    },
+    {
+      "id": "DORA-29.3.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Governance - Designated Contact",
+      "question_text": "Have you designated qualified individuals as points of contact for managing the relationship with financial entities?",
+      "description": "DORA Article 29(3) requires designated, qualified personnel to manage financial entity relationships and escalations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-02",
+        "GOV-02"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*designated.*qualified.*contacts",
+          "dedicated.*relationship.*managers",
+          "escalation.*contacts.*identified"
+        ],
+        "partially_acceptable": [
+          "contacts.*designated.*qualifications.*unclear",
+          "shared.*contacts.*multiple.*clients"
+        ],
+        "unacceptable": [
+          "no.*designated.*contacts",
+          "generic.*support.*only"
+        ],
+        "required_keywords": [
+          "designated",
+          "contact"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "3"
+      }
+    },
+    {
+      "id": "DORA-29.4.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Compliance - Regulatory Changes",
+      "question_text": "Do your contracts include provisions to adapt services in response to regulatory changes affecting financial entities?",
+      "description": "DORA Article 29(4) requires flexibility to accommodate regulatory changes and evolving supervisory expectations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "CPL-01",
+        "CHG-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*adapt.*regulatory.*changes",
+          "provisions.*accommodate.*compliance.*requirements",
+          "regulatory.*flexibility.*built-in"
+        ],
+        "partially_acceptable": [
+          "changes.*require.*renegotiation",
+          "limited.*adaptation.*capability"
+        ],
+        "unacceptable": [
+          "no.*regulatory.*provisions",
+          "fixed.*terms.*no.*adaptation"
+        ],
+        "required_keywords": [
+          "regulatory",
+          "compliance",
+          "changes"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "4"
+      }
+    },
+    {
+      "id": "DORA-29.5.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Supervisory Access - Authority Rights",
+      "question_text": "Do your contracts explicitly grant competent authorities the right to access, inspect, and audit your ICT systems and premises?",
+      "description": "DORA Article 29(5) ensures supervisory authorities can directly assess ICT third-party service providers.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "CPL-02",
+        "TPM-07"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*authority.*access.*granted",
+          "supervisory.*inspection.*rights.*explicit",
+          "competent.*authorities.*can.*audit"
+        ],
+        "partially_acceptable": [
+          "access.*subject.*conditions",
+          "limited.*authority.*rights"
+        ],
+        "unacceptable": [
+          "no.*authority.*access",
+          "refuse.*supervisory.*rights"
+        ],
+        "required_keywords": [
+          "supervisory",
+          "authorities",
+          "access"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "5"
+      }
+    },
+    {
+      "id": "DORA-30.1.1",
+      "category": "Register of Information",
+      "subcategory": "Register Maintenance - Comprehensive Registry",
+      "question_text": "Do you maintain a comprehensive register of all contractual arrangements with financial entities for ICT services?",
+      "description": "DORA Article 30(1) requires financial entities to maintain a register of information on all ICT third-party service providers.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "AST-01",
+        "GOV-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*register.*maintained",
+          "all.*contracts.*documented.*registry",
+          "register.*up-to-date.*complete"
+        ],
+        "partially_acceptable": [
+          "register.*exists.*incomplete",
+          "some.*contracts.*not.*registered"
+        ],
+        "unacceptable": [
+          "no.*register",
+          "no.*documentation.*contracts"
+        ],
+        "required_keywords": [
+          "register",
+          "contracts"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-30.2.1",
+      "category": "Register of Information",
+      "subcategory": "Register Content - Service Details",
+      "question_text": "Does your register include detailed information on services provided, including criticality classification and geographic locations?",
+      "description": "DORA Article 30(2) specifies minimum information requirements for the register, including service descriptions and criticality.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "AST-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*detailed.*service.*information",
+          "criticality.*locations.*documented",
+          "comprehensive.*register.*content"
+        ],
+        "partially_acceptable": [
+          "basic.*information.*only",
+          "some.*details.*missing"
+        ],
+        "unacceptable": [
+          "minimal.*information",
+          "no.*service.*details"
+        ],
+        "required_keywords": [
+          "service details",
+          "criticality",
+          "locations"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "2"
+      }
+    },
+    {
+      "id": "DORA-30.2.2",
+      "category": "Register of Information",
+      "subcategory": "Register Content - Provider Information",
+      "question_text": "Does the register include comprehensive information about ICT third-party service providers, including legal entity details and contact information?",
+      "description": "DORA Article 30(2) requires: The register must contain provider identification, legal structure, and contact details for relationship management.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "TPM-02"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*provider.*information",
+          "legal.*entity.*contact.*details.*complete",
+          "provider.*records.*maintained"
+        ],
+        "partially_acceptable": [
+          "basic.*provider.*details",
+          "some.*information.*missing"
+        ],
+        "unacceptable": [
+          "minimal.*provider.*data",
+          "no.*contact.*information"
+        ],
+        "required_keywords": [
+          "provider",
+          "legal entity",
+          "contact"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "2"
+      }
+    },
+    {
+      "id": "DORA-30.2.3",
+      "category": "Register of Information",
+      "subcategory": "Register Content - Contract Terms",
+      "question_text": "Does the register document contract start and end dates, notice periods, and renewal terms for all ICT service arrangements?",
+      "description": "DORA Article 30(2) requires: Register must track contractual timelines, notice periods, and renewal provisions to manage lifecycle and plan exits.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-04",
+        "GOV-02"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*contract.*dates.*documented",
+          "notice.*periods.*renewal.*terms.*tracked",
+          "lifecycle.*management.*comprehensive"
+        ],
+        "partially_acceptable": [
+          "dates.*tracked.*renewals.*not",
+          "incomplete.*term.*tracking"
+        ],
+        "unacceptable": [
+          "no.*date.*tracking",
+          "no.*contract.*terms.*documented"
+        ],
+        "required_keywords": [
+          "contract dates",
+          "notice period",
+          "renewal"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "2"
+      }
+    },
+    {
+      "id": "DORA-30.2.4",
+      "category": "Register of Information",
+      "subcategory": "Register Content - Data Processing",
+      "question_text": "Does the register specify the nature and location of data being processed, stored, or accessed by ICT third-party providers?",
+      "description": "DORA Article 30(2) requires: Register must document data types, processing activities, and geographic locations for compliance and risk management.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "DCH-01",
+        "PRI-01",
+        "TPM-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*data.*nature.*location.*specified",
+          "comprehensive.*processing.*documentation",
+          "data.*inventory.*maintained"
+        ],
+        "partially_acceptable": [
+          "data.*types.*documented.*locations.*unclear",
+          "basic.*processing.*records"
+        ],
+        "unacceptable": [
+          "no.*data.*documentation",
+          "no.*processing.*records"
+        ],
+        "required_keywords": [
+          "data",
+          "processing",
+          "location"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "2"
+      }
+    },
+    {
+      "id": "DORA-30.2.5",
+      "category": "Register of Information",
+      "subcategory": "Register Content - Subcontractors",
+      "question_text": "Does the register identify all subcontractors involved in ICT service delivery, including their locations and roles?",
+      "description": "DORA Article 30(2) requires: Register must track subcontracting chains to manage concentration risk and ensure oversight of entire service delivery.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-08",
+        "TPM-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*all.*subcontractors.*identified",
+          "subcontracting.*chain.*documented",
+          "roles.*locations.*tracked"
+        ],
+        "partially_acceptable": [
+          "direct.*subcontractors.*only",
+          "incomplete.*subcontractor.*data"
+        ],
+        "unacceptable": [
+          "no.*subcontractor.*tracking",
+          "subcontractors.*not.*disclosed"
+        ],
+        "required_keywords": [
+          "subcontractors",
+          "chain"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "2"
+      }
+    },
+    {
+      "id": "DORA-30.3.1",
+      "category": "Register of Information",
+      "subcategory": "Updates and Notifications - Change Management",
+      "question_text": "Do you promptly notify financial entities of material changes to services, subcontractors, or data processing locations?",
+      "description": "DORA Article 30(3) requires timely notification of changes that could impact risk profiles or compliance.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "CHG-01",
+        "TPM-02",
+        "TPM-09"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*prompt.*notification.*changes",
+          "material.*changes.*communicated.*timely",
+          "proactive.*change.*disclosure"
+        ],
+        "partially_acceptable": [
+          "notification.*with.*delays",
+          "some.*changes.*not.*notified"
+        ],
+        "unacceptable": [
+          "no.*change.*notification",
+          "changes.*not.*disclosed"
+        ],
+        "required_keywords": [
+          "notification",
+          "changes",
+          "material"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "3"
+      }
+    },
+    {
+      "id": "DORA-30.3.2",
+      "category": "Register of Information",
+      "subcategory": "Updates and Notifications - Register Updates",
+      "question_text": "Do you ensure the register is updated at least annually and whenever significant changes occur?",
+      "description": "DORA Article 30(3) requires: Register must be kept current through regular updates and event-driven updates for significant changes.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "GOV-04"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*annual.*updates.*event-driven",
+          "register.*kept.*current",
+          "regular.*significant.*change.*updates"
+        ],
+        "partially_acceptable": [
+          "annual.*updates.*only",
+          "updates.*delayed"
+        ],
+        "unacceptable": [
+          "no.*regular.*updates",
+          "register.*outdated"
+        ],
+        "required_keywords": [
+          "updates",
+          "annually"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "3"
+      }
+    },
+    {
+      "id": "DORA-GENERAL-1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "General Compliance - DORA Awareness",
+      "question_text": "Has your organization conducted a comprehensive DORA readiness assessment and developed an implementation plan for compliance by January 17, 2025?",
+      "description": "All ICT third-party service providers to financial entities must be DORA-ready by the January 2025 deadline.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article All",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "GOV-01",
+        "CPL-01",
+        "RSK-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*readiness.*assessment.*completed",
+          "implementation.*plan.*developed",
+          "dora.*compliance.*program.*established"
+        ],
+        "partially_acceptable": [
+          "assessment.*in.*progress",
+          "plan.*under.*development"
+        ],
+        "unacceptable": [
+          "no.*assessment",
+          "no.*compliance.*plan"
+        ],
+        "required_keywords": [
+          "DORA",
+          "readiness",
+          "compliance"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-GENERAL-2",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "General Compliance - Training and Awareness",
+      "question_text": "Have you trained relevant personnel on DORA requirements and their implications for ICT service delivery to financial entities?",
+      "description": "Staff must understand DORA obligations to ensure proper implementation and ongoing compliance.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "DORA - Article General",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "HRS-06",
+        "HRS-07"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*personnel.*trained.*dora",
+          "awareness.*program.*implemented",
+          "regular.*training.*conducted"
+        ],
+        "partially_acceptable": [
+          "some.*training.*provided",
+          "awareness.*limited"
+        ],
+        "unacceptable": [
+          "no.*training",
+          "no.*awareness.*program"
+        ],
+        "required_keywords": [
+          "training",
+          "awareness"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-INTEGRATION-1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Integration - NIS2 Alignment",
+      "question_text": "Have you aligned your DORA compliance efforts with NIS2 Directive requirements to ensure comprehensive cybersecurity resilience?",
+      "description": "DORA and NIS2 have overlapping requirements for ICT risk management, incident reporting, and supply chain security.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "DORA - Article All",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "GOV-01",
+        "CPL-01"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*dora.*nis2.*aligned",
+          "integrated.*compliance.*approach",
+          "harmonized.*requirements"
+        ],
+        "partially_acceptable": [
+          "separate.*compliance.*programs",
+          "limited.*alignment"
+        ],
+        "unacceptable": [
+          "no.*nis2.*consideration",
+          "no.*alignment"
+        ],
+        "required_keywords": [
+          "NIS2",
+          "alignment"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-CRITICAL-1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Critical Providers - Oversight Framework",
+      "question_text": "If designated as a critical ICT third-party service provider, have you established processes to comply with the Oversight Framework under DORA Article 31-40?",
+      "description": "DORA Article 28(1) requires: Critical providers face additional oversight by European Supervisory Authorities (ESAs), including supervisory fees and direct supervision.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 31-40",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "GOV-01",
+        "CPL-02",
+        "TPM-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*oversight.*framework.*compliance",
+          "esa.*supervision.*processes.*established",
+          "critical.*provider.*obligations.*met"
+        ],
+        "partially_acceptable": [
+          "preparing.*for.*oversight",
+          "partial.*compliance.*framework"
+        ],
+        "unacceptable": [
+          "no.*oversight.*compliance",
+          "not.*applicable.*claim"
+        ],
+        "required_keywords": [
+          "oversight",
+          "ESA"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-BC-1",
+      "category": "Business Continuity",
+      "subcategory": "ICT Continuity - Testing",
+      "question_text": "Do you conduct regular ICT business continuity and disaster recovery tests, including scenarios relevant to financial entity operations?",
+      "description": "DORA requires regular testing of continuity plans, with financial entity participation where appropriate.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 11",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-21.2.j"
+      ],
+      "scf_control_mappings": [
+        "BCD-08",
+        "BCD-09",
+        "BCD-11"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regular.*testing.*conducted",
+          "financial.*entity.*scenarios.*included",
+          "annual.*comprehensive.*tests"
+        ],
+        "partially_acceptable": [
+          "testing.*irregular",
+          "limited.*scenarios"
+        ],
+        "unacceptable": [
+          "no.*testing",
+          "no.*continuity.*plans"
+        ],
+        "required_keywords": [
+          "testing",
+          "continuity",
+          "disaster recovery"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "4"
+      },
+      "nis2_crossreference": "NIS2-21.2.j"
+    },
+    {
+      "id": "DORA-INCIDENT-1",
+      "category": "Incident Management",
+      "subcategory": "ICT Incident Management - Classification",
+      "question_text": "Have you established ICT incident classification criteria aligned with DORA's definition of major ICT-related incidents?",
+      "description": "DORA defines major incidents based on impact criteria, requiring classification frameworks that trigger appropriate reporting.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 18-19",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-23.1"
+      ],
+      "scf_control_mappings": [
+        "IRO-01",
+        "IRO-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*dora-aligned.*classification",
+          "major.*incident.*criteria.*defined",
+          "classification.*framework.*established"
+        ],
+        "partially_acceptable": [
+          "classification.*not.*dora-specific",
+          "criteria.*incomplete"
+        ],
+        "unacceptable": [
+          "no.*classification",
+          "no.*incident.*criteria"
+        ],
+        "required_keywords": [
+          "classification",
+          "major incident"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "6"
+      },
+      "nis2_crossreference": "NIS2-23.1"
+    },
+    {
+      "id": "DORA-INCIDENT-2",
+      "category": "Incident Management",
+      "subcategory": "ICT Incident Reporting - Timeline Compliance",
+      "question_text": "Can you meet DORA's incident reporting timelines: initial notification (significant incident determination), intermediate report (72 hours), and final report (1 month)?",
+      "description": "DORA Article 19 specifies strict reporting timelines for major ICT-related incidents to competent authorities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 19",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "IRO-02",
+        "IRO-08"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*meet.*dora.*timelines",
+          "initial.*intermediate.*final.*reporting.*capable",
+          "processes.*ensure.*compliance"
+        ],
+        "partially_acceptable": [
+          "timelines.*challenging",
+          "may.*require.*extensions"
+        ],
+        "unacceptable": [
+          "cannot.*meet.*timelines",
+          "no.*reporting.*capability"
+        ],
+        "required_keywords": [
+          "reporting",
+          "timeline",
+          "notification"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "6"
+      }
+    },
+    {
+      "id": "DORA-TESTING-1",
+      "category": "Testing",
+      "subcategory": "Digital Operational Resilience Testing - TLPT",
+      "question_text": "Do you support Threat-Led Penetration Testing (TLPT) as required by DORA Article 26 for critical ICT services?",
+      "description": "DORA requires advanced testing including TLPT for critical functions, simulating real-world cyber attack scenarios.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 26",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-21.2"
+      ],
+      "scf_control_mappings": [
+        "TVM-05",
+        "TVM-06",
+        "TPM-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*tlpt.*supported",
+          "threat-led.*testing.*accommodated",
+          "tiber-eu.*compliant"
+        ],
+        "partially_acceptable": [
+          "penetration.*testing.*supported.*not.*tlpt",
+          "limited.*testing.*scope"
+        ],
+        "unacceptable": [
+          "no.*tlpt.*support",
+          "testing.*not.*permitted"
+        ],
+        "required_keywords": [
+          "TLPT",
+          "penetration testing"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "11"
+      },
+      "nis2_crossreference": "NIS2-21.2"
+    },
+    {
+      "id": "DORA-INFORMATION-1",
+      "category": "Information Sharing",
+      "subcategory": "ICT Information Sharing - Threat Intelligence",
+      "question_text": "Do you participate in information sharing arrangements to exchange cyber threat intelligence and best practices with financial entities?",
+      "description": "DORA Article 45 encourages information sharing to enhance collective cyber resilience across the financial sector.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 6,
+      "regulatory_mappings": [
+        "DORA - Article 45",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "IRO-07",
+        "TVM-02"
+      ],
+      "risk_if_inadequate": "low",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*information.*sharing.*participation",
+          "threat.*intelligence.*exchange",
+          "active.*cyber.*community.*engagement"
+        ],
+        "partially_acceptable": [
+          "limited.*sharing",
+          "passive.*participation"
+        ],
+        "unacceptable": [
+          "no.*information.*sharing",
+          "isolated.*approach"
+        ],
+        "required_keywords": [
+          "information sharing",
+          "threat intelligence"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-GOVERNANCE-1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Governance - Board Oversight",
+      "question_text": "Does your governance framework include board-level oversight of ICT risks and third-party dependencies relevant to financial entity services?",
+      "description": "DORA emphasizes management body responsibility for ICT risk, including third-party risk management.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 5-6",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "GOV-01",
+        "GOV-03",
+        "RSK-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*board.*oversight.*ict.*risks",
+          "management.*body.*responsible",
+          "governance.*framework.*established"
+        ],
+        "partially_acceptable": [
+          "oversight.*limited.*scope",
+          "reporting.*irregular"
+        ],
+        "unacceptable": [
+          "no.*board.*oversight",
+          "no.*management.*accountability"
+        ],
+        "required_keywords": [
+          "board",
+          "oversight",
+          "governance"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-DOCUMENTATION-1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Documentation - Policy Framework",
+      "question_text": "Have you documented comprehensive ICT third-party risk management policies aligned with DORA requirements?",
+      "description": "DORA requires formal documentation of third-party risk management policies, procedures, and controls.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "GOV-02",
+        "TPM-01",
+        "RSK-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*policies.*documented",
+          "dora-aligned.*policy.*framework",
+          "policies.*procedures.*controls.*defined"
+        ],
+        "partially_acceptable": [
+          "policies.*exist.*not.*comprehensive",
+          "documentation.*incomplete"
+        ],
+        "unacceptable": [
+          "no.*documented.*policies",
+          "informal.*approach"
+        ],
+        "required_keywords": [
+          "policy",
+          "documentation",
+          "procedures"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-MONITORING-1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Monitoring - Continuous Improvement",
+      "question_text": "Have you established key performance indicators (KPIs) and key risk indicators (KRIs) to monitor ICT third-party risk management effectiveness?",
+      "description": "DORA Article 28 requires: Effective risk management requires measurable indicators to track performance and identify emerging risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "DORA - Article 6",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-21.2.b"
+      ],
+      "scf_control_mappings": [
+        "MON-01",
+        "RSK-04",
+        "TPM-02"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*kpi.*kri.*established",
+          "monitoring.*indicators.*defined",
+          "continuous.*improvement.*metrics"
+        ],
+        "partially_acceptable": [
+          "basic.*metrics.*tracked",
+          "limited.*indicator.*set"
+        ],
+        "unacceptable": [
+          "no.*kpis.*kris",
+          "no.*monitoring.*metrics"
+        ],
+        "required_keywords": [
+          "KPI",
+          "KRI",
+          "monitoring"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "10"
+      },
+      "nis2_crossreference": "NIS2-21.2.b"
+    },
+    {
+      "id": "DORA-28.5.1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Concentration Risk - Single Provider Dependency",
+      "question_text": "Have you assessed whether financial entities face concentration risk due to reliance on your services, particularly if you provide critical or important functions?",
+      "description": "DORA Article 28(9) requires assessment of concentration risk where multiple financial entities depend on the same ICT third-party service provider.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-03",
+        "RSK-06",
+        "BCD-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*concentration.*risk.*assessed",
+          "dependency.*analysis.*conducted",
+          "systemic.*risk.*evaluated"
+        ],
+        "partially_acceptable": [
+          "basic.*assessment.*performed",
+          "limited.*concentration.*analysis"
+        ],
+        "unacceptable": [
+          "no.*concentration.*assessment",
+          "no.*dependency.*analysis"
+        ],
+        "required_keywords": [
+          "concentration",
+          "dependency",
+          "risk"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "5"
+      }
+    },
+    {
+      "id": "DORA-28.5.2",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Concentration Risk - Interconnected Dependencies",
+      "question_text": "Do you identify and disclose interconnected dependencies with other ICT service providers that could amplify systemic risk?",
+      "description": "DORA Article 28(5) requires: Concentration risk extends beyond single provider dependency to include interconnected chains of ICT service providers.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-03",
+        "TPM-08",
+        "RSK-06"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*interconnected.*dependencies.*identified",
+          "supply.*chain.*mapping.*comprehensive",
+          "systemic.*risk.*chains.*disclosed"
+        ],
+        "partially_acceptable": [
+          "direct.*dependencies.*only",
+          "incomplete.*chain.*analysis"
+        ],
+        "unacceptable": [
+          "no.*dependency.*mapping",
+          "no.*interconnection.*analysis"
+        ],
+        "required_keywords": [
+          "interconnected",
+          "dependencies",
+          "systemic"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "5"
+      }
+    },
+    {
+      "id": "DORA-28.6.1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Criticality Assessment - Classification Methodology",
+      "question_text": "Have you established criteria to help financial entities classify your ICT services as critical or important functions under DORA?",
+      "description": "DORA Article 28(6) requires: Financial entities must classify ICT third-party services as critical/important. Providers should facilitate this with clear service descriptions and impact assessments.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "RSK-01",
+        "BCD-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*criticality.*criteria.*established",
+          "classification.*methodology.*documented",
+          "impact.*assessment.*framework.*provided"
+        ],
+        "partially_acceptable": [
+          "basic.*classification.*guidance",
+          "informal.*assessment.*support"
+        ],
+        "unacceptable": [
+          "no.*criticality.*criteria",
+          "no.*classification.*support"
+        ],
+        "required_keywords": [
+          "criticality",
+          "classification",
+          "assessment"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "6"
+      }
+    },
+    {
+      "id": "DORA-29.6.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Service Updates - Change Management",
+      "question_text": "Do your contracts include provisions for managing planned changes to ICT services, including advance notification and financial entity approval requirements?",
+      "description": "DORA Article 29(6) requires: Contracts must address how service changes, updates, and upgrades are managed to prevent disruption and maintain security.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "CHG-01",
+        "CHG-02",
+        "TPM-09"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*change.*management.*provisions",
+          "advance.*notification.*required",
+          "approval.*process.*defined"
+        ],
+        "partially_acceptable": [
+          "notification.*without.*approval",
+          "limited.*change.*controls"
+        ],
+        "unacceptable": [
+          "no.*change.*management",
+          "no.*notification.*requirements"
+        ],
+        "required_keywords": [
+          "change management",
+          "notification",
+          "approval"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "6"
+      }
+    },
+    {
+      "id": "DORA-29.7.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Liability and Insurance - Limitation of Liability",
+      "question_text": "Do your contracts include appropriate liability provisions that do not unduly limit financial entity rights in case of service failures or breaches?",
+      "description": "DORA requires balanced contractual terms that protect financial entity interests while recognizing provider realities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-04",
+        "GOV-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*balanced.*liability.*provisions",
+          "financial.*entity.*protections.*adequate",
+          "fair.*liability.*allocation"
+        ],
+        "partially_acceptable": [
+          "liability.*limited.*but.*reasonable",
+          "some.*protections.*provided"
+        ],
+        "unacceptable": [
+          "excessive.*limitation.*liability",
+          "no.*financial.*entity.*protections"
+        ],
+        "required_keywords": [
+          "liability",
+          "indemnification"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "7"
+      }
+    },
+    {
+      "id": "DORA-29.8.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Intellectual Property - Data Ownership",
+      "question_text": "Do your contracts clearly establish that financial entities retain full ownership of their data and intellectual property?",
+      "description": "DORA Article 29(8) requires: Financial entities must maintain ownership and control over their data, with no claims by ICT providers.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "DCH-01",
+        "PRI-01",
+        "TPM-04"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*full.*data.*ownership.*retained",
+          "clear.*ip.*rights.*financial.*entity",
+          "no.*provider.*claims.*data"
+        ],
+        "partially_acceptable": [
+          "ownership.*shared.*limited",
+          "some.*ambiguity.*data.*rights"
+        ],
+        "unacceptable": [
+          "provider.*claims.*data.*ownership",
+          "unclear.*data.*rights"
+        ],
+        "required_keywords": [
+          "data ownership",
+          "intellectual property",
+          "rights"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Data processing agreements",
+        "Data location documentation",
+        "Data protection impact assessments",
+        "Cross-border transfer mechanisms"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "8"
+      }
+    },
+    {
+      "id": "DORA-29.9.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Business Continuity - Provider Resilience",
+      "question_text": "Do your contracts include commitments regarding your own business continuity and disaster recovery capabilities?",
+      "description": "DORA Article 29(9) requires: Financial entities need assurance of provider resilience through documented BCM/DR capabilities and testing.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "BCD-01",
+        "BCD-02",
+        "TPM-06"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*bcm.*dr.*commitments.*documented",
+          "resilience.*capabilities.*contractual",
+          "testing.*results.*shared"
+        ],
+        "partially_acceptable": [
+          "basic.*continuity.*commitments",
+          "limited.*dr.*disclosures"
+        ],
+        "unacceptable": [
+          "no.*bcm.*commitments",
+          "no.*resilience.*assurances"
+        ],
+        "required_keywords": [
+          "business continuity",
+          "disaster recovery",
+          "resilience"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "9"
+      }
+    },
+    {
+      "id": "DORA-29.10.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Security Testing - Right to Test",
+      "question_text": "Do your contracts permit financial entities to conduct security assessments, penetration testing, and vulnerability scanning of your services?",
+      "description": "DORA Article 29(10) requires: Financial entities need the right to independently verify security controls through testing activities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-07",
+        "TVM-05",
+        "TVM-06"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*testing.*rights.*granted",
+          "penetration.*testing.*permitted",
+          "security.*assessments.*supported"
+        ],
+        "partially_acceptable": [
+          "testing.*limited.*conditions",
+          "restricted.*testing.*windows"
+        ],
+        "unacceptable": [
+          "no.*testing.*permitted",
+          "testing.*prohibited"
+        ],
+        "required_keywords": [
+          "testing",
+          "penetration",
+          "assessment"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Information security requirements in contracts",
+        "Incident notification procedures",
+        "Security incident response plans",
+        "Incident notification records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "10"
+      }
+    },
+    {
+      "id": "DORA-29.11.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Performance Degradation - Service Credits",
+      "question_text": "Do your contracts include appropriate remedies, such as service credits or performance penalties, for SLA breaches?",
+      "description": "DORA Article 29(11) requires: Contracts should include financial remedies for service level failures to incentivize performance.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-06",
+        "MON-01"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*service.*credits.*defined",
+          "sla.*breach.*remedies.*included",
+          "performance.*penalties.*specified"
+        ],
+        "partially_acceptable": [
+          "limited.*remedies.*provided",
+          "credits.*minimal.*amounts"
+        ],
+        "unacceptable": [
+          "no.*remedies.*sla.*breach",
+          "no.*service.*credits"
+        ],
+        "required_keywords": [
+          "service credits",
+          "remedies",
+          "SLA"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "11"
+      }
+    },
+    {
+      "id": "DORA-29.12.1",
+      "category": "Key Contractual Provisions",
+      "subcategory": "Termination - Notice Periods",
+      "question_text": "Do your contracts specify reasonable notice periods for termination that allow adequate time for transition planning?",
+      "description": "DORA Article 29(9) requires appropriate notice periods to enable orderly exits without disruption.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-05",
+        "BCD-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*reasonable.*notice.*periods",
+          "adequate.*transition.*time.*provided",
+          "notice.*aligns.*service.*complexity"
+        ],
+        "partially_acceptable": [
+          "notice.*period.*short",
+          "may.*require.*extension"
+        ],
+        "unacceptable": [
+          "no.*notice.*period",
+          "insufficient.*transition.*time"
+        ],
+        "required_keywords": [
+          "notice period",
+          "termination",
+          "transition"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Exit strategy documentation",
+        "Data return/deletion procedures",
+        "Service transition plans",
+        "Business continuity plans for provider exit"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "29",
+        "requirement": "Contractual provisions for ICT services",
+        "paragraph": "12"
+      }
+    },
+    {
+      "id": "DORA-30.4.1",
+      "category": "Register of Information",
+      "subcategory": "Register Governance - Board Reporting",
+      "question_text": "Is the register of ICT third-party arrangements regularly reported to the management body for oversight and decision-making?",
+      "description": "DORA Article 30 requires board-level awareness and oversight of ICT third-party dependencies.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 30",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "GOV-01",
+        "GOV-03",
+        "TPM-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regular.*board.*reporting",
+          "register.*reviewed.*management.*body",
+          "quarterly.*annual.*reporting"
+        ],
+        "partially_acceptable": [
+          "ad.*hoc.*board.*reporting",
+          "limited.*management.*review"
+        ],
+        "unacceptable": [
+          "no.*board.*reporting",
+          "no.*management.*oversight"
+        ],
+        "required_keywords": [
+          "board",
+          "reporting",
+          "management body"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Register of information on ICT third-party providers",
+        "Register maintenance procedures",
+        "Register update records",
+        "Reporting submissions to competent authorities"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "30",
+        "requirement": "Register of information on ICT third-party service providers",
+        "paragraph": "4"
+      }
+    },
+    {
+      "id": "DORA-CYBER-1",
+      "category": "Cybersecurity",
+      "subcategory": "Security Controls - ICT Security Measures",
+      "question_text": "Have you implemented comprehensive ICT security measures aligned with international standards (e.g., ISO 27001, NIST CSF) for services provided to financial entities?",
+      "description": "DORA requires robust cybersecurity controls proportionate to the criticality of ICT services provided.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 8-9",
+        "ISO 27001:2022 - A.15",
+        "NIS2 - Article NIS2-21.2.c"
+      ],
+      "scf_control_mappings": [
+        "IAC-01",
+        "CRY-01",
+        "NET-01",
+        "END-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*security.*measures",
+          "iso.*27001.*aligned.*controls",
+          "nist.*csf.*implemented"
+        ],
+        "partially_acceptable": [
+          "basic.*security.*controls",
+          "partial.*standards.*alignment"
+        ],
+        "unacceptable": [
+          "no.*comprehensive.*security",
+          "no.*standards.*alignment"
+        ],
+        "required_keywords": [
+          "security",
+          "controls",
+          "standards"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT security policy documentation",
+        "ISO 27001 certification or equivalent security standard",
+        "Security controls implementation evidence",
+        "Technical security documentation",
+        "Audit reports and compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      },
+      "nis2_crossreference": "NIS2-21.2.c"
+    },
+    {
+      "id": "DORA-CYBER-2",
+      "category": "Cybersecurity",
+      "subcategory": "Vulnerability Management - Patching",
+      "question_text": "Do you maintain a robust vulnerability management program including timely patching and remediation for services supporting financial entities?",
+      "description": "DORA Article 28 requires: Critical vulnerabilities must be identified and remediated promptly to protect financial entity data and operations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 8",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TVM-01",
+        "TVM-03",
+        "CHG-03"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*vulnerability.*management.*program",
+          "timely.*patching.*process",
+          "critical.*vulnerabilities.*prioritized"
+        ],
+        "partially_acceptable": [
+          "patching.*delayed",
+          "limited.*vulnerability.*scanning"
+        ],
+        "unacceptable": [
+          "no.*vulnerability.*management",
+          "no.*patching.*process"
+        ],
+        "required_keywords": [
+          "vulnerability",
+          "patching",
+          "remediation"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-CYBER-3",
+      "category": "Cybersecurity",
+      "subcategory": "Access Control - Multi-Factor Authentication",
+      "question_text": "Do you enforce multi-factor authentication (MFA) for all privileged access and remote access to systems processing financial entity data?",
+      "description": "DORA Article 28 requires: Strong authentication is essential to prevent unauthorized access to sensitive financial data and systems.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 8",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "IAC-10",
+        "IAC-11",
+        "IAC-13"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*mfa.*enforced.*all.*privileged",
+          "multi-factor.*authentication.*mandatory",
+          "strong.*authentication.*implemented"
+        ],
+        "partially_acceptable": [
+          "mfa.*most.*users",
+          "some.*exceptions.*mfa"
+        ],
+        "unacceptable": [
+          "no.*mfa",
+          "password-only.*authentication"
+        ],
+        "required_keywords": [
+          "MFA",
+          "multi-factor",
+          "authentication"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-CYBER-4",
+      "category": "Cybersecurity",
+      "subcategory": "Encryption - Data Protection",
+      "question_text": "Do you encrypt financial entity data both in transit and at rest using industry-standard encryption algorithms?",
+      "description": "DORA Article 28 requires: Encryption is mandatory for protecting sensitive financial data from unauthorized access and breaches.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 8",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "CRY-01",
+        "CRY-02",
+        "DCH-05"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*encryption.*transit.*rest",
+          "aes.*256.*tls.*1\\.2.*1\\.3",
+          "industry-standard.*algorithms"
+        ],
+        "partially_acceptable": [
+          "encryption.*transit.*only",
+          "weak.*encryption.*some.*data"
+        ],
+        "unacceptable": [
+          "no.*encryption",
+          "plaintext.*data.*storage"
+        ],
+        "required_keywords": [
+          "encryption",
+          "in transit",
+          "at rest"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-CYBER-5",
+      "category": "Cybersecurity",
+      "subcategory": "Logging and Monitoring - Security Event Logging",
+      "question_text": "Do you maintain comprehensive security event logs with adequate retention periods to support incident investigation and forensics?",
+      "description": "DORA requires robust logging and monitoring capabilities to detect, investigate, and respond to security incidents.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 17",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "MON-02",
+        "MON-03",
+        "IRO-04"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*logging.*implemented",
+          "security.*events.*logged.*retained",
+          "12.*month.*minimum.*retention"
+        ],
+        "partially_acceptable": [
+          "basic.*logging.*limited.*retention",
+          "some.*events.*not.*logged"
+        ],
+        "unacceptable": [
+          "no.*security.*logging",
+          "inadequate.*log.*retention"
+        ],
+        "required_keywords": [
+          "logging",
+          "security events",
+          "retention"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-BACKUP-1",
+      "category": "Business Continuity",
+      "subcategory": "Data Backup - Backup Strategy",
+      "question_text": "Do you implement regular automated backups of financial entity data with offsite or cloud-based storage for disaster recovery?",
+      "description": "DORA Article 28 requires: Reliable backups are essential for data recovery and business continuity in case of incidents or disasters.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "DORA - Article 11-12",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "BCD-05",
+        "BCD-06",
+        "BCD-07"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*automated.*backups.*regular",
+          "offsite.*backup.*storage",
+          "3-2-1.*backup.*strategy"
+        ],
+        "partially_acceptable": [
+          "manual.*backups.*irregular",
+          "onsite.*only.*backups"
+        ],
+        "unacceptable": [
+          "no.*regular.*backups",
+          "no.*backup.*strategy"
+        ],
+        "required_keywords": [
+          "backup",
+          "automated",
+          "offsite"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "9"
+      }
+    },
+    {
+      "id": "DORA-BACKUP-2",
+      "category": "Business Continuity",
+      "subcategory": "Data Backup - Recovery Testing",
+      "question_text": "Do you regularly test backup restoration procedures to verify data recoverability and meet RTO/RPO requirements?",
+      "description": "DORA Article 28 requires: Untested backups cannot be relied upon. Regular testing ensures backups can be restored within agreed timeframes.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 11",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "BCD-08",
+        "BCD-09",
+        "BCD-06"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regular.*restoration.*testing",
+          "quarterly.*backup.*tests",
+          "rto.*rpo.*validated"
+        ],
+        "partially_acceptable": [
+          "annual.*testing.*only",
+          "limited.*restoration.*tests"
+        ],
+        "unacceptable": [
+          "no.*backup.*testing",
+          "never.*tested.*restoration"
+        ],
+        "required_keywords": [
+          "testing",
+          "restoration",
+          "recovery"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "9"
+      }
+    },
+    {
+      "id": "DORA-SUPPLY-1",
+      "category": "Supply Chain Security",
+      "subcategory": "Fourth-Party Risk - Sub-Subcontractors",
+      "question_text": "Do you maintain visibility into your subcontractors' subcontracting arrangements (fourth parties) that support financial entity services?",
+      "description": "DORA Article 28 requires: Supply chain risk extends beyond direct subcontractors to include the entire dependency chain.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 28-29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-08",
+        "TPM-02",
+        "RSK-06"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*fourth-party.*visibility.*maintained",
+          "sub-subcontractor.*tracking.*implemented",
+          "full.*supply.*chain.*transparency"
+        ],
+        "partially_acceptable": [
+          "direct.*subcontractors.*only",
+          "limited.*fourth-party.*visibility"
+        ],
+        "unacceptable": [
+          "no.*fourth-party.*tracking",
+          "no.*supply.*chain.*visibility"
+        ],
+        "required_keywords": [
+          "fourth party",
+          "subcontractors",
+          "supply chain"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "7"
+      }
+    },
+    {
+      "id": "DORA-SUPPLY-2",
+      "category": "Supply Chain Security",
+      "subcategory": "Geographic Restrictions - Data Localization",
+      "question_text": "Can you accommodate financial entity requirements for data processing and storage to remain within specific geographic jurisdictions (e.g., EU/EEA)?",
+      "description": "DORA Article 28 requires: Some financial entities may require data to remain within specific jurisdictions for legal or regulatory reasons.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "DCH-01",
+        "PRI-01",
+        "TPM-04"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*geographic.*restrictions.*supported",
+          "eu.*eea.*data.*localization.*available",
+          "jurisdiction-specific.*deployments"
+        ],
+        "partially_acceptable": [
+          "limited.*geography.*options",
+          "additional.*cost.*restrictions"
+        ],
+        "unacceptable": [
+          "no.*geographic.*restrictions",
+          "global.*deployment.*only"
+        ],
+        "required_keywords": [
+          "geographic",
+          "data localization",
+          "jurisdiction"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Data processing agreements",
+        "Data location documentation",
+        "Data protection impact assessments",
+        "Cross-border transfer mechanisms"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "7"
+      }
+    },
+    {
+      "id": "DORA-COMPLIANCE-1",
+      "category": "Regulatory Compliance",
+      "subcategory": "Compliance Monitoring - Regulatory Updates",
+      "question_text": "Do you maintain a process to monitor and implement DORA regulatory updates, EBA/ESMA guidelines, and other relevant EU financial regulations?",
+      "description": "DORA Article 28 requires: Ongoing compliance requires tracking regulatory developments and updating services accordingly.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 29",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "CPL-01",
+        "CPL-03",
+        "GOV-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regulatory.*monitoring.*process",
+          "dora.*updates.*tracked.*implemented",
+          "compliance.*program.*active"
+        ],
+        "partially_acceptable": [
+          "reactive.*compliance.*approach",
+          "limited.*monitoring.*resources"
+        ],
+        "unacceptable": [
+          "no.*regulatory.*monitoring",
+          "no.*compliance.*process"
+        ],
+        "required_keywords": [
+          "regulatory",
+          "monitoring",
+          "compliance"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Service contracts and agreements",
+        "Contractual compliance documentation",
+        "Legal review records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-PERSONNEL-1",
+      "category": "Human Resources",
+      "subcategory": "Personnel Security - Background Checks",
+      "question_text": "Do you conduct appropriate background checks and screening for personnel with access to financial entity data and systems?",
+      "description": "DORA Article 28 requires: Personnel security is critical for protecting sensitive financial data and preventing insider threats.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "DORA - Article 8",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "HRS-01",
+        "HRS-02",
+        "HRS-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*background.*checks.*conducted",
+          "screening.*all.*personnel.*access",
+          "comprehensive.*vetting.*process"
+        ],
+        "partially_acceptable": [
+          "basic.*screening.*only",
+          "checks.*not.*comprehensive"
+        ],
+        "unacceptable": [
+          "no.*background.*checks",
+          "no.*personnel.*screening"
+        ],
+        "required_keywords": [
+          "background checks",
+          "screening",
+          "vetting"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Policy documentation",
+        "Technical documentation",
+        "Audit reports",
+        "Compliance records"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "1"
+      }
+    },
+    {
+      "id": "DORA-OUTSOURCING-1",
+      "category": "ICT Third-Party Risk Management",
+      "subcategory": "Cloud Services - Multi-Cloud Strategy",
+      "question_text": "If you use cloud infrastructure providers, do you support multi-cloud or hybrid cloud deployments to mitigate concentration risk?",
+      "description": "DORA Article 28 requires: Reliance on a single cloud provider creates concentration risk. Multi-cloud capabilities enhance resilience.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 6,
+      "regulatory_mappings": [
+        "DORA - Article 28",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-03",
+        "BCD-01",
+        "RSK-06"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*multi-cloud.*supported",
+          "hybrid.*cloud.*capabilities",
+          "cloud.*portability.*enabled"
+        ],
+        "partially_acceptable": [
+          "single.*cloud.*containerized.*workloads",
+          "migration.*capability.*limited"
+        ],
+        "unacceptable": [
+          "single.*cloud.*locked-in",
+          "no.*portability"
+        ],
+        "required_keywords": [
+          "multi-cloud",
+          "hybrid",
+          "portability"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "ICT third-party risk management policy",
+        "Risk assessment documentation",
+        "Audit reports"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "requirement": "ICT third-party risk management framework",
+        "paragraph": "7"
+      }
+    },
+    {
+      "id": "DORA-29.1h.2",
+      "category": "Contractual Arrangements",
+      "subcategory": "Audit and Access Rights",
+      "question_text": "Do contractual arrangements include provisions for supervisory authority (competent authorities) to have effective access rights to data, premises, and personnel as required by DORA Article 29(1)(h) and Article 28(3)(i)?",
+      "description": "DORA Article 28(3)(i) requires that contractual arrangements ensure competent authorities can effectively exercise their right of access to data and premises. This is critical for regulatory oversight of ICT third-party providers supporting critical functions.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "DORA - Article 28(3)(i)",
+        "DORA - Article 29(1)(h)",
+        "DORA - Article 41"
+      ],
+      "scf_control_mappings": [
+        "CPL-01",
+        "CPL-02",
+        "GOV-03"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*supervisory.*authority.*access",
+          "contractual.*provisions.*regulator.*access",
+          "competent.*authority.*access.*data.*premises",
+          "article 28.*access.*rights"
+        ],
+        "partially_acceptable": [
+          "access.*rights.*partial",
+          "some.*supervisory.*provisions"
+        ],
+        "unacceptable": [
+          "no.*supervisory.*access",
+          "no.*provisions.*authority",
+          "not.*applicable"
+        ],
+        "required_keywords": [
+          "supervisory",
+          "access",
+          "authority"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Contractual clauses for supervisory access",
+        "Access protocols for competent authorities",
+        "Data access provisions",
+        "Premises access procedures",
+        "Personnel availability commitments"
+      ],
+      "regulatory_source": {
+        "regulation": "DORA",
+        "article": "28",
+        "paragraph": "1(e)",
+        "requirement": "Supervisory authority access rights"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1935 @@
+{
+  "metadata": {
+    "name": "Shared Assessments SIG Full Questionnaire",
+    "version": "2025.1",
+    "total_questions": 100,
+    "status": "placeholder",
+    "description": "PLACEHOLDER: Full SIG questionnaire requires commercial license. This is a structural placeholder with sample questions across all domains.",
+    "licensing_note": "Production use requires Shared Assessments membership and SIG license. Contact Shared Assessments at https://sharedassessments.org for licensing information.",
+    "categories": [
+      "Business Resiliency",
+      "Compliance & Operational Risk",
+      "Cybersecurity",
+      "Data Governance & Privacy",
+      "Human Resources Security",
+      "Information & Asset Management",
+      "Infrastructure & Virtualization",
+      "Network Security",
+      "Physical & Environmental Security",
+      "Privacy",
+      "Risk Management",
+      "Security Incident Management",
+      "Third-Party Management",
+      "Threat Detection & Response",
+      "Training & Awareness",
+      "Vulnerability Management",
+      "Endpoint Security",
+      "Cloud Security",
+      "Identity & Access Management",
+      "Logging & Monitoring"
+    ],
+    "estimated_completion_time": "8-12 hours"
+  },
+  "questions": [
+    {
+      "id": "SIG-1.1",
+      "category": "Business Resiliency",
+      "subcategory": "BCP Strategy",
+      "question_text": "Does your organization have a documented business continuity plan (BCP) that has been approved by senior management?",
+      "description": "BCP should identify critical business processes, recovery time objectives (RTOs), and recovery point objectives (RPOs).",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 22301 - 8.1", "DORA - Business Continuity", "SOC 2 - A1.2"],
+      "scf_control_mappings": ["BCD-01", "BCD-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*bcp.*approved"],
+        "partially_acceptable": ["plan exists.*not.*approved"],
+        "unacceptable": ["no", "no.*plan"],
+        "required_keywords": ["documented", "approved"]
+      }
+    },
+    {
+      "id": "SIG-1.2",
+      "category": "Business Resiliency",
+      "subcategory": "BCP Testing",
+      "question_text": "How often do you conduct business continuity tests or exercises?",
+      "description": "Testing should include tabletop exercises, simulation tests, or full-scale tests at least annually.",
+      "expected_answer_type": "text",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 22301 - 8.5", "DORA - BCM Testing"],
+      "scf_control_mappings": ["BCD-05", "BCD-11"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["annually", "yearly", "quarterly", "at least.*year"],
+        "partially_acceptable": ["bi-annually", "every.*years"],
+        "unacceptable": ["never", "not tested", "no schedule"],
+        "required_keywords": ["tested"]
+      }
+    },
+    {
+      "id": "SIG-1.3",
+      "category": "Business Resiliency",
+      "subcategory": "Disaster Recovery",
+      "question_text": "Do you maintain a documented disaster recovery (DR) plan with defined RTOs and RPOs?",
+      "description": "DR plan should address system recovery procedures, backup restoration processes, and alternate site activation.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.29", "NIST 800-53 - CP-10"],
+      "scf_control_mappings": ["BCD-08", "BCD-09"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*dr.*rto.*rpo"],
+        "partially_acceptable": ["plan exists.*incomplete"],
+        "unacceptable": ["no", "no.*plan"],
+        "required_keywords": ["rto", "rpo"]
+      }
+    },
+    {
+      "id": "SIG-1.4",
+      "category": "Business Resiliency",
+      "subcategory": "Backup Strategy",
+      "question_text": "What is your backup frequency and retention period for critical data?",
+      "description": "Backups should be performed regularly (daily recommended) with appropriate retention periods to meet business and regulatory requirements.",
+      "expected_answer_type": "text",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.13", "GDPR - Article 32"],
+      "scf_control_mappings": ["BCD-10", "DCH-07"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["daily", "continuous", "hourly"],
+        "partially_acceptable": ["weekly", "every.*days"],
+        "unacceptable": ["monthly", "irregular", "no.*schedule"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-1.5",
+      "category": "Business Resiliency",
+      "subcategory": "Backup Testing",
+      "question_text": "How frequently are backup restoration procedures tested?",
+      "description": "Backup restoration should be tested at least quarterly to ensure data can be successfully recovered.",
+      "expected_answer_type": "text",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.13", "SOC 2 - A1.2"],
+      "scf_control_mappings": ["BCD-05", "BCD-10"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["quarterly", "monthly", "every.*months"],
+        "partially_acceptable": ["annually", "yearly"],
+        "unacceptable": ["never", "not tested", "irregularly"],
+        "required_keywords": ["tested"]
+      }
+    },
+    {
+      "id": "SIG-2.1",
+      "category": "Compliance & Operational Risk",
+      "subcategory": "Regulatory Compliance",
+      "question_text": "Do you maintain an inventory of applicable regulatory and contractual obligations?",
+      "description": "Organization should track all applicable regulations (e.g., GDPR, HIPAA, PCI DSS, DORA, NIS2) and contractual requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 4.2", "SOC 2 - CC1.2"],
+      "scf_control_mappings": ["CPL-01", "CPL-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "maintain.*inventory"],
+        "partially_acceptable": ["partial.*inventory"],
+        "unacceptable": ["no", "not.*tracked"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-2.2",
+      "category": "Compliance & Operational Risk",
+      "subcategory": "Audit Management",
+      "question_text": "How often do you conduct internal security audits?",
+      "description": "Internal audits should assess compliance with policies, standards, and regulatory requirements at least annually.",
+      "expected_answer_type": "text",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 9.2", "SOC 2 - CC4.1"],
+      "scf_control_mappings": ["CPL-02", "MON-01"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["annually", "yearly", "quarterly"],
+        "partially_acceptable": ["bi-annually"],
+        "unacceptable": ["never", "no schedule"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-2.3",
+      "category": "Compliance & Operational Risk",
+      "subcategory": "Third-Party Audits",
+      "question_text": "Do you undergo independent third-party security audits or assessments (e.g., SOC 2, ISO 27001)?",
+      "description": "Third-party audits provide independent validation of security controls and compliance.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["SOC 2 Type II", "ISO 27001:2022 - Certification"],
+      "scf_control_mappings": ["CPL-02", "GOV-04"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "soc 2", "iso 27001", "third-party.*audit"],
+        "partially_acceptable": ["planning.*audit"],
+        "unacceptable": ["no", "no.*plans"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-2.4",
+      "category": "Compliance & Operational Risk",
+      "subcategory": "Policy Framework",
+      "question_text": "Do you have a comprehensive set of information security policies that are reviewed and updated at least annually?",
+      "description": "Policy framework should include acceptable use, data classification, access control, encryption, incident response, and other key policies.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.2", "NIST CSF - GV.PO"],
+      "scf_control_mappings": ["GOV-01", "GOV-04"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "comprehensive.*policies.*reviewed"],
+        "partially_acceptable": ["policies.*not.*complete"],
+        "unacceptable": ["no", "no.*policies"],
+        "required_keywords": ["policies", "reviewed"]
+      }
+    },
+    {
+      "id": "SIG-2.5",
+      "category": "Compliance & Operational Risk",
+      "subcategory": "Legal & Regulatory Changes",
+      "question_text": "Do you have a process to monitor and respond to changes in applicable laws and regulations?",
+      "description": "Organization should track regulatory changes and update controls, policies, and procedures accordingly.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 4.2", "DORA - Compliance"],
+      "scf_control_mappings": ["CPL-01", "GOV-04"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "process.*monitor.*regulatory"],
+        "partially_acceptable": ["informal.*monitoring"],
+        "unacceptable": ["no", "not.*monitored"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-3.1",
+      "category": "Cybersecurity",
+      "subcategory": "Security Architecture",
+      "question_text": "Do you maintain a documented security architecture that includes network segmentation and defense-in-depth principles?",
+      "description": "Security architecture should implement multiple layers of defense, network segmentation, and zero-trust principles.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.20", "NIST CSF - PR.PT"],
+      "scf_control_mappings": ["NET-01", "NET-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*architecture.*segmentation"],
+        "partially_acceptable": ["partial.*segmentation"],
+        "unacceptable": ["no", "flat.*network"],
+        "required_keywords": ["segmentation"]
+      }
+    },
+    {
+      "id": "SIG-3.2",
+      "category": "Cybersecurity",
+      "subcategory": "Firewall Management",
+      "question_text": "Are firewall rules reviewed and updated at least quarterly?",
+      "description": "Firewall rules should be reviewed regularly to remove unnecessary rules and ensure least privilege access.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["PCI DSS 4.0 - 1.2.1", "NIST 800-53 - SC-7"],
+      "scf_control_mappings": ["NET-04", "CFG-02"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "quarterly", "regularly"],
+        "partially_acceptable": ["annually"],
+        "unacceptable": ["no", "never", "rarely"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-3.3",
+      "category": "Cybersecurity",
+      "subcategory": "Intrusion Detection/Prevention",
+      "question_text": "Do you employ intrusion detection and/or intrusion prevention systems (IDS/IPS)?",
+      "description": "IDS/IPS systems should monitor network traffic for malicious activity and unauthorized access attempts.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.16", "NIST CSF - DE.CM"],
+      "scf_control_mappings": ["NET-06", "MON-08"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "ids", "ips", "intrusion.*detection"],
+        "partially_acceptable": ["ids.*only"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-3.4",
+      "category": "Cybersecurity",
+      "subcategory": "Wireless Security",
+      "question_text": "If you provide wireless network access, is it secured using WPA3 or WPA2-Enterprise with strong authentication?",
+      "description": "Wireless networks should use strong encryption and authentication protocols, separate from production networks.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 7,
+      "regulatory_mappings": ["PCI DSS 4.0 - 4.1.1", "NIST 800-53 - AC-18"],
+      "scf_control_mappings": ["NET-05", "IAC-15"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "wpa3", "wpa2.*enterprise"],
+        "partially_acceptable": ["wpa2.*psk"],
+        "unacceptable": ["no", "wep", "open"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-3.5",
+      "category": "Cybersecurity",
+      "subcategory": "Remote Access",
+      "question_text": "Do you require VPN with multi-factor authentication for all remote access to corporate networks?",
+      "description": "Remote access should be secured with VPN using strong encryption (e.g., IPSec, SSL/TLS) and MFA.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.7", "NIST 800-53 - AC-17"],
+      "scf_control_mappings": ["IAC-11", "IAC-12"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "vpn.*mfa", "required"],
+        "partially_acceptable": ["vpn.*not.*always.*mfa"],
+        "unacceptable": ["no", "not.*required"],
+        "required_keywords": ["vpn", "mfa"]
+      }
+    },
+    {
+      "id": "SIG-4.1",
+      "category": "Data Governance & Privacy",
+      "subcategory": "Data Classification",
+      "question_text": "Do you have a data classification policy that categorizes data based on sensitivity (e.g., public, internal, confidential, restricted)?",
+      "description": "Data classification enables appropriate security controls based on data sensitivity and regulatory requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.12", "GDPR - Article 32"],
+      "scf_control_mappings": ["DCH-01", "DCH-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "classification.*policy", "categorize.*sensitivity"],
+        "partially_acceptable": ["informal.*classification"],
+        "unacceptable": ["no", "no.*classification"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-4.2",
+      "category": "Data Governance & Privacy",
+      "subcategory": "Data Retention",
+      "question_text": "Do you have documented data retention and disposal policies that comply with applicable regulations?",
+      "description": "Data retention policies should specify how long different data types are retained and secure disposal procedures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["GDPR - Article 5(1)(e)", "ISO 27001:2022 - 5.12"],
+      "scf_control_mappings": ["DCH-07", "PRI-04"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*retention.*disposal"],
+        "partially_acceptable": ["retention.*no.*disposal"],
+        "unacceptable": ["no", "no.*policy"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-4.3",
+      "category": "Data Governance & Privacy",
+      "subcategory": "Data Minimization",
+      "question_text": "Do you implement data minimization practices to collect and retain only necessary personal data?",
+      "description": "Organizations should collect minimum data necessary for business purposes and limit data retention periods.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["GDPR - Article 5(1)(c)", "CCPA - Section 1798.100"],
+      "scf_control_mappings": ["PRI-03", "DCH-02"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "data minimization", "collect.*necessary"],
+        "partially_acceptable": ["informal.*practices"],
+        "unacceptable": ["no", "collect.*everything"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-4.4",
+      "category": "Data Governance & Privacy",
+      "subcategory": "Secure Data Disposal",
+      "question_text": "What methods do you use to securely dispose of data and media containing sensitive information?",
+      "description": "Disposal methods should include degaussing, physical destruction, or cryptographic erasure for media, and secure deletion for electronic data.",
+      "expected_answer_type": "text",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.10", "NIST 800-88"],
+      "scf_control_mappings": ["DCH-10", "PRI-08"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["degaussing", "physical destruction", "cryptographic.*erasure", "certified.*destruction"],
+        "partially_acceptable": ["standard.*deletion"],
+        "unacceptable": ["simple deletion", "trash"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-4.5",
+      "category": "Data Governance & Privacy",
+      "subcategory": "Data Loss Prevention",
+      "question_text": "Do you have data loss prevention (DLP) controls to prevent unauthorized data exfiltration?",
+      "description": "DLP solutions should monitor and prevent unauthorized transmission of sensitive data via email, web, removable media, etc.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.11", "PCI DSS 4.0 - 3.5.1"],
+      "scf_control_mappings": ["DCH-13", "APP-06"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "dlp", "data loss prevention"],
+        "partially_acceptable": ["partial.*dlp"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-5.1",
+      "category": "Human Resources Security",
+      "subcategory": "Background Checks",
+      "question_text": "Do you conduct background checks for employees and contractors with access to sensitive data or systems?",
+      "description": "Background checks should be performed before granting access, in accordance with applicable laws and regulations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.1", "SOC 2 - CC1.4"],
+      "scf_control_mappings": ["HRS-01", "HRS-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "background checks.*required"],
+        "partially_acceptable": ["employees.*only"],
+        "unacceptable": ["no", "not.*performed"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-5.2",
+      "category": "Human Resources Security",
+      "subcategory": "Security Agreements",
+      "question_text": "Do employees and contractors sign confidentiality or non-disclosure agreements?",
+      "description": "All personnel should sign agreements acknowledging their responsibilities to protect organizational information.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.1", "SOC 2 - CC1.4"],
+      "scf_control_mappings": ["HRS-03", "HRS-04"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "nda", "confidentiality.*agreement"],
+        "partially_acceptable": ["some.*sign"],
+        "unacceptable": ["no", "not.*required"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-5.3",
+      "category": "Human Resources Security",
+      "subcategory": "Termination Procedures",
+      "question_text": "Do you have documented procedures for revoking access immediately upon employee or contractor termination?",
+      "description": "Access should be revoked on termination date, including physical access, logical access, credentials, and company assets.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.4", "SOC 2 - CC6.3"],
+      "scf_control_mappings": ["HRS-09", "IAC-19"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "immediately.*revoked", "same day"],
+        "partially_acceptable": ["revoked.*24 hours"],
+        "unacceptable": ["no", "delayed", "manual.*slow"],
+        "required_keywords": ["revoked"]
+      }
+    },
+    {
+      "id": "SIG-5.4",
+      "category": "Human Resources Security",
+      "subcategory": "Acceptable Use Policy",
+      "question_text": "Do you have an acceptable use policy that employees and contractors must acknowledge?",
+      "description": "Acceptable use policy should define appropriate use of organizational systems, data, and resources.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.2", "NIST 800-53 - PS-6"],
+      "scf_control_mappings": ["HRS-07", "CPL-01"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "aup", "acceptable use.*policy"],
+        "partially_acceptable": ["policy exists.*not.*acknowledged"],
+        "unacceptable": ["no", "no.*policy"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-5.5",
+      "category": "Human Resources Security",
+      "subcategory": "Role-Based Access",
+      "question_text": "Are access permissions assigned based on job roles and responsibilities following least privilege principles?",
+      "description": "Users should have only the minimum access necessary to perform their job functions.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.15", "PCI DSS 4.0 - 7.1"],
+      "scf_control_mappings": ["IAC-01", "IAC-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "least privilege", "role-based"],
+        "partially_acceptable": ["mostly.*role-based"],
+        "unacceptable": ["no", "everyone.*has.*access"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-6.1",
+      "category": "Information & Asset Management",
+      "subcategory": "Asset Inventory",
+      "question_text": "Do you maintain a comprehensive inventory of all information assets, including hardware, software, and data?",
+      "description": "Asset inventory should be maintained, regularly updated, and include asset owners, locations, and classifications.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.9", "NIST CSF - ID.AM"],
+      "scf_control_mappings": ["AST-01", "GOV-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "comprehensive.*inventory", "cmdb"],
+        "partially_acceptable": ["partial.*inventory"],
+        "unacceptable": ["no", "no.*inventory"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-6.2",
+      "category": "Information & Asset Management",
+      "subcategory": "Asset Ownership",
+      "question_text": "Are all information assets assigned to specific owners with defined responsibilities?",
+      "description": "Each asset should have an identified owner responsible for its security, maintenance, and appropriate use.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.9", "SOC 2 - CC6.5"],
+      "scf_control_mappings": ["AST-01", "GOV-02"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "assigned.*owners"],
+        "partially_acceptable": ["some.*assets.*owned"],
+        "unacceptable": ["no", "no.*ownership"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-6.3",
+      "category": "Information & Asset Management",
+      "subcategory": "Media Handling",
+      "question_text": "Do you have procedures for secure handling, storage, and transportation of physical and electronic media?",
+      "description": "Media containing sensitive information should be securely stored, transported, and tracked throughout its lifecycle.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.3", "PCI DSS 4.0 - 9.6"],
+      "scf_control_mappings": ["DCH-08", "PES-07"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "procedures.*media.*handling"],
+        "partially_acceptable": ["informal.*procedures"],
+        "unacceptable": ["no", "no.*procedures"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-6.4",
+      "category": "Information & Asset Management",
+      "subcategory": "Removable Media",
+      "question_text": "Are removable media devices (USB drives, external hard drives) encrypted and controlled?",
+      "description": "Removable media should be encrypted, tracked, and restricted to authorized users to prevent data loss.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.3", "PCI DSS 4.0 - 3.4.2"],
+      "scf_control_mappings": ["CRY-07", "DCH-08"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "encrypted.*controlled"],
+        "partially_acceptable": ["encrypted.*not.*controlled"],
+        "unacceptable": ["no", "unrestricted", "not.*encrypted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-6.5",
+      "category": "Information & Asset Management",
+      "subcategory": "Labeling & Handling",
+      "question_text": "Is sensitive information labeled according to its classification with appropriate handling instructions?",
+      "description": "Data labels should indicate classification level and handling requirements (e.g., Confidential, Internal Use Only).",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 6,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.12", "NIST 800-53 - MP-3"],
+      "scf_control_mappings": ["DCH-02", "DCH-03"],
+      "risk_if_inadequate": "low",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "labeled.*classification"],
+        "partially_acceptable": ["some.*labeled"],
+        "unacceptable": ["no", "not.*labeled"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-7.1",
+      "category": "Infrastructure & Virtualization",
+      "subcategory": "Virtual Environment Security",
+      "question_text": "If you use virtualization, are hypervisors hardened and patched according to vendor recommendations?",
+      "description": "Hypervisors should follow security hardening guidelines and receive timely security updates.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.32", "NIST 800-53 - SC-44"],
+      "scf_control_mappings": ["IVS-01", "IVS-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "hardened.*patched"],
+        "partially_acceptable": ["patched.*not.*hardened"],
+        "unacceptable": ["no", "not.*maintained"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-7.2",
+      "category": "Infrastructure & Virtualization",
+      "subcategory": "Container Security",
+      "question_text": "If you use containers (Docker, Kubernetes), do you scan container images for vulnerabilities?",
+      "description": "Container images should be scanned for vulnerabilities and misconfigurations before deployment.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 8,
+      "regulatory_mappings": ["NIST 800-190", "CIS Benchmark - Docker"],
+      "scf_control_mappings": ["IVS-03", "APP-07"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "scan.*images", "vulnerability.*scanning"],
+        "partially_acceptable": ["manual.*scanning"],
+        "unacceptable": ["no", "not.*scanned"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-7.3",
+      "category": "Infrastructure & Virtualization",
+      "subcategory": "Infrastructure as Code",
+      "question_text": "If you use infrastructure as code (IaC), do you perform security reviews and testing of IaC templates?",
+      "description": "IaC templates (Terraform, CloudFormation) should be reviewed for security misconfigurations and compliance.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 7,
+      "regulatory_mappings": ["NIST CSF - PR.IP", "CIS Controls - 16"],
+      "scf_control_mappings": ["CFG-03", "APP-02"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "security.*reviews.*iac"],
+        "partially_acceptable": ["manual.*reviews"],
+        "unacceptable": ["no", "not.*reviewed"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-7.4",
+      "category": "Infrastructure & Virtualization",
+      "subcategory": "VM Isolation",
+      "question_text": "Are virtual machines properly isolated based on data sensitivity and business function?",
+      "description": "VMs processing sensitive data should be isolated from less critical systems using virtual network segmentation.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.32", "PCI DSS 4.0 - 2.2.3"],
+      "scf_control_mappings": ["IVS-04", "NET-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "isolated.*segmented"],
+        "partially_acceptable": ["partial.*isolation"],
+        "unacceptable": ["no", "no.*isolation"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-7.5",
+      "category": "Infrastructure & Virtualization",
+      "subcategory": "System Hardening",
+      "question_text": "Do you follow industry-standard hardening guidelines (e.g., CIS Benchmarks, DISA STIGs) for servers and workstations?",
+      "description": "Systems should be configured according to hardening standards to reduce attack surface and vulnerabilities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.9", "NIST 800-53 - CM-6"],
+      "scf_control_mappings": ["CFG-01", "CFG-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "cis benchmarks", "hardening.*guidelines"],
+        "partially_acceptable": ["custom.*hardening"],
+        "unacceptable": ["no", "default.*configuration"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-8.1",
+      "category": "Network Security",
+      "subcategory": "Network Segmentation",
+      "question_text": "Is your network segmented into distinct zones (e.g., DMZ, internal, management) with controlled access between zones?",
+      "description": "Network segmentation limits lateral movement and contains security breaches.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["PCI DSS 4.0 - 1.2.1", "NIST 800-53 - SC-7"],
+      "scf_control_mappings": ["NET-01", "NET-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "segmented.*zones"],
+        "partially_acceptable": ["partial.*segmentation"],
+        "unacceptable": ["no", "flat.*network"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-8.2",
+      "category": "Network Security",
+      "subcategory": "DDoS Protection",
+      "question_text": "Do you have DDoS (Distributed Denial of Service) protection mechanisms in place?",
+      "description": "DDoS protection should include rate limiting, traffic filtering, and cloud-based DDoS mitigation services.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["DORA - ICT Services", "ISO 27001:2022 - 8.16"],
+      "scf_control_mappings": ["NET-04", "BCD-06"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "ddos.*protection", "cloudflare", "akamai"],
+        "partially_acceptable": ["rate.*limiting"],
+        "unacceptable": ["no", "not.*protected"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-8.3",
+      "category": "Network Security",
+      "subcategory": "Network Monitoring",
+      "question_text": "Do you continuously monitor network traffic for anomalous or malicious activity?",
+      "description": "Network monitoring should detect unauthorized access, data exfiltration, and malware communications.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.16", "NIST CSF - DE.CM"],
+      "scf_control_mappings": ["MON-08", "NET-06"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "continuously.*monitor", "siem"],
+        "partially_acceptable": ["periodic.*monitoring"],
+        "unacceptable": ["no", "not.*monitored"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-8.4",
+      "category": "Network Security",
+      "subcategory": "DNS Security",
+      "question_text": "Do you implement DNS security measures (e.g., DNSSEC, DNS filtering)?",
+      "description": "DNS security prevents DNS spoofing, cache poisoning, and blocks access to known malicious domains.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 6,
+      "regulatory_mappings": ["NIST 800-53 - SC-20", "NIST 800-53 - SC-21"],
+      "scf_control_mappings": ["NET-04", "APP-08"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "dnssec", "dns.*filtering"],
+        "partially_acceptable": ["dns.*filtering.*only"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-8.5",
+      "category": "Network Security",
+      "subcategory": "Web Application Firewall",
+      "question_text": "Do you use a web application firewall (WAF) to protect internet-facing applications?",
+      "description": "WAF should protect against common web attacks including SQL injection, XSS, and OWASP Top 10 vulnerabilities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["PCI DSS 4.0 - 6.4.1", "OWASP ASVS"],
+      "scf_control_mappings": ["APP-04", "APP-05"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "waf", "web application firewall"],
+        "partially_acceptable": ["partial.*waf.*coverage"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-9.1",
+      "category": "Physical & Environmental Security",
+      "subcategory": "Physical Access Control",
+      "question_text": "Are physical access controls (e.g., badge readers, biometrics) in place for data centers and secure areas?",
+      "description": "Physical access should be restricted to authorized personnel only, with logging of entry/exit.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 7.2", "SOC 2 - CC6.4"],
+      "scf_control_mappings": ["PES-01", "PES-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "badge.*readers", "biometric", "access.*control"],
+        "partially_acceptable": ["badge.*only"],
+        "unacceptable": ["no", "unrestricted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-9.2",
+      "category": "Physical & Environmental Security",
+      "subcategory": "Visitor Management",
+      "question_text": "Do you have visitor management procedures including sign-in/sign-out and escort requirements?",
+      "description": "Visitors to secure areas should be logged, badged, and escorted by authorized personnel.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 6,
+      "regulatory_mappings": ["ISO 27001:2022 - 7.2", "SOC 2 - CC6.4"],
+      "scf_control_mappings": ["PES-03", "IAC-21"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "visitor.*management", "sign-in.*escort"],
+        "partially_acceptable": ["sign-in.*no.*escort"],
+        "unacceptable": ["no", "no.*procedures"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-9.3",
+      "category": "Physical & Environmental Security",
+      "subcategory": "Environmental Controls",
+      "question_text": "Are environmental controls (temperature, humidity, fire suppression) in place for data centers?",
+      "description": "Data centers require HVAC systems, fire detection/suppression, and environmental monitoring.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 7.4", "SOC 2 - A1.2"],
+      "scf_control_mappings": ["PES-04", "PES-05"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "hvac", "fire suppression", "environmental"],
+        "partially_acceptable": ["partial.*controls"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-9.4",
+      "category": "Physical & Environmental Security",
+      "subcategory": "Video Surveillance",
+      "question_text": "Is video surveillance in place for critical facilities with recorded footage retained for a defined period?",
+      "description": "CCTV should cover entry/exit points and sensitive areas with recordings retained per policy (typically 90 days).",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 6,
+      "regulatory_mappings": ["ISO 27001:2022 - 7.2", "PCI DSS 4.0 - 9.4"],
+      "scf_control_mappings": ["PES-02", "MON-01"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "cctv", "video surveillance.*retained"],
+        "partially_acceptable": ["surveillance.*short.*retention"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-9.5",
+      "category": "Physical & Environmental Security",
+      "subcategory": "Equipment Security",
+      "question_text": "Are servers, network equipment, and critical systems secured in locked racks or cages?",
+      "description": "Critical equipment should be physically secured to prevent tampering, theft, or unauthorized access.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 7.7", "PCI DSS 4.0 - 9.1"],
+      "scf_control_mappings": ["PES-06", "AST-02"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "locked.*racks", "cages", "secured"],
+        "partially_acceptable": ["some.*secured"],
+        "unacceptable": ["no", "unsecured"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-10.1",
+      "category": "Privacy",
+      "subcategory": "Privacy Policy",
+      "question_text": "Do you maintain a publicly available privacy policy that complies with applicable regulations (GDPR, CCPA, etc.)?",
+      "description": "Privacy policy should describe data collection, use, sharing, retention, and individual rights.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["GDPR - Article 13", "CCPA - Section 1798.100"],
+      "scf_control_mappings": ["PRI-01", "PRI-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "privacy policy.*compliant"],
+        "partially_acceptable": ["policy.*incomplete"],
+        "unacceptable": ["no", "no.*policy"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-10.2",
+      "category": "Privacy",
+      "subcategory": "Consent Management",
+      "question_text": "Do you obtain and document consent for processing personal data when required by law?",
+      "description": "Consent should be freely given, specific, informed, and unambiguous, with records maintained.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["GDPR - Article 7", "CCPA - Section 1798.120"],
+      "scf_control_mappings": ["PRI-03", "PRI-07"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "consent.*documented"],
+        "partially_acceptable": ["consent.*not.*documented"],
+        "unacceptable": ["no", "not.*obtained"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-10.3",
+      "category": "Privacy",
+      "subcategory": "Data Subject Rights",
+      "question_text": "Do you have processes to respond to data subject access requests (DSARs) within required timeframes?",
+      "description": "Processes should enable individuals to access, correct, delete, or port their personal data per GDPR/CCPA requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["GDPR - Articles 15-22", "CCPA - Section 1798.105"],
+      "scf_control_mappings": ["PRI-06", "DCH-11"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "process.*dsar", "respond.*30 days"],
+        "partially_acceptable": ["informal.*process"],
+        "unacceptable": ["no", "no.*process"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-10.4",
+      "category": "Privacy",
+      "subcategory": "Privacy Impact Assessment",
+      "question_text": "Do you conduct privacy impact assessments (PIAs) or data protection impact assessments (DPIAs) for high-risk processing?",
+      "description": "PIAs/DPIAs should assess privacy risks before implementing new systems or processes involving personal data.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["GDPR - Article 35", "NIST Privacy Framework"],
+      "scf_control_mappings": ["PRI-09", "RSK-02"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "pia", "dpia", "privacy impact"],
+        "partially_acceptable": ["informal.*assessment"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-10.5",
+      "category": "Privacy",
+      "subcategory": "Cross-Border Transfers",
+      "question_text": "If you transfer personal data internationally, do you have appropriate safeguards in place (e.g., SCCs, BCRs)?",
+      "description": "International data transfers must comply with GDPR requirements using standard contractual clauses or other approved mechanisms.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 8,
+      "regulatory_mappings": ["GDPR - Chapter V", "CCPA - Section 1798.110"],
+      "scf_control_mappings": ["PRI-10", "TPM-04"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "sccs", "standard contractual clauses", "bcr"],
+        "partially_acceptable": ["some.*safeguards"],
+        "unacceptable": ["no", "not.*applicable", "no.*safeguards"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-11.1",
+      "category": "Risk Management",
+      "subcategory": "Risk Assessment Program",
+      "question_text": "Do you conduct formal risk assessments at least annually to identify information security and operational risks?",
+      "description": "Risk assessments should identify threats, vulnerabilities, likelihood, and impact using a documented methodology.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.1.2", "NIST CSF - ID.RA", "DORA - ICT Risk Management"],
+      "scf_control_mappings": ["RSK-01", "RSK-02", "RSK-04"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "annually", "formal.*risk.*assessment"],
+        "partially_acceptable": ["risk assessment.*informal"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-11.2",
+      "category": "Risk Management",
+      "subcategory": "Risk Treatment",
+      "question_text": "Do you have a documented risk treatment plan that addresses identified risks through mitigation, transfer, acceptance, or avoidance?",
+      "description": "Risk treatment plans should specify actions, owners, timelines, and resources for addressing risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.1.3", "NIST CSF - RS.MA"],
+      "scf_control_mappings": ["RSK-04", "RSK-05"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*risk.*treatment"],
+        "partially_acceptable": ["informal.*plans"],
+        "unacceptable": ["no", "no.*plan"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-11.3",
+      "category": "Risk Management",
+      "subcategory": "Risk Monitoring",
+      "question_text": "Do you continuously monitor risk indicators and review the risk register regularly?",
+      "description": "Risk registers should be reviewed and updated as threats, vulnerabilities, and business context change.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.1.2", "NIST CSF - ID.RM"],
+      "scf_control_mappings": ["RSK-04", "MON-01"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "continuously.*monitor", "regularly.*review"],
+        "partially_acceptable": ["periodic.*review"],
+        "unacceptable": ["no", "not.*monitored"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-11.4",
+      "category": "Risk Management",
+      "subcategory": "Cyber Insurance",
+      "question_text": "Do you maintain cyber insurance or other risk transfer mechanisms?",
+      "description": "Cyber insurance can help transfer financial risks associated with data breaches, ransomware, and business interruption.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 5,
+      "regulatory_mappings": ["NIST CSF - ID.RM"],
+      "scf_control_mappings": ["RSK-06", "BCD-01"],
+      "risk_if_inadequate": "low",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "cyber insurance"],
+        "partially_acceptable": ["considering"],
+        "unacceptable": ["no", "not.*applicable"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-11.5",
+      "category": "Risk Management",
+      "subcategory": "Threat Intelligence",
+      "question_text": "Do you consume threat intelligence feeds to inform risk assessments and security monitoring?",
+      "description": "Threat intelligence provides information about emerging threats, vulnerabilities, and attack techniques.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["NIST CSF - ID.RA", "ISO 27001:2022 - 6.1.2"],
+      "scf_control_mappings": ["THR-01", "RSK-02"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "threat intelligence", "intel feeds"],
+        "partially_acceptable": ["some.*feeds"],
+        "unacceptable": ["no", "not.*used"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-12.1",
+      "category": "Security Incident Management",
+      "subcategory": "Incident Response Plan",
+      "question_text": "Do you have a documented incident response plan that is tested at least annually?",
+      "description": "IR plan should cover detection, containment, eradication, recovery, and post-incident review.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.24", "DORA - Incident Management", "NIS2 - Incident Handling"],
+      "scf_control_mappings": ["IRO-01", "IRO-02", "IRO-07"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*plan.*tested"],
+        "partially_acceptable": ["plan exists.*not.*tested"],
+        "unacceptable": ["no", "no.*plan"],
+        "required_keywords": ["documented", "tested"]
+      }
+    },
+    {
+      "id": "SIG-12.2",
+      "category": "Security Incident Management",
+      "subcategory": "Incident Response Team",
+      "question_text": "Do you have a designated incident response team with defined roles and responsibilities?",
+      "description": "IR team should include technical, legal, communications, and management representatives with clear responsibilities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.24", "NIST 800-61"],
+      "scf_control_mappings": ["IRO-01", "IRO-05"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "designated.*team.*roles"],
+        "partially_acceptable": ["team.*unclear.*roles"],
+        "unacceptable": ["no", "no.*team"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-12.3",
+      "category": "Security Incident Management",
+      "subcategory": "Incident Notification",
+      "question_text": "Do you have procedures to notify relevant stakeholders (customers, regulators) of security incidents within required timeframes?",
+      "description": "Notification procedures should comply with GDPR (72 hours), NIS2, DORA, and contractual requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["GDPR - Article 33", "NIS2 - Article 23", "DORA - Article 19"],
+      "scf_control_mappings": ["IRO-08", "IRO-09"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "procedures.*notify.*72 hours"],
+        "partially_acceptable": ["procedures.*unclear.*timeframe"],
+        "unacceptable": ["no", "no.*procedures"],
+        "required_keywords": ["notify"]
+      }
+    },
+    {
+      "id": "SIG-12.4",
+      "category": "Security Incident Management",
+      "subcategory": "Forensics Capability",
+      "question_text": "Do you have digital forensics capabilities or access to forensics services for incident investigation?",
+      "description": "Forensics capabilities enable evidence collection, root cause analysis, and support legal proceedings.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.25", "NIST 800-61"],
+      "scf_control_mappings": ["IRO-06", "IRO-10"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "forensics.*capability", "forensics.*service"],
+        "partially_acceptable": ["limited.*forensics"],
+        "unacceptable": ["no", "no.*capability"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-12.5",
+      "category": "Security Incident Management",
+      "subcategory": "Post-Incident Review",
+      "question_text": "Do you conduct post-incident reviews to identify lessons learned and improve security controls?",
+      "description": "Post-incident reviews should analyze incident response effectiveness and implement improvements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.24", "NIST 800-61"],
+      "scf_control_mappings": ["IRO-02", "RSK-05"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "post-incident.*review", "lessons learned"],
+        "partially_acceptable": ["informal.*review"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-13.1",
+      "category": "Third-Party Management",
+      "subcategory": "Vendor Risk Assessment",
+      "question_text": "Do you conduct due diligence and risk assessments before engaging third-party vendors?",
+      "description": "Vendor assessments should evaluate security controls, compliance, financial stability, and business continuity.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["DORA - Article 28", "NIS2 - Article 22", "ISO 27001:2022 - 5.19"],
+      "scf_control_mappings": ["TPM-01", "TPM-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "due diligence.*risk.*assessment"],
+        "partially_acceptable": ["informal.*assessment"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-13.2",
+      "category": "Third-Party Management",
+      "subcategory": "Vendor Contracts",
+      "question_text": "Do vendor contracts include security requirements, SLAs, audit rights, and incident notification obligations?",
+      "description": "Contracts should define security expectations, right to audit, incident notification, data handling, and termination procedures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["DORA - Article 30", "GDPR - Article 28", "ISO 27001:2022 - 5.19"],
+      "scf_control_mappings": ["TPM-03", "RSK-07"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "contracts.*security.*requirements"],
+        "partially_acceptable": ["some.*requirements"],
+        "unacceptable": ["no", "no.*security.*terms"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-13.3",
+      "category": "Third-Party Management",
+      "subcategory": "Vendor Monitoring",
+      "question_text": "Do you continuously monitor third-party vendors through periodic reassessments and performance reviews?",
+      "description": "Vendor monitoring should include annual reassessments, security questionnaires, and performance metrics review.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["DORA - Article 28.2", "ISO 27001:2022 - 5.19"],
+      "scf_control_mappings": ["TPM-02", "MON-01"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "continuously.*monitor", "periodic.*reassessment"],
+        "partially_acceptable": ["annual.*review"],
+        "unacceptable": ["no", "not.*monitored"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-13.4",
+      "category": "Third-Party Management",
+      "subcategory": "Fourth-Party Risk",
+      "question_text": "Do you assess and monitor the security risks of your vendors' subcontractors (fourth parties)?",
+      "description": "Fourth-party risk management ensures vendors' suppliers also maintain adequate security controls.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["DORA - Article 28.1", "ISO 27001:2022 - 5.19"],
+      "scf_control_mappings": ["TPM-04", "RSK-03"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "fourth.*party", "subcontractor.*risk"],
+        "partially_acceptable": ["vendor.*discloses"],
+        "unacceptable": ["no", "not.*assessed"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-13.5",
+      "category": "Third-Party Management",
+      "subcategory": "Vendor Exit Strategy",
+      "question_text": "Do you have documented procedures for vendor termination including data return or destruction?",
+      "description": "Exit procedures should ensure secure data return/destruction, access revocation, and transition to alternative providers.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["DORA - Article 28.4", "GDPR - Article 28(3)"],
+      "scf_control_mappings": ["TPM-05", "DCH-10"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*exit.*procedures"],
+        "partially_acceptable": ["informal.*procedures"],
+        "unacceptable": ["no", "no.*procedures"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-14.1",
+      "category": "Threat Detection & Response",
+      "subcategory": "Security Monitoring",
+      "question_text": "Do you have a 24/7 security operations center (SOC) or security monitoring capability?",
+      "description": "SOC should monitor security events, analyze threats, and coordinate incident response activities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.16", "NIST CSF - DE.CM"],
+      "scf_control_mappings": ["MON-08", "IRO-01"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "24/7 soc", "security operations center"],
+        "partially_acceptable": ["business hours.*monitoring"],
+        "unacceptable": ["no", "no.*monitoring"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-14.2",
+      "category": "Threat Detection & Response",
+      "subcategory": "SIEM",
+      "question_text": "Do you use a Security Information and Event Management (SIEM) system to aggregate and analyze security logs?",
+      "description": "SIEM should collect logs from all critical systems, correlate events, and generate alerts for security incidents.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.15", "PCI DSS 4.0 - 10.4"],
+      "scf_control_mappings": ["MON-03", "MON-08"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "siem", "splunk", "sentinel", "qradar"],
+        "partially_acceptable": ["log.*aggregation.*no.*correlation"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-14.3",
+      "category": "Threat Detection & Response",
+      "subcategory": "Endpoint Detection",
+      "question_text": "Do you deploy endpoint detection and response (EDR) or extended detection and response (XDR) solutions?",
+      "description": "EDR/XDR provides advanced threat detection, investigation, and response capabilities on endpoints.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["NIST CSF - DE.CM", "ISO 27001:2022 - 8.7"],
+      "scf_control_mappings": ["END-03", "MON-09"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "edr", "xdr", "endpoint detection"],
+        "partially_acceptable": ["antivirus.*only"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-14.4",
+      "category": "Threat Detection & Response",
+      "subcategory": "Threat Hunting",
+      "question_text": "Do you conduct proactive threat hunting activities to identify advanced or persistent threats?",
+      "description": "Threat hunting involves actively searching for indicators of compromise and anomalous behavior.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["NIST CSF - DE.DP", "ISO 27001:2022 - 8.16"],
+      "scf_control_mappings": ["THR-01", "MON-08"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "threat hunting", "proactive.*hunting"],
+        "partially_acceptable": ["occasional.*hunting"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-14.5",
+      "category": "Threat Detection & Response",
+      "subcategory": "Automated Response",
+      "question_text": "Do you have automated security orchestration and response (SOAR) capabilities?",
+      "description": "SOAR enables automated incident triage, enrichment, and response actions to accelerate threat mitigation.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 6,
+      "regulatory_mappings": ["NIST CSF - RS.MI"],
+      "scf_control_mappings": ["IRO-01", "IRO-03"],
+      "risk_if_inadequate": "low",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "soar", "automated.*response"],
+        "partially_acceptable": ["some.*automation"],
+        "unacceptable": ["no", "manual.*only"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-15.1",
+      "category": "Training & Awareness",
+      "subcategory": "Security Awareness Training",
+      "question_text": "Do all employees receive security awareness training at least annually?",
+      "description": "Training should cover phishing, social engineering, password security, data handling, and incident reporting.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.3", "NIST 800-53 - AT-2"],
+      "scf_control_mappings": ["HRS-07", "HRS-08"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "annually", "all.*employees.*training"],
+        "partially_acceptable": ["some.*employees"],
+        "unacceptable": ["no", "not.*provided"],
+        "required_keywords": ["training"]
+      }
+    },
+    {
+      "id": "SIG-15.2",
+      "category": "Training & Awareness",
+      "subcategory": "Phishing Simulations",
+      "question_text": "Do you conduct regular phishing simulation exercises to test employee awareness?",
+      "description": "Phishing simulations help identify users requiring additional training and measure program effectiveness.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["NIST CSF - PR.AT", "ISO 27001:2022 - 6.3"],
+      "scf_control_mappings": ["HRS-08", "MON-01"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "quarterly", "regular.*phishing.*simulation"],
+        "partially_acceptable": ["annually"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-15.3",
+      "category": "Training & Awareness",
+      "subcategory": "Role-Specific Training",
+      "question_text": "Do users with elevated privileges (administrators, developers) receive role-specific security training?",
+      "description": "Role-specific training should cover secure coding, privileged access management, and advanced threats.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.3", "NIST 800-53 - AT-3"],
+      "scf_control_mappings": ["HRS-07", "IAC-20"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "role-specific.*training"],
+        "partially_acceptable": ["some.*roles"],
+        "unacceptable": ["no", "not.*provided"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-15.4",
+      "category": "Training & Awareness",
+      "subcategory": "New Hire Training",
+      "question_text": "Do new employees receive security training during onboarding before accessing systems?",
+      "description": "Security training should be mandatory during onboarding and completed before system access is granted.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.3", "SOC 2 - CC1.4"],
+      "scf_control_mappings": ["HRS-06", "HRS-07"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "onboarding.*training", "before.*access"],
+        "partially_acceptable": ["training.*after.*access"],
+        "unacceptable": ["no", "not.*provided"],
+        "required_keywords": ["onboarding"]
+      }
+    },
+    {
+      "id": "SIG-15.5",
+      "category": "Training & Awareness",
+      "subcategory": "Training Effectiveness",
+      "question_text": "Do you measure the effectiveness of security awareness training through testing or metrics?",
+      "description": "Training effectiveness can be measured through quizzes, phishing click rates, incident reports, and surveys.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 6,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.3", "NIST 800-53 - AT-2"],
+      "scf_control_mappings": ["HRS-08", "MON-01"],
+      "risk_if_inadequate": "low",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "measure.*effectiveness", "metrics", "testing"],
+        "partially_acceptable": ["informal.*measurement"],
+        "unacceptable": ["no", "not.*measured"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-16.1",
+      "category": "Vulnerability Management",
+      "subcategory": "Vulnerability Scanning",
+      "question_text": "Do you conduct vulnerability scans of all systems at least quarterly?",
+      "description": "Vulnerability scanning should identify security weaknesses in operating systems, applications, and network devices.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["PCI DSS 4.0 - 11.3.1", "ISO 27001:2022 - 8.8"],
+      "scf_control_mappings": ["TVM-01", "TVM-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "quarterly", "monthly", "continuous"],
+        "partially_acceptable": ["annually"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-16.2",
+      "category": "Vulnerability Management",
+      "subcategory": "Patch Management",
+      "question_text": "Do you have a documented patch management process with defined timeframes based on vulnerability severity?",
+      "description": "Critical patches should be applied within days, high within weeks, following testing in non-production environments.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.8", "PCI DSS 4.0 - 6.3.3", "NIS2 - Patch Management"],
+      "scf_control_mappings": ["TVM-03", "CHG-01"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*patch.*process", "sla.*severity"],
+        "partially_acceptable": ["process.*no.*timeframes"],
+        "unacceptable": ["no", "ad hoc"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-16.3",
+      "category": "Vulnerability Management",
+      "subcategory": "Penetration Testing",
+      "question_text": "Do you conduct penetration testing by qualified professionals at least annually?",
+      "description": "Penetration testing simulates real-world attacks to identify exploitable vulnerabilities and security gaps.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["PCI DSS 4.0 - 11.4.1", "ISO 27001:2022 - 8.8"],
+      "scf_control_mappings": ["TVM-05", "TVM-06"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "annually", "penetration.*testing"],
+        "partially_acceptable": ["planning.*pentest"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-16.4",
+      "category": "Vulnerability Management",
+      "subcategory": "Remediation Tracking",
+      "question_text": "Do you track vulnerabilities through remediation with assigned owners and due dates?",
+      "description": "Vulnerability tracking ensures identified issues are prioritized, assigned, and resolved within defined timeframes.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.8", "NIST CSF - RS.MA"],
+      "scf_control_mappings": ["TVM-04", "RSK-04"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "track.*remediation", "assigned.*due dates"],
+        "partially_acceptable": ["tracked.*no.*owners"],
+        "unacceptable": ["no", "not.*tracked"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-16.5",
+      "category": "Vulnerability Management",
+      "subcategory": "Vulnerability Disclosure",
+      "question_text": "Do you have a vulnerability disclosure or bug bounty program for external security researchers?",
+      "description": "Vulnerability disclosure programs enable responsible reporting of security issues by external researchers.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 6,
+      "regulatory_mappings": ["ISO 29147", "NIST CSF - RS.CO"],
+      "scf_control_mappings": ["TVM-08", "IRO-09"],
+      "risk_if_inadequate": "low",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "bug bounty", "vulnerability.*disclosure"],
+        "partially_acceptable": ["security.*contact"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-17.1",
+      "category": "Endpoint Security",
+      "subcategory": "Endpoint Protection",
+      "question_text": "Do you deploy anti-malware/anti-virus software on all endpoints with real-time scanning and automatic updates?",
+      "description": "Endpoint protection should detect and block malware, viruses, ransomware, and other malicious software.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.7", "PCI DSS 4.0 - 5.2"],
+      "scf_control_mappings": ["END-01", "END-02"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "anti-malware.*all.*endpoints", "real-time"],
+        "partially_acceptable": ["most.*endpoints"],
+        "unacceptable": ["no", "not.*deployed"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-17.2",
+      "category": "Endpoint Security",
+      "subcategory": "Device Encryption",
+      "question_text": "Are all laptops, mobile devices, and removable media encrypted with full-disk or file-level encryption?",
+      "description": "Device encryption protects data if devices are lost, stolen, or improperly disposed of.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.24", "GDPR - Article 32", "PCI DSS 4.0 - 3.5.1"],
+      "scf_control_mappings": ["CRY-07", "END-01"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "full.*disk.*encryption", "all.*devices"],
+        "partially_acceptable": ["some.*devices"],
+        "unacceptable": ["no", "not.*encrypted"],
+        "required_keywords": ["encrypted"]
+      }
+    },
+    {
+      "id": "SIG-17.3",
+      "category": "Endpoint Security",
+      "subcategory": "Mobile Device Management",
+      "question_text": "Do you use mobile device management (MDM) to secure and manage corporate mobile devices?",
+      "description": "MDM enables remote configuration, policy enforcement, application management, and device wiping.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.7", "NIST 800-53 - AC-19"],
+      "scf_control_mappings": ["MOS-01", "MOS-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "mdm", "mobile device management"],
+        "partially_acceptable": ["partial.*mdm"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-17.4",
+      "category": "Endpoint Security",
+      "subcategory": "BYOD Policy",
+      "question_text": "If you allow bring-your-own-device (BYOD), do you have security requirements and controls for personal devices?",
+      "description": "BYOD policies should require encryption, MDM enrollment, passcodes, and data separation (containerization).",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.7", "NIST 800-53 - AC-20"],
+      "scf_control_mappings": ["MOS-03", "IAC-23"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "byod.*policy", "security.*requirements"],
+        "partially_acceptable": ["informal.*requirements"],
+        "unacceptable": ["no", "no.*requirements", "not.*applicable"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-17.5",
+      "category": "Endpoint Security",
+      "subcategory": "Endpoint Hardening",
+      "question_text": "Are endpoints hardened according to security baselines (e.g., disabling unnecessary services, restricting admin rights)?",
+      "description": "Endpoint hardening reduces attack surface through configuration management and least privilege enforcement.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.9", "CIS Controls - 4"],
+      "scf_control_mappings": ["CFG-03", "END-01"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "hardened.*baselines"],
+        "partially_acceptable": ["partial.*hardening"],
+        "unacceptable": ["no", "default.*configuration"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-18.1",
+      "category": "Cloud Security",
+      "subcategory": "Cloud Security Posture",
+      "question_text": "Do you use cloud security posture management (CSPM) tools to detect misconfigurations?",
+      "description": "CSPM tools continuously monitor cloud infrastructure for security misconfigurations and compliance violations.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 7,
+      "regulatory_mappings": ["NIST 800-53 - CM-2", "CIS Controls - 4"],
+      "scf_control_mappings": ["CFG-01", "MON-01"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "cspm", "cloud security posture"],
+        "partially_acceptable": ["manual.*reviews"],
+        "unacceptable": ["no", "not.*applicable"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-18.2",
+      "category": "Cloud Security",
+      "subcategory": "Cloud Identity Management",
+      "question_text": "Do you implement identity federation and single sign-on (SSO) for cloud applications?",
+      "description": "Identity federation centralizes authentication and enables MFA across cloud services.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.17", "NIST 800-63"],
+      "scf_control_mappings": ["IAC-13", "IAC-14"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "sso", "saml", "federation"],
+        "partially_acceptable": ["some.*applications"],
+        "unacceptable": ["no", "not.*applicable"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-18.3",
+      "category": "Cloud Security",
+      "subcategory": "Data Residency",
+      "question_text": "If you use cloud services, do you control data residency and ensure data is stored in approved regions?",
+      "description": "Data residency controls ensure compliance with regulations requiring data to remain in specific jurisdictions.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 7,
+      "regulatory_mappings": ["GDPR - Chapter V", "DORA - ICT Services"],
+      "scf_control_mappings": ["DCH-01", "PRI-10"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "data residency.*controlled"],
+        "partially_acceptable": ["aware.*not.*enforced"],
+        "unacceptable": ["no", "not.*applicable"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-18.4",
+      "category": "Cloud Security",
+      "subcategory": "Cloud Workload Protection",
+      "question_text": "Do you implement cloud workload protection platform (CWPP) for runtime security of cloud workloads?",
+      "description": "CWPP provides vulnerability management, runtime protection, and compliance monitoring for cloud workloads.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 7,
+      "regulatory_mappings": ["NIST CSF - PR.DS", "ISO 27001:2022 - 8.32"],
+      "scf_control_mappings": ["IVS-05", "APP-08"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "cwpp", "workload.*protection"],
+        "partially_acceptable": ["partial.*protection"],
+        "unacceptable": ["no", "not.*applicable"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-18.5",
+      "category": "Cloud Security",
+      "subcategory": "Shared Responsibility",
+      "question_text": "Do you understand and document the shared responsibility model for your cloud services?",
+      "description": "Shared responsibility model defines which security controls are managed by cloud provider vs. customer.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 6,
+      "regulatory_mappings": ["NIST 800-53 - SA-9", "ISO 27001:2022 - 5.19"],
+      "scf_control_mappings": ["GOV-02", "TPM-01"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*shared.*responsibility"],
+        "partially_acceptable": ["understood.*not.*documented"],
+        "unacceptable": ["no", "not.*applicable"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-19.1",
+      "category": "Identity & Access Management",
+      "subcategory": "Access Provisioning",
+      "question_text": "Do you have a formal user access provisioning process with management approval?",
+      "description": "Access provisioning should require manager approval and follow least privilege principles.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.15", "SOC 2 - CC6.1"],
+      "scf_control_mappings": ["IAC-01", "IAC-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "formal.*process.*approval"],
+        "partially_acceptable": ["informal.*approval"],
+        "unacceptable": ["no", "no.*approval"],
+        "required_keywords": ["approval"]
+      }
+    },
+    {
+      "id": "SIG-19.2",
+      "category": "Identity & Access Management",
+      "subcategory": "Access Reviews",
+      "question_text": "Do you conduct periodic access reviews (at least quarterly) to validate user permissions?",
+      "description": "Access reviews ensure users have appropriate access and identify orphaned or excessive permissions.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.18", "SOC 2 - CC6.2"],
+      "scf_control_mappings": ["IAC-06", "IAC-20"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "quarterly", "periodic.*review"],
+        "partially_acceptable": ["annually"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-19.3",
+      "category": "Identity & Access Management",
+      "subcategory": "Password Policy",
+      "question_text": "Do you enforce strong password requirements (minimum length, complexity, expiration)?",
+      "description": "Password policies should require minimum 12 characters, complexity, and prevent password reuse.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.17", "NIST 800-63B", "PCI DSS 4.0 - 8.3"],
+      "scf_control_mappings": ["IAC-09", "IAC-10"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "12.*characters", "complexity"],
+        "partially_acceptable": ["8.*characters"],
+        "unacceptable": ["no", "no.*requirements"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-19.4",
+      "category": "Identity & Access Management",
+      "subcategory": "Privileged Access",
+      "question_text": "Do you implement privileged access management (PAM) with session recording for administrative accounts?",
+      "description": "PAM controls privileged access through vaulting, session management, and activity monitoring.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.15", "PCI DSS 4.0 - 8.6"],
+      "scf_control_mappings": ["IAC-16", "IAC-17"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "pam", "privileged.*access.*management"],
+        "partially_acceptable": ["limited.*pam"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-19.5",
+      "category": "Identity & Access Management",
+      "subcategory": "Account Lockout",
+      "question_text": "Do you implement account lockout policies after a defined number of failed login attempts?",
+      "description": "Account lockout prevents brute-force attacks by temporarily disabling accounts after failed login attempts.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.17", "PCI DSS 4.0 - 8.3.4"],
+      "scf_control_mappings": ["IAC-10", "IAC-09"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "account lockout", "5.*attempts"],
+        "partially_acceptable": ["10.*attempts"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-20.1",
+      "category": "Logging & Monitoring",
+      "subcategory": "Security Logging",
+      "question_text": "Do you log security-relevant events including authentication, authorization, and administrative actions?",
+      "description": "Security logs should capture who accessed what, when, from where, and what changes were made.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.15", "PCI DSS 4.0 - 10.2", "GDPR - Article 32"],
+      "scf_control_mappings": ["MON-01", "MON-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "log.*security.*events"],
+        "partially_acceptable": ["partial.*logging"],
+        "unacceptable": ["no", "not.*logged"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-20.2",
+      "category": "Logging & Monitoring",
+      "subcategory": "Log Retention",
+      "question_text": "Are security logs retained for at least 90 days (or per regulatory requirements)?",
+      "description": "Log retention enables investigation of security incidents and compliance with regulations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.15", "PCI DSS 4.0 - 10.5.1"],
+      "scf_control_mappings": ["MON-05", "CPL-06"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "90.*days", "one year"],
+        "partially_acceptable": ["30.*days"],
+        "unacceptable": ["no", "less.*30"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-20.3",
+      "category": "Logging & Monitoring",
+      "subcategory": "Log Protection",
+      "question_text": "Are security logs protected from unauthorized access, modification, and deletion?",
+      "description": "Log integrity controls prevent attackers from covering their tracks by modifying or deleting logs.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.15", "PCI DSS 4.0 - 10.5.2"],
+      "scf_control_mappings": ["MON-06", "DCH-14"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "protected.*immutable", "write-once"],
+        "partially_acceptable": ["restricted.*access"],
+        "unacceptable": ["no", "not.*protected"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-20.4",
+      "category": "Logging & Monitoring",
+      "subcategory": "Time Synchronization",
+      "question_text": "Do you use Network Time Protocol (NTP) to synchronize system clocks across your infrastructure?",
+      "description": "Time synchronization ensures accurate timestamps for security events, critical for incident investigation.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.15", "PCI DSS 4.0 - 10.4.3"],
+      "scf_control_mappings": ["MON-07", "CFG-04"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "ntp", "time.*synchronization"],
+        "partially_acceptable": ["partial.*ntp"],
+        "unacceptable": ["no", "not.*implemented"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "SIG-20.5",
+      "category": "Logging & Monitoring",
+      "subcategory": "Alert Response",
+      "question_text": "Do you have documented procedures for investigating and responding to security alerts?",
+      "description": "Alert response procedures ensure security events are triaged, investigated, and escalated appropriately.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.16", "NIST CSF - DE.DP"],
+      "scf_control_mappings": ["MON-08", "IRO-01"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*procedures.*response"],
+        "partially_acceptable": ["informal.*procedures"],
+        "unacceptable": ["no", "no.*procedures"],
+        "required_keywords": []
+      }
+    }
+  ]
+}

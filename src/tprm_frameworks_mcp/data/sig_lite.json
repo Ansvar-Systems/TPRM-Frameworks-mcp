@@ -1,0 +1,214 @@
+{
+  "metadata": {
+    "name": "Shared Assessments SIG Lite",
+    "version": "2025.1",
+    "total_questions": 180,
+    "status": "placeholder",
+    "description": "Streamlined vendor assessment focusing on core security controls",
+    "categories": [
+      "Information Security Policy",
+      "Access Control",
+      "Business Continuity",
+      "Risk Management",
+      "Data Classification",
+      "Encryption",
+      "Incident Response",
+      "Vendor Management",
+      "Physical Security",
+      "Network Security"
+    ],
+    "estimated_completion_time": "4-6 hours"
+  },
+  "questions": [
+    {
+      "id": "sig_lite_1.1",
+      "category": "Information Security Policy",
+      "subcategory": "Governance",
+      "question_text": "Does your organization have a documented and board-approved information security policy?",
+      "description": "Information security policy should be formally documented, approved by senior management or board, and communicated to all relevant personnel.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.2", "SOC 2 - CC1.1", "DORA - ICT Risk Management"],
+      "scf_control_mappings": ["GOV-01", "GOV-03"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "we have.*policy.*approved", "board.*approved.*policy"],
+        "partially_acceptable": ["policy exists.*not.*board", "documented.*awaiting approval"],
+        "unacceptable": ["no", "not.*have.*policy", "informal.*policy"],
+        "required_keywords": ["documented", "approved"]
+      }
+    },
+    {
+      "id": "sig_lite_1.2",
+      "category": "Information Security Policy",
+      "subcategory": "Review",
+      "question_text": "How frequently is your information security policy reviewed and updated?",
+      "description": "Policies should be reviewed at least annually or when significant changes occur.",
+      "expected_answer_type": "text",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.2", "NIST CSF - GV.PO"],
+      "scf_control_mappings": ["GOV-01", "GOV-04"],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": ["annually", "yearly", "at least.*year", "every 12 months"],
+        "partially_acceptable": ["bi-annually", "every.*years", "as needed"],
+        "unacceptable": ["never", "no schedule", "rarely"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "sig_lite_2.1",
+      "category": "Access Control",
+      "subcategory": "User Access Management",
+      "question_text": "Do you have a formal user access management process including provisioning, modification, and de-provisioning?",
+      "description": "Access management should cover the full lifecycle from hire to termination.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.15", "SOC 2 - CC6.1", "DORA - Access Management"],
+      "scf_control_mappings": ["IAC-01", "IAC-02", "IAC-05"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "formal.*process", "documented.*provisioning.*deprovisioning"],
+        "partially_acceptable": ["process exists.*not.*formal", "manual.*process"],
+        "unacceptable": ["no", "ad hoc", "no.*formal.*process"],
+        "required_keywords": ["provisioning", "de-provisioning"]
+      }
+    },
+    {
+      "id": "sig_lite_2.2",
+      "category": "Access Control",
+      "subcategory": "Multi-Factor Authentication",
+      "question_text": "Is multi-factor authentication (MFA) required for all remote access and privileged accounts?",
+      "description": "MFA should be enforced for all remote connections and administrative access.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.17", "NIST 800-53 - IA-2", "PCI DSS 4.0 - 8.4"],
+      "scf_control_mappings": ["IAC-11", "IAC-12"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "mfa.*required", "multi-factor.*all.*accounts"],
+        "partially_acceptable": ["mfa.*most", "mfa.*privileged.*not.*all"],
+        "unacceptable": ["no", "not.*required", "optional"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "sig_lite_3.1",
+      "category": "Business Continuity",
+      "subcategory": "BCP Testing",
+      "question_text": "How often do you test your business continuity and disaster recovery plans?",
+      "description": "BC/DR plans should be tested at least annually with documented results.",
+      "expected_answer_type": "text",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 22301 - 8.5", "DORA - Business Continuity", "SOC 2 - A1.2"],
+      "scf_control_mappings": ["BCD-02", "BCD-05"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["annually", "yearly", "quarterly", "at least.*year"],
+        "partially_acceptable": ["bi-annually", "every.*years"],
+        "unacceptable": ["never", "not tested", "no schedule"],
+        "required_keywords": ["tested"]
+      }
+    },
+    {
+      "id": "sig_lite_4.1",
+      "category": "Risk Management",
+      "subcategory": "Risk Assessment",
+      "question_text": "Do you conduct formal risk assessments at least annually?",
+      "description": "Comprehensive risk assessments should identify, analyze, and prioritize information security risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.1.2", "NIST CSF - ID.RA", "DORA - ICT Risk Management"],
+      "scf_control_mappings": ["RSK-01", "RSK-02", "RSK-04"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "annually", "formal.*risk.*assessment"],
+        "partially_acceptable": ["risk assessment.*informal", "ad hoc.*assessments"],
+        "unacceptable": ["no", "not.*conducted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "sig_lite_5.1",
+      "category": "Data Classification",
+      "subcategory": "Classification Scheme",
+      "question_text": "Do you have a data classification policy that categorizes data based on sensitivity?",
+      "description": "Data should be classified (e.g., public, internal, confidential, restricted) with appropriate handling requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.12", "GDPR - Article 32", "NIST 800-53 - MP-4"],
+      "scf_control_mappings": ["DCH-01", "DCH-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "classification.*policy", "categorize.*based.*sensitivity"],
+        "partially_acceptable": ["informal.*classification", "partial.*classification"],
+        "unacceptable": ["no", "no.*classification"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "sig_lite_6.1",
+      "category": "Encryption",
+      "subcategory": "Data at Rest",
+      "question_text": "Is sensitive data encrypted at rest using industry-standard encryption algorithms?",
+      "description": "Encryption should use algorithms like AES-256 for data stored on disk, databases, and backups.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.24", "PCI DSS 4.0 - 3.5", "GDPR - Article 32"],
+      "scf_control_mappings": ["CRY-01", "CRY-02"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "aes.*256", "encrypted.*rest"],
+        "partially_acceptable": ["encrypted.*some", "older.*algorithms"],
+        "unacceptable": ["no", "not.*encrypted"],
+        "required_keywords": ["encrypted"]
+      }
+    },
+    {
+      "id": "sig_lite_6.2",
+      "category": "Encryption",
+      "subcategory": "Data in Transit",
+      "question_text": "Is data encrypted in transit using TLS 1.2 or higher?",
+      "description": "All sensitive data transmission should use TLS 1.2 or 1.3 with strong cipher suites.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.24", "PCI DSS 4.0 - 4.2", "NIST 800-52"],
+      "scf_control_mappings": ["CRY-03", "CRY-04"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "tls 1.2", "tls 1.3", "encrypted.*transit"],
+        "partially_acceptable": ["tls.*some"],
+        "unacceptable": ["no", "tls 1.0", "tls 1.1", "not.*encrypted"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "sig_lite_7.1",
+      "category": "Incident Response",
+      "subcategory": "IR Plan",
+      "question_text": "Do you have a documented incident response plan that is tested at least annually?",
+      "description": "IR plan should cover detection, containment, eradication, recovery, and post-incident review.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.24", "DORA - Incident Management", "NIS2 - Incident Handling"],
+      "scf_control_mappings": ["IRO-01", "IRO-02", "IRO-07"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*plan.*tested"],
+        "partially_acceptable": ["plan exists.*not.*tested", "tested.*irregularly"],
+        "unacceptable": ["no", "no.*plan"],
+        "required_keywords": ["documented", "tested"]
+      }
+    }
+  ]
+}

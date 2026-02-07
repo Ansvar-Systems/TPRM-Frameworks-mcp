@@ -1,0 +1,3294 @@
+{
+  "metadata": {
+    "name": "NIS2 Supply Chain Security Assessment",
+    "version": "1.0",
+    "regulation": "EU Directive 2022/2555",
+    "total_questions": 70,
+    "status": "production",
+    "description": "Comprehensive cybersecurity risk management and supply chain security assessment for NIS2 compliance (Articles 20-23)",
+    "categories": [
+      "Governance (Article 20)",
+      "Cybersecurity Risk Management (Article 21)",
+      "Supply Chain Security (Article 21.2 & 22)",
+      "Incident Handling (Article 21 & 23)",
+      "Business Continuity (Article 21)",
+      "Network Security (Article 21)",
+      "Access Control & Authentication (Article 21)",
+      "Cryptography (Article 21)",
+      "Vulnerability Management (Article 21)",
+      "Reporting Obligations (Article 23)"
+    ],
+    "compliance_deadline": "2024-10-17",
+    "scope": "Essential and important entities across 18 sectors",
+    "estimated_completion_time": "6-8 hours"
+  },
+  "questions": [
+    {
+      "id": "NIS2-20.1",
+      "category": "Governance (Article 20)",
+      "subcategory": "Management Oversight",
+      "question_text": "Does your management body approve and oversee the implementation of cybersecurity risk management measures in accordance with NIS2 Article 20?",
+      "description": "Management body must be responsible for oversight of cybersecurity risk management, including monitoring implementation and approving policies.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 20",
+        "ISO 27001:2022 - 5.1"
+      ],
+      "scf_control_mappings": [
+        "GOV-01",
+        "GOV-02",
+        "GOV-03"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*management.*approves.*oversees",
+          "board.*oversight.*cybersecurity",
+          "management.*responsible.*nis2"
+        ],
+        "partially_acceptable": [
+          "management.*aware.*not.*formal.*oversight",
+          "cybersecurity.*delegated.*no.*board.*review"
+        ],
+        "unacceptable": [
+          "no.*management.*involvement",
+          "no.*oversight",
+          "not.*applicable"
+        ],
+        "required_keywords": [
+          "management",
+          "oversight"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "20",
+        "requirement": "Governance framework"
+      }
+    },
+    {
+      "id": "NIS2-20.2",
+      "category": "Governance (Article 20)",
+      "subcategory": "Cybersecurity Training",
+      "question_text": "Do members of your management body participate in regular cybersecurity training to acquire sufficient knowledge and skills per NIS2 Article 20(2)?",
+      "description": "Management must undergo training to gain the knowledge and skills necessary to understand and assess cybersecurity risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 20",
+        "ISO 27001:2022 - 5.1"
+      ],
+      "scf_control_mappings": [
+        "GOV-06",
+        "HRS-07"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*management.*training.*cybersecurity",
+          "regular.*training.*board.*members",
+          "annual.*cybersecurity.*awareness.*executives"
+        ],
+        "partially_acceptable": [
+          "some.*training.*not.*regular",
+          "cybersecurity.*briefings.*not.*formal.*training"
+        ],
+        "unacceptable": [
+          "no.*training",
+          "management.*not.*trained"
+        ],
+        "required_keywords": [
+          "training",
+          "management"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "20",
+        "requirement": "Governance framework"
+      }
+    },
+    {
+      "id": "NIS2-21.1",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Risk Assessment",
+      "question_text": "Have you implemented policies on risk analysis and information system security in accordance with NIS2 Article 21(1)?",
+      "description": "Technical, operational, and organizational measures must be appropriate and proportionate to manage cybersecurity risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "RSK-01",
+        "RSK-02",
+        "GOV-04"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*risk.*analysis.*policy.*implemented",
+          "information.*security.*policies.*documented",
+          "nis2.*compliant.*risk.*framework"
+        ],
+        "partially_acceptable": [
+          "policies.*exist.*not.*nis2.*specific",
+          "risk.*assessment.*informal"
+        ],
+        "unacceptable": [
+          "no.*policies",
+          "no.*risk.*assessment"
+        ],
+        "required_keywords": [
+          "risk",
+          "policy"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.a",
+      "category": "Incident Handling (Article 21)",
+      "subcategory": "Incident Response",
+      "question_text": "Do you have policies and procedures for incident handling in accordance with NIS2 Article 21(2)(a)?",
+      "description": "Incident handling must include detection, classification, containment, response, and recovery procedures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "IRO-01",
+        "IRO-02",
+        "IRO-07"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*incident.*handling.*procedures",
+          "incident.*response.*plan.*documented",
+          "detection.*containment.*recovery.*processes"
+        ],
+        "partially_acceptable": [
+          "basic.*incident.*procedures.*not.*comprehensive",
+          "incident.*process.*exists.*not.*tested"
+        ],
+        "unacceptable": [
+          "no.*incident.*procedures",
+          "no.*plan"
+        ],
+        "required_keywords": [
+          "incident",
+          "handling"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.b",
+      "category": "Business Continuity (Article 21)",
+      "subcategory": "BCM & Recovery",
+      "question_text": "Have you established business continuity, backup management, and disaster recovery policies including crisis management per NIS2 Article 21(2)(b)?",
+      "description": "Business continuity must address crisis management and include backup and disaster recovery capabilities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "BCD-01",
+        "BCD-02",
+        "BCD-06",
+        "BCD-08"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*business.*continuity.*backup.*disaster.*recovery",
+          "bcp.*drp.*backup.*crisis.*management",
+          "rto.*rpo.*defined.*tested"
+        ],
+        "partially_acceptable": [
+          "some.*continuity.*measures.*not.*comprehensive",
+          "backup.*exists.*no.*formal.*drp"
+        ],
+        "unacceptable": [
+          "no.*continuity.*plan",
+          "no.*backup.*disaster.*recovery"
+        ],
+        "required_keywords": [
+          "continuity",
+          "backup",
+          "recovery"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.c",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Supply Chain Security",
+      "question_text": "Are security requirements for the acquisition, development, and maintenance of network and information systems implemented per NIS2 Article 21(2)(c)?",
+      "description": "Security must be integrated into the full lifecycle of systems including supply chain considerations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "TPM-06",
+        "APP-01",
+        "APP-02"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*security.*acquisition.*development.*maintenance",
+          "sdlc.*security.*requirements.*procurement",
+          "supply.*chain.*security.*integrated"
+        ],
+        "partially_acceptable": [
+          "some.*security.*requirements.*not.*comprehensive",
+          "development.*security.*no.*procurement.*requirements"
+        ],
+        "unacceptable": [
+          "no.*security.*requirements",
+          "no.*supply.*chain.*security"
+        ],
+        "required_keywords": [
+          "security",
+          "acquisition",
+          "development"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.d",
+      "category": "Network Security (Article 21)",
+      "subcategory": "Network Segmentation",
+      "question_text": "Are network security measures including network segmentation and monitoring implemented per NIS2 Article 21(2)(d)?",
+      "description": "Network security must include appropriate segmentation to limit the impact of security incidents.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "NET-01",
+        "NET-04",
+        "MON-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*network.*segmentation.*monitoring",
+          "vlans.*firewalls.*network.*segregation",
+          "segmented.*networks.*monitored"
+        ],
+        "partially_acceptable": [
+          "basic.*segmentation.*limited.*monitoring",
+          "network.*monitoring.*no.*segmentation"
+        ],
+        "unacceptable": [
+          "no.*segmentation",
+          "flat.*network",
+          "no.*network.*security"
+        ],
+        "required_keywords": [
+          "network",
+          "segmentation"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.e",
+      "category": "Access Control & Authentication (Article 21)",
+      "subcategory": "Multi-Factor Authentication",
+      "question_text": "Are multi-factor authentication or continuous authentication solutions implemented for access control per NIS2 Article 21(2)(e)?",
+      "description": "NIS2 explicitly requires MFA or continuous authentication solutions, along with secured voice, video, and text communications.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "IAC-09",
+        "IAC-10"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*mfa.*implemented.*enforced",
+          "multi-factor.*authentication.*all.*users",
+          "continuous.*authentication.*deployed"
+        ],
+        "partially_acceptable": [
+          "mfa.*some.*users.*not.*all",
+          "mfa.*optional.*not.*enforced"
+        ],
+        "unacceptable": [
+          "no.*mfa",
+          "single.*factor.*only",
+          "planned.*not.*implemented"
+        ],
+        "required_keywords": [
+          "mfa",
+          "multi-factor",
+          "authentication"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.e.2",
+      "category": "Access Control & Authentication (Article 21)",
+      "subcategory": "Secured Communications",
+      "question_text": "Are secured voice, video, and text communication solutions implemented in accordance with NIS2 Article 21(2)(e)?",
+      "description": "Communication channels must be secured, especially for sensitive or critical communications.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "CRY-08",
+        "NET-04"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*secured.*encrypted.*communications",
+          "voice.*video.*text.*encrypted",
+          "end-to-end.*encryption.*communications"
+        ],
+        "partially_acceptable": [
+          "some.*communications.*encrypted.*not.*all",
+          "encryption.*available.*not.*enforced"
+        ],
+        "unacceptable": [
+          "no.*encryption.*communications",
+          "unencrypted.*communications"
+        ],
+        "required_keywords": [
+          "secured",
+          "communications"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.f",
+      "category": "Access Control & Authentication (Article 21)",
+      "subcategory": "Emergency Communications",
+      "question_text": "Do you have secured emergency communication systems operable during crises per NIS2 Article 21(2)(f)?",
+      "description": "Emergency communication systems must be secured and remain functional during crisis situations.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "BCD-08",
+        "IRO-06"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*emergency.*communications.*crisis",
+          "backup.*communications.*secured.*tested",
+          "redundant.*communications.*crisis.*management"
+        ],
+        "partially_acceptable": [
+          "emergency.*communications.*not.*tested",
+          "backup.*systems.*no.*crisis.*testing"
+        ],
+        "unacceptable": [
+          "no.*emergency.*communications",
+          "no.*backup.*systems"
+        ],
+        "required_keywords": [
+          "emergency",
+          "communications"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.g",
+      "category": "Vulnerability Management (Article 21)",
+      "subcategory": "Vulnerability Handling",
+      "question_text": "Have you implemented vulnerability handling and disclosure policies and procedures per NIS2 Article 21(2)(g)?",
+      "description": "Processes must be in place for identifying, assessing, and remediating vulnerabilities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TVM-01",
+        "TVM-02",
+        "TVM-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*vulnerability.*management.*disclosure",
+          "scanning.*patching.*disclosure.*process",
+          "vulnerability.*handling.*documented"
+        ],
+        "partially_acceptable": [
+          "vulnerability.*scanning.*no.*formal.*process",
+          "patching.*ad-hoc.*no.*policy"
+        ],
+        "unacceptable": [
+          "no.*vulnerability.*management",
+          "no.*patching.*process"
+        ],
+        "required_keywords": [
+          "vulnerability",
+          "handling"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.h",
+      "category": "Cryptography (Article 21)",
+      "subcategory": "Encryption",
+      "question_text": "Are cryptographic controls including encryption implemented to protect data confidentiality and integrity per NIS2 Article 21(2)(h)?",
+      "description": "Encryption must be used to protect sensitive data at rest and in transit.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "CRY-01",
+        "CRY-02",
+        "DCH-05"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*encryption.*data.*rest.*transit",
+          "cryptographic.*controls.*confidentiality.*integrity",
+          "aes.*256.*tls.*1\\.3"
+        ],
+        "partially_acceptable": [
+          "some.*encryption.*not.*comprehensive",
+          "encryption.*transit.*not.*rest"
+        ],
+        "unacceptable": [
+          "no.*encryption",
+          "weak.*encryption.*deprecated.*algorithms"
+        ],
+        "required_keywords": [
+          "encryption",
+          "cryptographic"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.i",
+      "category": "Access Control & Authentication (Article 21)",
+      "subcategory": "Human Resources Security",
+      "question_text": "Have you implemented security in human resources practices including access control policies per NIS2 Article 21(2)(i)?",
+      "description": "HR security includes background checks, security awareness training, access provisioning/deprovisioning, and acceptable use policies.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "HRS-01",
+        "HRS-02",
+        "IAC-01",
+        "IAC-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*hr.*security.*access.*control",
+          "background.*checks.*training.*access.*management",
+          "joiner.*leaver.*process.*security.*awareness"
+        ],
+        "partially_acceptable": [
+          "some.*hr.*security.*not.*comprehensive",
+          "training.*exists.*no.*background.*checks"
+        ],
+        "unacceptable": [
+          "no.*hr.*security",
+          "no.*access.*control",
+          "no.*security.*awareness"
+        ],
+        "required_keywords": [
+          "human resources",
+          "access control"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.j",
+      "category": "Access Control & Authentication (Article 21)",
+      "subcategory": "Access Rights Management",
+      "question_text": "Are policies for access control and asset management implemented to ensure appropriate access rights per NIS2 Article 21(2)(j)?",
+      "description": "Access control must follow least privilege principles with regular reviews of access rights.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "IAC-01",
+        "IAC-03",
+        "IAC-05",
+        "AST-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*access.*control.*asset.*management",
+          "least.*privilege.*access.*reviews",
+          "rbac.*regular.*reviews.*asset.*inventory"
+        ],
+        "partially_acceptable": [
+          "access.*control.*no.*regular.*reviews",
+          "asset.*inventory.*incomplete"
+        ],
+        "unacceptable": [
+          "no.*access.*control.*policy",
+          "no.*asset.*management",
+          "excessive.*privileges"
+        ],
+        "required_keywords": [
+          "access control",
+          "asset"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.k",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Security Testing",
+      "question_text": "Do you conduct security assessments of the effectiveness of cybersecurity risk management measures per NIS2 Article 21(2)(k)?",
+      "description": "Regular testing must validate the effectiveness of security controls through penetration testing, vulnerability assessments, and security audits.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "RSK-04",
+        "TVM-04",
+        "CPL-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*security.*testing.*penetration.*vulnerability",
+          "regular.*assessments.*effectiveness.*controls",
+          "annual.*penetration.*testing.*quarterly.*scanning"
+        ],
+        "partially_acceptable": [
+          "some.*testing.*not.*regular",
+          "vulnerability.*scanning.*no.*penetration.*testing"
+        ],
+        "unacceptable": [
+          "no.*security.*testing",
+          "no.*assessments",
+          "testing.*not.*conducted"
+        ],
+        "required_keywords": [
+          "security",
+          "assessment",
+          "testing"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.l",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Security Hygiene",
+      "question_text": "Are cybersecurity training, education, and basic cyber hygiene practices implemented per NIS2 Article 21(2)(l)?",
+      "description": "All personnel must receive regular security awareness training and follow basic cyber hygiene practices.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "HRS-07",
+        "HRS-08"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*security.*training.*awareness.*hygiene",
+          "regular.*training.*all.*personnel.*cyber.*hygiene",
+          "annual.*training.*phishing.*simulations"
+        ],
+        "partially_acceptable": [
+          "training.*provided.*not.*regular",
+          "awareness.*materials.*no.*formal.*training"
+        ],
+        "unacceptable": [
+          "no.*training",
+          "no.*awareness.*program",
+          "ad-hoc.*training.*only"
+        ],
+        "required_keywords": [
+          "training",
+          "awareness",
+          "hygiene"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.m",
+      "category": "Cryptography (Article 21)",
+      "subcategory": "Cryptographic Policies",
+      "question_text": "Have you established policies and procedures for the use and deployment of cryptography per NIS2 Article 21(2)(m)?",
+      "description": "Cryptographic policies must define approved algorithms, key management, certificate management, and usage guidelines.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "CRY-03",
+        "CRY-04",
+        "CRY-05"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*cryptographic.*policy.*procedures",
+          "key.*management.*approved.*algorithms",
+          "documented.*crypto.*standards.*nist.*approved"
+        ],
+        "partially_acceptable": [
+          "cryptography.*used.*no.*formal.*policy",
+          "some.*standards.*not.*comprehensive"
+        ],
+        "unacceptable": [
+          "no.*cryptographic.*policy",
+          "no.*key.*management",
+          "weak.*deprecated.*algorithms"
+        ],
+        "required_keywords": [
+          "cryptographic",
+          "policy"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.n",
+      "category": "Network Security (Article 21)",
+      "subcategory": "Personnel and Physical Security",
+      "question_text": "Are physical security and environmental security measures implemented to protect personnel and facilities per NIS2 Article 21(2)(n)?",
+      "description": "Physical security controls must protect data centers, network equipment, and personnel from unauthorized access and environmental threats.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "PES-01",
+        "PES-02",
+        "PES-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*physical.*security.*environmental.*controls",
+          "access.*control.*cctv.*environmental.*monitoring",
+          "secure.*facilities.*fire.*suppression.*ups"
+        ],
+        "partially_acceptable": [
+          "basic.*physical.*security.*limited.*environmental",
+          "access.*control.*no.*monitoring"
+        ],
+        "unacceptable": [
+          "no.*physical.*security",
+          "no.*environmental.*controls",
+          "open.*access.*facilities"
+        ],
+        "required_keywords": [
+          "physical security",
+          "environmental"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-22.1",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supply Chain Risk Assessment",
+      "question_text": "Do you assess cybersecurity risks related to relationships with suppliers and service providers per NIS2 Article 22?",
+      "description": "Supply chain risk assessment must identify and evaluate cybersecurity risks from all suppliers, including direct and indirect ICT service providers.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "TPM-02",
+        "RSK-03"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*supply.*chain.*risk.*assessment",
+          "supplier.*cybersecurity.*evaluation.*process",
+          "third-party.*risk.*management.*program"
+        ],
+        "partially_acceptable": [
+          "some.*supplier.*assessment.*not.*comprehensive",
+          "critical.*suppliers.*assessed.*not.*all"
+        ],
+        "unacceptable": [
+          "no.*supply.*chain.*risk.*assessment",
+          "no.*supplier.*evaluation",
+          "suppliers.*not.*assessed"
+        ],
+        "required_keywords": [
+          "supply chain",
+          "risk",
+          "supplier"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-22.2",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supplier Security Requirements",
+      "question_text": "Are appropriate security measures incorporated into contracts with direct suppliers per NIS2 Article 22?",
+      "description": "Contracts must include security requirements, incident notification obligations, and security assessment rights.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-04",
+        "TPM-06"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*contracts.*security.*requirements.*suppliers",
+          "contractual.*security.*obligations.*incident.*notification",
+          "supplier.*contracts.*security.*audit.*rights"
+        ],
+        "partially_acceptable": [
+          "some.*security.*clauses.*not.*comprehensive",
+          "security.*requirements.*critical.*suppliers.*only"
+        ],
+        "unacceptable": [
+          "no.*security.*requirements.*contracts",
+          "no.*contractual.*security.*obligations",
+          "generic.*contracts.*no.*security"
+        ],
+        "required_keywords": [
+          "contract",
+          "security requirements",
+          "supplier"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-22.3",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "ICT Service Supplier Assessment",
+      "question_text": "Do you identify all direct suppliers of ICT products and services and assess their overall security level per NIS2 Article 22?",
+      "description": "All ICT suppliers must be identified and their security posture assessed, including compliance with security standards.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "TPM-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*ict.*suppliers.*identified.*assessed",
+          "supplier.*inventory.*security.*evaluation",
+          "all.*ict.*providers.*security.*assessment"
+        ],
+        "partially_acceptable": [
+          "supplier.*list.*exists.*not.*all.*assessed",
+          "critical.*suppliers.*assessed.*not.*complete"
+        ],
+        "unacceptable": [
+          "no.*supplier.*inventory",
+          "ict.*suppliers.*not.*identified",
+          "no.*security.*assessment"
+        ],
+        "required_keywords": [
+          "ICT",
+          "supplier",
+          "assessment"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-22.4",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supplier Monitoring",
+      "question_text": "Do you monitor and review the security performance of your suppliers on an ongoing basis?",
+      "description": "Continuous monitoring ensures suppliers maintain adequate security levels throughout the relationship.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-02",
+        "TPM-08",
+        "MON-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*ongoing.*supplier.*monitoring.*reviews",
+          "continuous.*assessment.*supplier.*security",
+          "regular.*supplier.*security.*reviews.*kpis"
+        ],
+        "partially_acceptable": [
+          "periodic.*reviews.*not.*continuous",
+          "monitoring.*critical.*suppliers.*only"
+        ],
+        "unacceptable": [
+          "no.*ongoing.*monitoring",
+          "one-time.*assessment.*only",
+          "suppliers.*not.*monitored"
+        ],
+        "required_keywords": [
+          "monitoring",
+          "supplier"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-22.5",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Subcontractor Visibility",
+      "question_text": "Do you have visibility into the security practices of critical subcontractors used by your direct suppliers?",
+      "description": "Supply chain security extends beyond direct suppliers to include critical subcontractors and fourth-party risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-03",
+        "TPM-07"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*subcontractor.*visibility.*fourth-party",
+          "supplier.*contracts.*require.*subcontractor.*disclosure",
+          "critical.*subcontractors.*assessed"
+        ],
+        "partially_acceptable": [
+          "some.*subcontractor.*visibility.*not.*comprehensive",
+          "disclosure.*required.*not.*enforced"
+        ],
+        "unacceptable": [
+          "no.*subcontractor.*visibility",
+          "fourth-party.*risks.*not.*considered",
+          "suppliers.*not.*required.*disclose.*subcontractors"
+        ],
+        "required_keywords": [
+          "subcontractor",
+          "visibility"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-23.1",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Incident Notification - Early Warning",
+      "question_text": "Are you prepared to submit early warning notifications of significant incidents within the required timeframe per NIS2 Article 23?",
+      "description": "Early warning must be submitted without undue delay, and in any case within 24 hours of becoming aware of the incident.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "IRO-08",
+        "IRO-09"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*early.*warning.*24.*hours.*notification",
+          "incident.*reporting.*procedures.*nis2.*compliant",
+          "processes.*notify.*csirt.*24.*hours"
+        ],
+        "partially_acceptable": [
+          "notification.*procedures.*exist.*timeline.*unclear",
+          "incident.*reporting.*not.*nis2.*specific"
+        ],
+        "unacceptable": [
+          "no.*notification.*procedures",
+          "not.*prepared.*report.*incidents",
+          "no.*early.*warning.*process"
+        ],
+        "required_keywords": [
+          "early warning",
+          "notification",
+          "24 hours"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-23.2",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Incident Notification - Full Report",
+      "question_text": "Can you submit incident notifications with required details within 72 hours of becoming aware per NIS2 Article 23?",
+      "description": "Incident notification must include details such as incident description, severity, impact, affected services, and initial mitigation measures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "IRO-08",
+        "IRO-10"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*incident.*notification.*72.*hours.*details",
+          "notification.*template.*nis2.*requirements",
+          "processes.*submit.*full.*report.*72.*hours"
+        ],
+        "partially_acceptable": [
+          "notification.*capability.*timeline.*not.*guaranteed",
+          "template.*exists.*not.*nis2.*complete"
+        ],
+        "unacceptable": [
+          "no.*notification.*capability",
+          "cannot.*meet.*72.*hour.*deadline",
+          "no.*incident.*reporting"
+        ],
+        "required_keywords": [
+          "notification",
+          "72 hours",
+          "incident"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-23.3",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Incident Notification - Progress Report",
+      "question_text": "Are you prepared to submit progress reports on ongoing incidents and provide final reports per NIS2 Article 23?",
+      "description": "Progress reports update authorities on incident handling status. Final reports due within one month of notification include root cause analysis and mitigation measures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "IRO-10",
+        "IRO-05"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*progress.*final.*reports.*procedures",
+          "incident.*reporting.*includes.*updates.*rca",
+          "post-incident.*review.*final.*report.*process"
+        ],
+        "partially_acceptable": [
+          "reporting.*capability.*not.*nis2.*compliant",
+          "final.*reports.*no.*formal.*process"
+        ],
+        "unacceptable": [
+          "no.*progress.*reporting",
+          "no.*final.*report.*capability",
+          "post-incident.*review.*not.*conducted"
+        ],
+        "required_keywords": [
+          "progress",
+          "final report",
+          "incident"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-23.4",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Significant Cyber Threats",
+      "question_text": "Do you have processes to notify authorities about significant cyber threats without undue delay per NIS2 Article 23(7)?",
+      "description": "Significant cyber threats (even if not resulting in incidents) must be reported to enable coordinated response.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "TVM-02",
+        "IRO-09",
+        "THR-01"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*cyber.*threat.*notification.*procedures",
+          "threat.*intelligence.*sharing.*authorities",
+          "processes.*report.*significant.*threats"
+        ],
+        "partially_acceptable": [
+          "threat.*monitoring.*no.*notification.*process",
+          "informal.*threat.*reporting"
+        ],
+        "unacceptable": [
+          "no.*threat.*notification",
+          "threats.*not.*reported.*authorities",
+          "no.*threat.*reporting.*process"
+        ],
+        "required_keywords": [
+          "cyber threat",
+          "notification"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-23.5",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Recipients and Service Impact",
+      "question_text": "Do you notify recipients of your services when incidents significantly impact service provision per NIS2 Article 23(8)?",
+      "description": "Service recipients must be informed when incidents affect the provision of services to enable them to take protective measures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "IRO-06",
+        "BCD-09"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*recipient.*notification.*service.*impact",
+          "customer.*communication.*incident.*impact",
+          "service.*disruption.*notification.*process"
+        ],
+        "partially_acceptable": [
+          "some.*customer.*notification.*not.*systematic",
+          "ad-hoc.*communication.*no.*formal.*process"
+        ],
+        "unacceptable": [
+          "no.*recipient.*notification",
+          "customers.*not.*informed.*incidents",
+          "no.*communication.*plan"
+        ],
+        "required_keywords": [
+          "recipient",
+          "notification",
+          "service"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-21.3",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Proportionate Risk Management",
+      "question_text": "Are your cybersecurity measures proportionate to the risks faced, taking into account the state of the art per NIS2 Article 21(3)?",
+      "description": "Measures must be appropriate to the level of risk and reflect current best practices and technological capabilities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "RSK-02",
+        "GOV-04"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*proportionate.*risk-based.*state.*art",
+          "security.*measures.*aligned.*risk.*assessment",
+          "controls.*appropriate.*threat.*landscape"
+        ],
+        "partially_acceptable": [
+          "some.*proportionality.*not.*systematic",
+          "controls.*implemented.*not.*risk-based"
+        ],
+        "unacceptable": [
+          "no.*risk-based.*approach",
+          "one-size-fits-all.*controls",
+          "outdated.*security.*measures"
+        ],
+        "required_keywords": [
+          "proportionate",
+          "risk"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Supply-01",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Critical Supplier Identification",
+      "question_text": "Have you identified and classified your critical ICT suppliers based on their importance to your operations?",
+      "description": "Critical suppliers require enhanced security oversight and may be subject to additional regulatory requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Supply-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "RSK-07"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*critical.*suppliers.*identified.*classified",
+          "supplier.*criticality.*assessment.*process",
+          "tiered.*supplier.*risk.*classification"
+        ],
+        "partially_acceptable": [
+          "some.*critical.*suppliers.*identified.*not.*all",
+          "informal.*criticality.*assessment"
+        ],
+        "unacceptable": [
+          "no.*supplier.*classification",
+          "critical.*suppliers.*not.*identified",
+          "all.*suppliers.*treated.*equally"
+        ],
+        "required_keywords": [
+          "critical",
+          "supplier",
+          "classified"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Supply-02",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supplier Exit Strategy",
+      "question_text": "Do you have exit strategies and contingency plans for critical suppliers to ensure continuity of operations?",
+      "description": "Exit strategies mitigate concentration risk and ensure service continuity if a supplier relationship ends.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article Supply-02",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TPM-05",
+        "BCD-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*exit.*strategy.*contingency.*critical.*suppliers",
+          "supplier.*transition.*plans.*documented",
+          "alternative.*suppliers.*identified.*exit.*procedures"
+        ],
+        "partially_acceptable": [
+          "some.*exit.*planning.*not.*comprehensive",
+          "exit.*strategies.*critical.*suppliers.*only"
+        ],
+        "unacceptable": [
+          "no.*exit.*strategies",
+          "no.*contingency.*plans.*suppliers",
+          "vendor.*lock-in.*no.*alternatives"
+        ],
+        "required_keywords": [
+          "exit",
+          "strategy",
+          "supplier"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Supply-03",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supplier Incident Response",
+      "question_text": "Are your suppliers contractually required to notify you of security incidents that may affect your operations?",
+      "description": "Supplier incident notification enables timely response and mitigation of supply chain security incidents.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Supply-03",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TPM-06",
+        "IRO-09"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*contractual.*incident.*notification.*suppliers",
+          "suppliers.*required.*report.*security.*incidents",
+          "slas.*supplier.*incident.*notification"
+        ],
+        "partially_acceptable": [
+          "some.*notification.*requirements.*not.*all.*suppliers",
+          "informal.*notification.*expectations.*no.*contractual"
+        ],
+        "unacceptable": [
+          "no.*contractual.*incident.*notification",
+          "suppliers.*not.*required.*report.*incidents",
+          "no.*supplier.*incident.*process"
+        ],
+        "required_keywords": [
+          "supplier",
+          "incident",
+          "notification"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Supply-04",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supplier Security Audits",
+      "question_text": "Do you have the contractual right to audit or assess the security controls of your critical suppliers?",
+      "description": "Audit rights enable verification of supplier security claims and compliance with contractual requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article Supply-04",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TPM-06",
+        "CPL-02"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*audit.*rights.*supplier.*contracts",
+          "contractual.*right.*assess.*supplier.*security",
+          "third-party.*audits.*supplier.*controls"
+        ],
+        "partially_acceptable": [
+          "audit.*rights.*critical.*suppliers.*only",
+          "rely.*certifications.*no.*audit.*rights"
+        ],
+        "unacceptable": [
+          "no.*audit.*rights",
+          "cannot.*assess.*supplier.*security",
+          "no.*contractual.*audit.*provisions"
+        ],
+        "required_keywords": [
+          "audit",
+          "supplier",
+          "rights"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Supply-05",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Secure Software Development",
+      "question_text": "Do you require suppliers of software products to follow secure development practices and provide software bills of materials (SBOMs)?",
+      "description": "Secure development lifecycle and transparency through SBOMs help identify and manage software supply chain risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article Supply-05",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "APP-01",
+        "APP-02",
+        "TPM-06"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*secure.*development.*sbom.*requirements",
+          "suppliers.*provide.*sbom.*secure.*sdlc",
+          "software.*supply.*chain.*security.*verified"
+        ],
+        "partially_acceptable": [
+          "secure.*development.*required.*no.*sbom",
+          "sbom.*requested.*not.*required"
+        ],
+        "unacceptable": [
+          "no.*secure.*development.*requirements",
+          "no.*sbom.*software.*transparency",
+          "software.*security.*not.*verified"
+        ],
+        "required_keywords": [
+          "secure development",
+          "SBOM"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Network-01",
+      "category": "Network Security (Article 21)",
+      "subcategory": "Network Architecture",
+      "question_text": "Is your network architecture designed with security zones and controlled interfaces between zones?",
+      "description": "Defense-in-depth through network segmentation limits lateral movement and contains security incidents.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article Network-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "NET-01",
+        "NET-02",
+        "NET-04"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*security.*zones.*controlled.*interfaces",
+          "network.*segmentation.*dmz.*internal.*separation",
+          "defense-in-depth.*network.*architecture"
+        ],
+        "partially_acceptable": [
+          "basic.*network.*separation.*not.*comprehensive",
+          "some.*segmentation.*not.*security.*zones"
+        ],
+        "unacceptable": [
+          "no.*network.*segmentation",
+          "flat.*network.*architecture",
+          "no.*security.*zones"
+        ],
+        "required_keywords": [
+          "network",
+          "security zones",
+          "segmentation"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Network-02",
+      "category": "Network Security (Article 21)",
+      "subcategory": "Network Monitoring & IDS",
+      "question_text": "Do you continuously monitor network traffic for anomalies and potential security incidents using intrusion detection systems?",
+      "description": "Network monitoring and IDS/IPS enable early detection of attacks and anomalous behavior.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Network-02",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "MON-08",
+        "NET-06",
+        "IRO-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*network.*monitoring.*ids.*ips",
+          "continuous.*monitoring.*anomaly.*detection",
+          "siem.*network.*traffic.*analysis.*alerts"
+        ],
+        "partially_acceptable": [
+          "network.*monitoring.*no.*ids",
+          "ids.*deployed.*limited.*coverage"
+        ],
+        "unacceptable": [
+          "no.*network.*monitoring",
+          "no.*intrusion.*detection",
+          "network.*traffic.*not.*monitored"
+        ],
+        "required_keywords": [
+          "network monitoring",
+          "intrusion detection"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Access-01",
+      "category": "Access Control & Authentication (Article 21)",
+      "subcategory": "Privileged Access Management",
+      "question_text": "Is privileged access to critical systems managed through dedicated privileged access management (PAM) solutions?",
+      "description": "PAM solutions provide enhanced security, monitoring, and auditing for privileged accounts.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Access-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "IAC-11",
+        "IAC-12",
+        "MON-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*pam.*privileged.*access.*management",
+          "dedicated.*pam.*solution.*session.*recording",
+          "privileged.*accounts.*controlled.*monitored"
+        ],
+        "partially_acceptable": [
+          "privileged.*access.*controls.*no.*dedicated.*pam",
+          "manual.*privileged.*access.*management"
+        ],
+        "unacceptable": [
+          "no.*pam.*solution",
+          "privileged.*accounts.*not.*managed",
+          "shared.*privileged.*credentials"
+        ],
+        "required_keywords": [
+          "privileged access",
+          "PAM"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Access-02",
+      "category": "Access Control & Authentication (Article 21)",
+      "subcategory": "Access Reviews",
+      "question_text": "Are access rights reviewed periodically to ensure they remain appropriate and follow the principle of least privilege?",
+      "description": "Regular access reviews prevent privilege creep and ensure access aligns with current roles and responsibilities.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article Access-02",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "IAC-04",
+        "IAC-05"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*periodic.*access.*reviews.*least.*privilege",
+          "regular.*certification.*access.*rights",
+          "quarterly.*access.*reviews.*remediation"
+        ],
+        "partially_acceptable": [
+          "annual.*access.*reviews.*not.*quarterly",
+          "access.*reviews.*conducted.*not.*regular"
+        ],
+        "unacceptable": [
+          "no.*access.*reviews",
+          "access.*rights.*not.*reviewed",
+          "one-time.*access.*grant.*no.*review"
+        ],
+        "required_keywords": [
+          "access review",
+          "least privilege"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Vuln-01",
+      "category": "Vulnerability Management (Article 21)",
+      "subcategory": "Vulnerability Scanning",
+      "question_text": "Do you conduct regular vulnerability scanning of all systems and applications to identify security weaknesses?",
+      "description": "Automated vulnerability scanning identifies known vulnerabilities before they can be exploited.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Vuln-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TVM-01",
+        "TVM-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regular.*vulnerability.*scanning.*all.*systems",
+          "weekly.*vulnerability.*scans.*remediation",
+          "automated.*vulnerability.*scanning.*continuous"
+        ],
+        "partially_acceptable": [
+          "vulnerability.*scanning.*not.*regular",
+          "scanning.*critical.*systems.*only"
+        ],
+        "unacceptable": [
+          "no.*vulnerability.*scanning",
+          "systems.*not.*scanned.*vulnerabilities",
+          "manual.*vulnerability.*checks.*only"
+        ],
+        "required_keywords": [
+          "vulnerability",
+          "scanning"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Vuln-02",
+      "category": "Vulnerability Management (Article 21)",
+      "subcategory": "Patch Management",
+      "question_text": "Is there a documented patch management process with defined SLAs for applying security patches based on severity?",
+      "description": "Timely patching of critical vulnerabilities is essential to prevent exploitation. SLAs should reflect risk.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Vuln-02",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TVM-03",
+        "CHG-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*patch.*management.*slas.*severity",
+          "documented.*patching.*process.*timelines",
+          "critical.*patches.*24-48.*hours.*high.*7.*days"
+        ],
+        "partially_acceptable": [
+          "patching.*process.*no.*defined.*slas",
+          "patches.*applied.*no.*severity-based.*prioritization"
+        ],
+        "unacceptable": [
+          "no.*patch.*management.*process",
+          "patches.*applied.*ad-hoc",
+          "no.*patching.*slas"
+        ],
+        "required_keywords": [
+          "patch management",
+          "SLA"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Vuln-03",
+      "category": "Vulnerability Management (Article 21)",
+      "subcategory": "Penetration Testing",
+      "question_text": "Do you conduct regular penetration testing by qualified professionals to identify exploitable vulnerabilities?",
+      "description": "Penetration testing simulates real-world attacks to identify vulnerabilities that automated scanning may miss.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article Vuln-03",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "TVM-04",
+        "RSK-04"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regular.*penetration.*testing.*qualified",
+          "annual.*penetration.*tests.*external.*internal",
+          "penetration.*testing.*red.*team.*exercises"
+        ],
+        "partially_acceptable": [
+          "penetration.*testing.*infrequent",
+          "limited.*scope.*penetration.*tests"
+        ],
+        "unacceptable": [
+          "no.*penetration.*testing",
+          "penetration.*tests.*not.*conducted",
+          "only.*vulnerability.*scanning.*no.*pen.*testing"
+        ],
+        "required_keywords": [
+          "penetration testing"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Incident-01",
+      "category": "Incident Handling (Article 21)",
+      "subcategory": "Incident Response Plan Testing",
+      "question_text": "Do you regularly test and update your incident response plan through tabletop exercises or simulations?",
+      "description": "Testing validates the effectiveness of incident response procedures and identifies gaps before real incidents occur.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article Incident-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "IRO-05",
+        "BCD-11"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regular.*ir.*testing.*tabletop.*exercises",
+          "incident.*response.*drills.*simulations.*annual",
+          "tabletop.*exercises.*plan.*updates"
+        ],
+        "partially_acceptable": [
+          "ir.*testing.*infrequent",
+          "plan.*exists.*not.*tested"
+        ],
+        "unacceptable": [
+          "no.*ir.*testing",
+          "incident.*plan.*never.*tested",
+          "no.*tabletop.*exercises"
+        ],
+        "required_keywords": [
+          "incident response",
+          "testing",
+          "exercise"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Incident-02",
+      "category": "Incident Handling (Article 21)",
+      "subcategory": "Incident Classification",
+      "question_text": "Do you have documented criteria for classifying incidents by severity to enable appropriate response and reporting?",
+      "description": "Incident classification ensures appropriate response resources and triggers regulatory reporting when required.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Incident-02",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "IRO-01",
+        "IRO-07"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*incident.*classification.*severity.*criteria",
+          "documented.*incident.*categorization.*escalation",
+          "severity.*levels.*response.*slas.*reporting.*triggers"
+        ],
+        "partially_acceptable": [
+          "basic.*incident.*classification.*not.*detailed",
+          "informal.*severity.*assessment"
+        ],
+        "unacceptable": [
+          "no.*incident.*classification",
+          "all.*incidents.*treated.*same",
+          "no.*severity.*criteria"
+        ],
+        "required_keywords": [
+          "incident",
+          "classification",
+          "severity"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-BCP-01",
+      "category": "Business Continuity (Article 21)",
+      "subcategory": "BCP Testing",
+      "question_text": "Do you regularly test your business continuity and disaster recovery plans to ensure they remain effective?",
+      "description": "Regular BCP/DR testing validates recovery procedures and identifies improvements needed to meet RTOs and RPOs.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article BCP-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "BCD-11",
+        "BCD-05"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*regular.*bcp.*dr.*testing.*validation",
+          "annual.*recovery.*tests.*rto.*rpo.*validation",
+          "tabletop.*full.*recovery.*tests.*documented"
+        ],
+        "partially_acceptable": [
+          "bcp.*testing.*infrequent",
+          "partial.*recovery.*tests.*not.*comprehensive"
+        ],
+        "unacceptable": [
+          "no.*bcp.*testing",
+          "recovery.*plans.*never.*tested",
+          "untested.*assumptions.*recovery"
+        ],
+        "required_keywords": [
+          "BCP",
+          "testing",
+          "recovery"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-BCP-02",
+      "category": "Business Continuity (Article 21)",
+      "subcategory": "Backup Verification",
+      "question_text": "Are backup integrity and restoration capabilities verified through regular testing?",
+      "description": "Backup testing ensures data can be successfully restored when needed, validating both backup integrity and restore procedures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article BCP-02",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "BCD-06",
+        "BCD-07"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*backup.*testing.*restore.*verification",
+          "regular.*restore.*tests.*backup.*integrity",
+          "monthly.*restore.*tests.*backup.*validation"
+        ],
+        "partially_acceptable": [
+          "backups.*taken.*restoration.*not.*tested",
+          "infrequent.*restore.*testing"
+        ],
+        "unacceptable": [
+          "no.*backup.*testing",
+          "backups.*never.*tested",
+          "restore.*capability.*unverified"
+        ],
+        "required_keywords": [
+          "backup",
+          "testing",
+          "restore"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Crypto-01",
+      "category": "Cryptography (Article 21)",
+      "subcategory": "Key Management",
+      "question_text": "Are cryptographic keys managed securely with documented procedures for generation, storage, rotation, and destruction?",
+      "description": "Proper key lifecycle management is critical to maintaining the security of encrypted data and communications.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article Crypto-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "CRY-05",
+        "CRY-06"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*key.*management.*generation.*rotation.*destruction",
+          "hsm.*key.*management.*service.*documented.*procedures",
+          "secure.*key.*lifecycle.*automated.*rotation"
+        ],
+        "partially_acceptable": [
+          "basic.*key.*management.*not.*comprehensive",
+          "manual.*key.*management.*no.*hsm"
+        ],
+        "unacceptable": [
+          "no.*key.*management.*procedures",
+          "keys.*stored.*insecurely",
+          "no.*key.*rotation"
+        ],
+        "required_keywords": [
+          "key management",
+          "cryptographic"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Compliance-01",
+      "category": "Governance (Article 20)",
+      "subcategory": "NIS2 Compliance Program",
+      "question_text": "Have you established a comprehensive NIS2 compliance program with assigned responsibilities and accountability?",
+      "description": "A structured compliance program ensures systematic implementation and maintenance of NIS2 requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Compliance-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "GOV-01",
+        "CPL-01",
+        "CPL-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*nis2.*compliance.*program.*responsibilities",
+          "structured.*program.*accountability.*monitoring",
+          "compliance.*framework.*gap.*assessment.*remediation"
+        ],
+        "partially_acceptable": [
+          "compliance.*efforts.*not.*formal.*program",
+          "some.*nis2.*implementation.*not.*systematic"
+        ],
+        "unacceptable": [
+          "no.*compliance.*program",
+          "nis2.*requirements.*not.*addressed",
+          "no.*assigned.*responsibilities"
+        ],
+        "required_keywords": [
+          "NIS2",
+          "compliance",
+          "program"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-Compliance-02",
+      "category": "Governance (Article 20)",
+      "subcategory": "Regulatory Coordination",
+      "question_text": "Have you identified and established contact with the relevant national competent authority and CSIRT for your sector?",
+      "description": "Knowing your regulatory authority and CSIRT contact points is essential for incident reporting and regulatory coordination.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Compliance-02",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "GOV-08",
+        "IRO-09"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*identified.*competent.*authority.*csirt.*contact",
+          "registered.*authorities.*communication.*established",
+          "authority.*csirt.*contacts.*documented.*tested"
+        ],
+        "partially_acceptable": [
+          "authorities.*identified.*not.*contacted",
+          "csirt.*known.*not.*registered"
+        ],
+        "unacceptable": [
+          "no.*authority.*identification",
+          "csirt.*contact.*unknown",
+          "no.*regulatory.*coordination"
+        ],
+        "required_keywords": [
+          "authority",
+          "CSIRT",
+          "contact"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.1.1",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Risk Assessment Methodology",
+      "question_text": "Do you use a documented risk assessment methodology that identifies and evaluates cybersecurity risks to your network and information systems?",
+      "description": "A structured risk assessment methodology ensures consistent identification and evaluation of risks across all systems and processes.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "RSK-01",
+        "RSK-02"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*documented.*risk.*assessment.*methodology",
+          "structured.*risk.*evaluation.*framework",
+          "iso.*27005.*nist.*risk.*framework"
+        ],
+        "partially_acceptable": [
+          "risk.*assessment.*conducted.*no.*formal.*methodology",
+          "informal.*risk.*evaluation.*process"
+        ],
+        "unacceptable": [
+          "no.*risk.*assessment.*methodology",
+          "ad-hoc.*risk.*identification",
+          "no.*documented.*approach"
+        ],
+        "required_keywords": [
+          "risk assessment",
+          "methodology"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.1.2",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Risk Treatment Plans",
+      "question_text": "Have you developed and implemented risk treatment plans to address identified cybersecurity risks?",
+      "description": "Risk treatment plans document how identified risks will be mitigated, transferred, accepted, or avoided.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "RSK-05",
+        "RSK-06"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*risk.*treatment.*plans.*implemented",
+          "documented.*risk.*mitigation.*strategies",
+          "risk.*owners.*action.*plans.*timelines"
+        ],
+        "partially_acceptable": [
+          "some.*risk.*treatment.*not.*comprehensive",
+          "mitigation.*plans.*informal.*documentation"
+        ],
+        "unacceptable": [
+          "no.*risk.*treatment.*plans",
+          "identified.*risks.*not.*addressed",
+          "no.*mitigation.*strategies"
+        ],
+        "required_keywords": [
+          "risk treatment",
+          "plan"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.1.3",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Risk Register Maintenance",
+      "question_text": "Do you maintain a current risk register that tracks identified cybersecurity risks, their assessment, and treatment status?",
+      "description": "A risk register provides visibility into the organization's risk landscape and supports risk-based decision making.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "RSK-01",
+        "GOV-04"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*risk.*register.*maintained.*current",
+          "documented.*risk.*inventory.*status.*tracking",
+          "risk.*register.*regularly.*updated.*reviewed"
+        ],
+        "partially_acceptable": [
+          "risk.*register.*exists.*not.*current",
+          "risk.*tracking.*informal.*documentation"
+        ],
+        "unacceptable": [
+          "no.*risk.*register",
+          "risks.*not.*tracked",
+          "no.*centralized.*risk.*documentation"
+        ],
+        "required_keywords": [
+          "risk register",
+          "tracking"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.1.4",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Periodic Risk Review",
+      "question_text": "Are cybersecurity risk assessments reviewed and updated periodically and when significant changes occur?",
+      "description": "Risk assessments must be updated to reflect changes in the threat landscape, business operations, and technology environment.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "RSK-02",
+        "GOV-04"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*periodic.*risk.*review.*updates",
+          "annual.*risk.*assessment.*change-triggered.*reviews",
+          "regular.*risk.*reassessment.*threat.*updates"
+        ],
+        "partially_acceptable": [
+          "risk.*review.*infrequent",
+          "risk.*assessment.*not.*change-triggered"
+        ],
+        "unacceptable": [
+          "no.*periodic.*risk.*review",
+          "risk.*assessment.*never.*updated",
+          "one-time.*risk.*assessment.*only"
+        ],
+        "required_keywords": [
+          "periodic",
+          "risk review"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-22.6",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supplier Concentration Risk",
+      "question_text": "Have you assessed and mitigated concentration risks from reliance on single or limited suppliers for critical services?",
+      "description": "Concentration risk occurs when multiple critical functions depend on a single supplier, creating a single point of failure.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-05",
+        "BCD-03",
+        "RSK-07"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*concentration.*risk.*assessed.*mitigated",
+          "supplier.*diversification.*strategy.*implemented",
+          "single.*supplier.*dependencies.*identified.*addressed"
+        ],
+        "partially_acceptable": [
+          "concentration.*risk.*identified.*not.*mitigated",
+          "some.*supplier.*diversification.*incomplete"
+        ],
+        "unacceptable": [
+          "no.*concentration.*risk.*assessment",
+          "single.*suppliers.*not.*identified",
+          "no.*diversification.*strategy"
+        ],
+        "required_keywords": [
+          "concentration risk",
+          "supplier"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-22.7",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Geographic Concentration",
+      "question_text": "Have you assessed geographic concentration risks in your supply chain (e.g., suppliers in single jurisdiction or region)?",
+      "description": "Geographic concentration can expose entities to regional disruptions, regulatory changes, or geopolitical risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-05",
+        "RSK-07"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*geographic.*concentration.*assessed",
+          "supplier.*geographic.*diversity.*strategy",
+          "regional.*risk.*analysis.*supply.*chain"
+        ],
+        "partially_acceptable": [
+          "geographic.*location.*known.*not.*risk.*assessed",
+          "some.*geographic.*awareness.*no.*formal.*analysis"
+        ],
+        "unacceptable": [
+          "no.*geographic.*risk.*assessment",
+          "supplier.*locations.*unknown",
+          "no.*consideration.*geographic.*risk"
+        ],
+        "required_keywords": [
+          "geographic",
+          "concentration"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-22.8",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supplier Data Protection",
+      "question_text": "Do your supplier contracts include data protection and privacy requirements aligned with GDPR and NIS2?",
+      "description": "Suppliers handling personal or sensitive data must comply with GDPR and implement appropriate security measures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-04",
+        "PRI-02",
+        "DCH-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*supplier.*contracts.*data.*protection.*gdpr",
+          "data.*processing.*agreements.*suppliers",
+          "privacy.*requirements.*contractual.*obligations"
+        ],
+        "partially_acceptable": [
+          "data.*protection.*clauses.*not.*comprehensive",
+          "privacy.*requirements.*critical.*suppliers.*only"
+        ],
+        "unacceptable": [
+          "no.*data.*protection.*requirements.*contracts",
+          "gdpr.*compliance.*not.*addressed.*suppliers",
+          "no.*data.*processing.*agreements"
+        ],
+        "required_keywords": [
+          "data protection",
+          "GDPR",
+          "supplier"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-22.9",
+      "category": "Supply Chain Security (Article 21.2 & 22)",
+      "subcategory": "Supplier Certification Requirements",
+      "question_text": "Do you require suppliers to maintain relevant security certifications (e.g., ISO 27001, SOC 2) appropriate to their risk level?",
+      "description": "Security certifications provide independent validation of supplier security controls and practices.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.15"
+      ],
+      "scf_control_mappings": [
+        "TPM-03",
+        "CPL-02"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*supplier.*certification.*requirements.*iso.*soc",
+          "security.*certifications.*required.*critical.*suppliers",
+          "certification.*validation.*supplier.*assessment"
+        ],
+        "partially_acceptable": [
+          "certifications.*preferred.*not.*required",
+          "certification.*requirements.*some.*suppliers"
+        ],
+        "unacceptable": [
+          "no.*certification.*requirements",
+          "supplier.*certifications.*not.*verified",
+          "no.*security.*certification.*expectations"
+        ],
+        "required_keywords": [
+          "certification",
+          "supplier"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "22",
+        "requirement": "Supply chain security"
+      }
+    },
+    {
+      "id": "NIS2-23.6",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Reporting Contact Points",
+      "question_text": "Have you designated and communicated internal contact points responsible for incident reporting to authorities?",
+      "description": "Clear designation of reporting responsibilities ensures timely and coordinated incident notifications.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "IRO-01",
+        "GOV-08"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*designated.*contact.*points.*incident.*reporting",
+          "reporting.*responsibilities.*assigned.*communicated",
+          "primary.*backup.*contacts.*designated.*authorities"
+        ],
+        "partially_acceptable": [
+          "contact.*points.*designated.*not.*formally.*communicated",
+          "reporting.*responsibilities.*unclear"
+        ],
+        "unacceptable": [
+          "no.*designated.*contact.*points",
+          "reporting.*responsibilities.*not.*assigned",
+          "unclear.*who.*reports.*incidents"
+        ],
+        "required_keywords": [
+          "contact points",
+          "incident reporting"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-23.7",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Incident Significance Criteria",
+      "question_text": "Have you defined criteria for determining when an incident is significant and requires reporting under NIS2?",
+      "description": "Clear significance criteria ensure consistent determination of reporting obligations based on impact, scope, and duration.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "IRO-01",
+        "IRO-07"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*significance.*criteria.*defined.*documented",
+          "reportable.*incident.*thresholds.*established",
+          "impact.*scope.*duration.*criteria.*reporting"
+        ],
+        "partially_acceptable": [
+          "general.*guidelines.*not.*specific.*criteria",
+          "significance.*determination.*subjective"
+        ],
+        "unacceptable": [
+          "no.*significance.*criteria",
+          "unclear.*when.*reporting.*required",
+          "no.*reportable.*incident.*definition"
+        ],
+        "required_keywords": [
+          "significance",
+          "criteria",
+          "incident"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-23.8",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Cross-Border Incidents",
+      "question_text": "Do you have procedures for coordinating reporting when incidents affect multiple member states or cross-border services?",
+      "description": "Cross-border incidents may require notification to multiple authorities and coordinated response.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "IRO-09",
+        "GOV-08"
+      ],
+      "risk_if_inadequate": "medium",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*cross-border.*incident.*procedures.*coordination",
+          "multi-jurisdiction.*reporting.*process.*documented",
+          "procedures.*notify.*multiple.*authorities"
+        ],
+        "partially_acceptable": [
+          "awareness.*cross-border.*no.*formal.*procedures",
+          "cross-border.*coordination.*informal"
+        ],
+        "unacceptable": [
+          "no.*cross-border.*procedures",
+          "multi-jurisdiction.*incidents.*not.*considered",
+          "no.*coordination.*process"
+        ],
+        "required_keywords": [
+          "cross-border",
+          "coordination"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-23.9",
+      "category": "Reporting Obligations (Article 23)",
+      "subcategory": "Voluntary Information Sharing",
+      "question_text": "Do you participate in voluntary cybersecurity information sharing with peer organizations and authorities?",
+      "description": "Information sharing enhances collective security awareness and enables coordinated defense against threats.",
+      "expected_answer_type": "yes_no",
+      "is_required": false,
+      "weight": 5,
+      "regulatory_mappings": [
+        "NIS2 - Article 23",
+        "ISO 27001:2022 - A.16"
+      ],
+      "scf_control_mappings": [
+        "THR-02",
+        "IRO-09"
+      ],
+      "risk_if_inadequate": "low",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*information.*sharing.*peer.*organizations.*authorities",
+          "participate.*threat.*intelligence.*sharing",
+          "isac.*sector.*sharing.*programs"
+        ],
+        "partially_acceptable": [
+          "limited.*information.*sharing.*informal",
+          "receive.*threat.*intelligence.*not.*share"
+        ],
+        "unacceptable": [
+          "no.*information.*sharing",
+          "isolated.*no.*external.*coordination",
+          "no.*threat.*intelligence.*participation"
+        ],
+        "required_keywords": [
+          "information sharing",
+          "voluntary"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "23",
+        "requirement": "Incident reporting obligations"
+      }
+    },
+    {
+      "id": "NIS2-Monitoring-01",
+      "category": "Network Security (Article 21)",
+      "subcategory": "Security Event Logging",
+      "question_text": "Do you implement comprehensive security event logging across all critical systems and network infrastructure?",
+      "description": "Security event logs provide audit trails for incident investigation, forensics, and compliance verification.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article Monitoring-01",
+        "ISO 27001:2022 - various"
+      ],
+      "scf_control_mappings": [
+        "MON-03",
+        "MON-04",
+        "IRO-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*comprehensive.*security.*logging.*all.*systems",
+          "centralized.*log.*management.*siem.*solution",
+          "security.*events.*logged.*retained.*analyzed"
+        ],
+        "partially_acceptable": [
+          "logging.*enabled.*not.*comprehensive",
+          "some.*systems.*logged.*not.*all"
+        ],
+        "unacceptable": [
+          "no.*security.*logging",
+          "logs.*not.*collected.*retained",
+          "minimal.*logging.*only"
+        ],
+        "required_keywords": [
+          "logging",
+          "security events"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.k",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Security Awareness & Training",
+      "question_text": "Does your organization provide cybersecurity awareness training and education programs for all personnel as required by NIS2?",
+      "description": "NIS2 Article 21 requires security awareness training to ensure personnel understand their role in protecting against cyber threats.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - A.6.3"
+      ],
+      "scf_control_mappings": [
+        "HRS-07",
+        "HRS-08",
+        "GOV-06"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*annual.*training.*all.*personnel",
+          "regular.*cybersecurity.*awareness.*programs",
+          "training.*completion.*tracked.*verified"
+        ],
+        "partially_acceptable": [
+          "some.*training.*not.*mandatory",
+          "awareness.*program.*incomplete"
+        ],
+        "unacceptable": [
+          "no.*training.*program",
+          "no.*cybersecurity.*awareness"
+        ],
+        "required_keywords": [
+          "training",
+          "awareness"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Training curriculum and materials",
+        "Training completion records",
+        "Awareness campaign documentation",
+        "Phishing simulation results"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2(k)",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.l",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Physical Security",
+      "question_text": "Are appropriate physical security controls implemented to protect critical ICT infrastructure and data centers?",
+      "description": "NIS2 requires physical security measures to prevent unauthorized access to facilities housing critical systems.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 7,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - A.7"
+      ],
+      "scf_control_mappings": [
+        "PES-01",
+        "PES-02",
+        "PES-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*access.*control.*monitoring.*facilities",
+          "physical.*security.*data.*centers",
+          "surveillance.*alarm.*systems"
+        ],
+        "partially_acceptable": [
+          "basic.*physical.*security.*limited.*monitoring",
+          "access.*controls.*no.*surveillance"
+        ],
+        "unacceptable": [
+          "no.*physical.*security",
+          "unrestricted.*access"
+        ],
+        "required_keywords": [
+          "physical",
+          "access control"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Physical security policy",
+        "Access control logs",
+        "Surveillance system documentation",
+        "Facility security assessments"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.m",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Change Management",
+      "question_text": "Is there a formal change management process for ICT systems that includes security impact analysis?",
+      "description": "NIS2 requires controlled change management to prevent security vulnerabilities from being introduced during system changes.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - A.8.32"
+      ],
+      "scf_control_mappings": [
+        "CHG-01",
+        "CHG-02",
+        "CHG-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*formal.*change.*process.*security.*review",
+          "change.*control.*board.*security.*analysis",
+          "documented.*procedures.*testing"
+        ],
+        "partially_acceptable": [
+          "informal.*change.*process",
+          "change.*management.*inconsistent"
+        ],
+        "unacceptable": [
+          "no.*change.*management",
+          "ad.*hoc.*changes"
+        ],
+        "required_keywords": [
+          "change",
+          "management"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Change management policy",
+        "Change request records",
+        "Security impact assessments",
+        "Change approval documentation"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.n",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Asset Management",
+      "question_text": "Do you maintain an accurate inventory of all ICT assets including hardware, software, and data?",
+      "description": "NIS2 requires comprehensive asset management to understand what needs to be protected and monitor for unauthorized changes.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - A.5.9"
+      ],
+      "scf_control_mappings": [
+        "AST-01",
+        "AST-02",
+        "AST-03"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*complete.*asset.*inventory.*maintained",
+          "cmdb.*updated.*regularly",
+          "automated.*asset.*discovery"
+        ],
+        "partially_acceptable": [
+          "partial.*inventory.*incomplete",
+          "asset.*tracking.*manual.*outdated"
+        ],
+        "unacceptable": [
+          "no.*asset.*inventory",
+          "unknown.*assets"
+        ],
+        "required_keywords": [
+          "asset",
+          "inventory"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Asset inventory database",
+        "Asset management policy",
+        "Asset classification records",
+        "Inventory update procedures"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.o",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Logging & Monitoring",
+      "question_text": "Are security events and logs collected, protected, and regularly reviewed for security incidents?",
+      "description": "NIS2 requires comprehensive logging and monitoring to detect and respond to security incidents promptly.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - A.8.15"
+      ],
+      "scf_control_mappings": [
+        "MON-01",
+        "MON-02",
+        "LOG-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*centralized.*logging.*siem",
+          "logs.*protected.*reviewed.*alerts",
+          "24/7.*monitoring.*security.*events"
+        ],
+        "partially_acceptable": [
+          "logs.*collected.*not.*centralized",
+          "monitoring.*limited.*coverage"
+        ],
+        "unacceptable": [
+          "no.*logging",
+          "logs.*not.*monitored"
+        ],
+        "required_keywords": [
+          "logging",
+          "monitoring"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Logging and monitoring policy",
+        "SIEM configuration",
+        "Log retention records",
+        "Security event reviews"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.p",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Third-Party Risk Management",
+      "question_text": "Do you assess and manage cybersecurity risks from third-party service providers and suppliers?",
+      "description": "NIS2 explicitly requires managing supply chain cybersecurity risks, including vendor assessments and contractual security requirements.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "NIS2 - Article 22",
+        "ISO 27001:2022 - A.5.19"
+      ],
+      "scf_control_mappings": [
+        "TPM-01",
+        "TPM-02",
+        "TPM-03"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*vendor.*risk.*assessments.*ongoing",
+          "third.*party.*security.*requirements.*contracts",
+          "supply.*chain.*monitoring"
+        ],
+        "partially_acceptable": [
+          "initial.*assessment.*no.*ongoing.*review",
+          "some.*vendors.*assessed.*incomplete"
+        ],
+        "unacceptable": [
+          "no.*third.*party.*assessment",
+          "no.*supply.*chain.*security"
+        ],
+        "required_keywords": [
+          "third-party",
+          "vendor"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Third-party risk assessment policy",
+        "Vendor assessment reports",
+        "Contractual security requirements",
+        "Ongoing monitoring records"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.q",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Secure Software Development",
+      "question_text": "Do you follow secure software development lifecycle (SDLC) practices including security testing and code reviews?",
+      "description": "NIS2 requires security to be integrated into the development process to prevent vulnerabilities in custom applications.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - A.8.25"
+      ],
+      "scf_control_mappings": [
+        "APP-01",
+        "APP-02",
+        "TVM-01"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*sdlc.*security.*testing.*code.*review",
+          "secure.*development.*standards.*followed",
+          "sast.*dast.*implemented"
+        ],
+        "partially_acceptable": [
+          "some.*security.*testing.*not.*consistent",
+          "code.*review.*not.*security.*focused"
+        ],
+        "unacceptable": [
+          "no.*secure.*development",
+          "no.*security.*testing"
+        ],
+        "required_keywords": [
+          "development",
+          "security testing"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Secure SDLC policy",
+        "Security testing results",
+        "Code review records",
+        "Vulnerability scan reports"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.r",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Incident Response Testing",
+      "question_text": "Do you regularly test and exercise your incident response capabilities through simulations and drills?",
+      "description": "NIS2 requires organizations to validate their incident response readiness through regular testing and exercises.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "ISO 27001:2022 - A.5.24"
+      ],
+      "scf_control_mappings": [
+        "IRO-05",
+        "IRO-06",
+        "BCD-10"
+      ],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*annual.*tabletop.*exercises",
+          "incident.*response.*drills.*documented",
+          "lessons.*learned.*incorporated"
+        ],
+        "partially_acceptable": [
+          "occasional.*testing.*not.*regular",
+          "drills.*not.*documented"
+        ],
+        "unacceptable": [
+          "no.*testing.*exercises",
+          "never.*tested"
+        ],
+        "required_keywords": [
+          "testing",
+          "exercises"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Incident response test plan",
+        "Exercise after-action reports",
+        "Lessons learned documentation",
+        "Improvement action items"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    },
+    {
+      "id": "NIS2-21.2.s",
+      "category": "Cybersecurity Risk Management (Article 21)",
+      "subcategory": "Data Protection",
+      "question_text": "Are appropriate technical and organizational measures in place to protect personal and sensitive data in accordance with GDPR and NIS2?",
+      "description": "NIS2 requires data protection measures that complement GDPR requirements, ensuring confidentiality and integrity of data.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": [
+        "NIS2 - Article 21",
+        "GDPR - Article 32",
+        "ISO 27001:2022 - A.5.34"
+      ],
+      "scf_control_mappings": [
+        "PRI-01",
+        "PRI-02",
+        "DCH-01"
+      ],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": [
+          "yes.*data.*protection.*gdpr.*compliant",
+          "encryption.*access.*controls.*data",
+          "data.*classification.*handling.*procedures"
+        ],
+        "partially_acceptable": [
+          "some.*data.*protection.*incomplete",
+          "controls.*exist.*not.*comprehensive"
+        ],
+        "unacceptable": [
+          "no.*data.*protection",
+          "no.*encryption"
+        ],
+        "required_keywords": [
+          "data protection",
+          "encryption"
+        ],
+        "weight_adjustment": 1.0
+      },
+      "required_evidence": [
+        "Data protection policy",
+        "Data classification scheme",
+        "Encryption implementation",
+        "GDPR compliance documentation"
+      ],
+      "regulatory_source": {
+        "regulation": "NIS2",
+        "article": "21",
+        "paragraph": "2",
+        "directive": "EU 2022/2555",
+        "requirement": "Cybersecurity risk management measures"
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "tprm-frameworks": {
+      "command": "python3",
+      "args": ["-m", "tprm_frameworks_mcp"],
+      "env": {
+        "TPRM_PORT": "8309",
+        "TPRM_LOG_LEVEL": "INFO"
+      },
+      "description": "TPRM Frameworks MCP server for vendor risk assessments",
+      "capabilities": {
+        "tools": true,
+        "resources": false,
+        "prompts": false
+      },
+      "metadata": {
+        "version": "0.1.0",
+        "port": 8309,
+        "protocol": "stdio",
+        "integration_servers": [
+          "security-controls-mcp (port 8308)",
+          "eu-regulations-mcp"
+        ]
+      }
+    }
+  }
+}

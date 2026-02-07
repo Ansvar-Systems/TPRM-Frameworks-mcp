@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "name": "CSA CAIQ v4",
+    "version": "4.0.4",
+    "total_questions": 295,
+    "status": "placeholder",
+    "description": "Cloud Security Alliance Consensus Assessments Initiative Questionnaire",
+    "categories": [
+      "Audit Assurance & Compliance",
+      "Business Continuity Management",
+      "Change Control",
+      "Data Security & Privacy",
+      "Datacenter Security",
+      "Encryption & Key Management",
+      "Governance",
+      "Human Resources",
+      "Identity & Access Management",
+      "Infrastructure & Virtualization",
+      "Interoperability & Portability",
+      "Mobile Security",
+      "Security Incident Management",
+      "Supply Chain Management",
+      "Threat & Vulnerability Management"
+    ],
+    "estimated_completion_time": "8-12 hours"
+  },
+  "questions": [
+    {
+      "id": "caiq_a&c-01",
+      "category": "Audit Assurance & Compliance",
+      "subcategory": "Audit Planning",
+      "question_text": "Can you provide evidence of annual independent security audits (e.g., SOC 2, ISO 27001)?",
+      "description": "Independent third-party audits provide assurance of security controls effectiveness.",
+      "expected_answer_type": "text",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 9.2", "SOC 2", "DORA - Audit"],
+      "scf_control_mappings": ["CPL-01", "CPL-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["soc 2.*type.*ii", "iso.*27001.*certified", "independent.*audit.*annually"],
+        "partially_acceptable": ["audit.*planned", "self-assessment"],
+        "unacceptable": ["no", "no.*audit"],
+        "required_keywords": ["audit"]
+      }
+    },
+    {
+      "id": "caiq_bcm-01",
+      "category": "Business Continuity Management",
+      "subcategory": "Business Continuity Planning",
+      "question_text": "Does your organization have a documented business continuity plan that addresses cloud service disruptions?",
+      "description": "BCP should specifically address cloud-specific failure scenarios and recovery procedures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 22301", "DORA - Business Continuity", "NIS2 - Continuity"],
+      "scf_control_mappings": ["BCD-01", "BCD-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "documented.*bcp.*cloud"],
+        "partially_acceptable": ["bcp exists.*not.*cloud-specific"],
+        "unacceptable": ["no", "no.*plan"],
+        "required_keywords": ["documented"]
+      }
+    },
+    {
+      "id": "caiq_ccc-01",
+      "category": "Change Control",
+      "subcategory": "Change Management",
+      "question_text": "Do you have a formal change management process that requires approval before production changes?",
+      "description": "Changes should follow a documented process with risk assessment, testing, and approval.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.32", "ITIL", "SOC 2 - CC8.1"],
+      "scf_control_mappings": ["CHG-01", "CHG-02", "CHG-04"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "formal.*change.*process.*approval"],
+        "partially_acceptable": ["change process.*informal"],
+        "unacceptable": ["no", "no.*process"],
+        "required_keywords": ["approval"]
+      }
+    },
+    {
+      "id": "caiq_dsp-01",
+      "category": "Data Security & Privacy",
+      "subcategory": "Data Classification",
+      "question_text": "Do you classify data based on sensitivity and apply controls accordingly?",
+      "description": "Data classification drives appropriate security controls and handling procedures.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.12", "GDPR - Article 32", "CCPA"],
+      "scf_control_mappings": ["DCH-01", "DCH-02", "PRI-03"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "classify.*data.*sensitivity.*controls"],
+        "partially_acceptable": ["partial.*classification"],
+        "unacceptable": ["no", "no.*classification"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "caiq_dsp-02",
+      "category": "Data Security & Privacy",
+      "subcategory": "Data Deletion",
+      "question_text": "Can you securely delete customer data upon request and provide verification?",
+      "description": "Secure deletion procedures should ensure data is irrecoverable and verifiable.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["GDPR - Article 17", "CCPA - Right to Delete", "ISO 27001:2022 - 8.10"],
+      "scf_control_mappings": ["DCH-10", "PRI-08"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "secure.*deletion.*verified"],
+        "partially_acceptable": ["deletion.*not.*verified"],
+        "unacceptable": ["no", "cannot.*delete"],
+        "required_keywords": ["delete"]
+      }
+    },
+    {
+      "id": "caiq_dcs-01",
+      "category": "Datacenter Security",
+      "subcategory": "Physical Security",
+      "question_text": "Are physical datacenters protected with multi-layered physical security controls?",
+      "description": "Physical security should include perimeter protection, access control, surveillance, and environmental controls.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 7.4", "SOC 2 - CC6.4"],
+      "scf_control_mappings": ["PES-01", "PES-02", "PES-03"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "multi-layer.*physical.*security"],
+        "partially_acceptable": ["basic.*physical.*security"],
+        "unacceptable": ["no", "minimal.*security"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "caiq_ekm-01",
+      "category": "Encryption & Key Management",
+      "subcategory": "Key Management",
+      "question_text": "Do you use a formal key management system for encryption key lifecycle management?",
+      "description": "Key management should cover generation, distribution, storage, rotation, and destruction.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["ISO 27001:2022 - 8.24", "PCI DSS 4.0 - 3.6", "NIST 800-57"],
+      "scf_control_mappings": ["CRY-05", "CRY-06"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "formal.*key management.*system"],
+        "partially_acceptable": ["key management.*informal"],
+        "unacceptable": ["no", "no.*key management"],
+        "required_keywords": ["key management"]
+      }
+    },
+    {
+      "id": "caiq_grc-01",
+      "category": "Governance",
+      "subcategory": "Risk Management",
+      "question_text": "Do you have an enterprise risk management program that includes cloud security risks?",
+      "description": "Risk management should identify, assess, and mitigate cloud-specific security risks.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 9,
+      "regulatory_mappings": ["ISO 31000", "NIST CSF - ID.RM", "DORA - ICT Risk"],
+      "scf_control_mappings": ["RSK-01", "RSK-02", "RSK-04"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "risk management.*cloud.*security"],
+        "partially_acceptable": ["risk management.*not.*cloud-specific"],
+        "unacceptable": ["no", "no.*risk management"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "caiq_hrs-01",
+      "category": "Human Resources",
+      "subcategory": "Background Screening",
+      "question_text": "Do you conduct background checks on employees with access to sensitive systems or data?",
+      "description": "Background screening should be commensurate with the level of access and sensitivity.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 8,
+      "regulatory_mappings": ["ISO 27001:2022 - 6.1", "SOC 2 - CC1.4", "PCI DSS 4.0 - 12.7"],
+      "scf_control_mappings": ["HRS-01", "HRS-02"],
+      "risk_if_inadequate": "high",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "background.*checks.*all.*employees"],
+        "partially_acceptable": ["background checks.*some"],
+        "unacceptable": ["no", "no.*checks"],
+        "required_keywords": []
+      }
+    },
+    {
+      "id": "caiq_iam-01",
+      "category": "Identity & Access Management",
+      "subcategory": "Access Control",
+      "question_text": "Do you implement role-based access control (RBAC) with least privilege principles?",
+      "description": "Access should be granted based on job function with minimum necessary privileges.",
+      "expected_answer_type": "yes_no",
+      "is_required": true,
+      "weight": 10,
+      "regulatory_mappings": ["ISO 27001:2022 - 5.15", "NIST 800-53 - AC-2", "SOC 2 - CC6.1"],
+      "scf_control_mappings": ["IAC-01", "IAC-02", "IAC-03"],
+      "risk_if_inadequate": "critical",
+      "evaluation_rubric": {
+        "acceptable": ["yes", "rbac.*least privilege"],
+        "partially_acceptable": ["rbac.*not.*consistently"],
+        "unacceptable": ["no", "no.*rbac"],
+        "required_keywords": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+{
+  "metadata": {
+    "title": "DORA and NIS2 Regulatory Overlap Analysis",
+    "version": "1.0",
+    "created": "2024-01-15",
+    "description": "Mapping of overlapping and unique requirements between DORA (Digital Operational Resilience Act) and NIS2 (Network and Information Security Directive 2)",
+    "scope": "Focus on ICT risk management, supply chain security, and incident reporting"
+  },
+  "overlapping_requirements": {
+    "governance_and_oversight": {
+      "description": "Management body responsibilities for cybersecurity risk management",
+      "dora_articles": ["Article 5 - Governance and organization"],
+      "nis2_articles": ["Article 20 - Management oversight"],
+      "shared_concepts": [
+        "Management body approval of security policies",
+        "Oversight of cybersecurity risk management",
+        "Regular reporting to management",
+        "Management training and competence"
+      ],
+      "scf_controls": ["GOV-01", "GOV-02", "GOV-03", "GOV-06"],
+      "assessment_approach": "Combined assessment using NIS2-20.1, NIS2-20.2",
+      "key_differences": [
+        "DORA: Specific focus on digital operational resilience",
+        "NIS2: Broader cybersecurity risk management scope",
+        "DORA: Applies to financial entities only",
+        "NIS2: Applies to essential and important entities across 18 sectors"
+      ]
+    },
+    "supply_chain_security": {
+      "description": "Third-party risk management and supply chain cybersecurity",
+      "dora_articles": [
+        "Article 28 - General principles on key contractual elements",
+        "Article 29 - Preliminary assessment of ICT concentration risk at entity level",
+        "Article 30 - Key principles for ICT third-party service providers"
+      ],
+      "nis2_articles": [
+        "Article 21(2)(c) - Security in acquisition, development, and maintenance",
+        "Article 22 - Supply chain security"
+      ],
+      "shared_concepts": [
+        "Supplier risk assessment",
+        "Contractual security requirements",
+        "Ongoing supplier monitoring",
+        "Incident notification from suppliers",
+        "Supplier security testing rights"
+      ],
+      "scf_controls": ["TPM-01", "TPM-02", "TPM-03", "TPM-04", "TPM-06", "TPM-08"],
+      "assessment_approach": "Use both DORA and NIS2 questionnaires for comprehensive supply chain assessment",
+      "shared_questions": [
+        "Supplier cybersecurity assessment",
+        "Contractual security requirements",
+        "Supplier monitoring and reviews",
+        "Incident notification obligations",
+        "Audit rights for critical suppliers"
+      ],
+      "key_differences": [
+        "DORA: Focus on ICT concentration risk and exit strategies",
+        "DORA: Specific register of ICT third-party service providers",
+        "DORA: Contractual access and audit rights explicitly required",
+        "NIS2: Broader coverage of supply chain beyond ICT",
+        "NIS2: Secure development lifecycle requirements"
+      ]
+    },
+    "incident_response_and_reporting": {
+      "description": "Incident detection, response, and regulatory notification",
+      "dora_articles": [
+        "Article 17 - ICT-related incident management process",
+        "Article 19 - Classification of ICT-related incidents and cyber threats"
+      ],
+      "nis2_articles": [
+        "Article 21(2)(a) - Incident handling",
+        "Article 23 - Reporting obligations"
+      ],
+      "shared_concepts": [
+        "Incident detection and classification",
+        "Incident response procedures",
+        "Incident reporting to authorities",
+        "Timeline-based reporting requirements",
+        "Root cause analysis and lessons learned"
+      ],
+      "scf_controls": ["IRO-01", "IRO-02", "IRO-05", "IRO-07", "IRO-08", "IRO-09", "IRO-10"],
+      "assessment_approach": "Combined incident management assessment focusing on both DORA and NIS2 timelines",
+      "reporting_timelines": {
+        "dora_major_incidents": {
+          "initial": "4 hours",
+          "intermediate": "Within 72 hours at the latest after initial notification",
+          "final": "Not later than 1 month from the intermediate report"
+        },
+        "nis2_significant_incidents": {
+          "early_warning": "24 hours",
+          "full_notification": "72 hours",
+          "progress_reports": "Upon request",
+          "final_report": "1 month from notification"
+        }
+      },
+      "key_differences": [
+        "DORA: 4-hour initial notification (stricter)",
+        "NIS2: 24-hour early warning (less strict)",
+        "DORA: Specific classification criteria for major incidents",
+        "NIS2: Broader definition of significant incidents",
+        "DORA: Notifications to competent authorities and ESAs",
+        "NIS2: Notifications to CSIRTs and competent authorities"
+      ]
+    },
+    "business_continuity_and_disaster_recovery": {
+      "description": "Business continuity planning and ICT continuity",
+      "dora_articles": ["Article 11 - Business continuity policy"],
+      "nis2_articles": ["Article 21(2)(b) - Business continuity, backup, disaster recovery"],
+      "shared_concepts": [
+        "Business continuity plans",
+        "Disaster recovery procedures",
+        "Backup management",
+        "Recovery time objectives (RTO)",
+        "Recovery point objectives (RPO)",
+        "Crisis management",
+        "BCP/DR testing"
+      ],
+      "scf_controls": ["BCD-01", "BCD-02", "BCD-05", "BCD-06", "BCD-07", "BCD-08", "BCD-11"],
+      "assessment_approach": "Combined BCP assessment covering both ICT-specific and broader business continuity",
+      "key_differences": [
+        "DORA: Specific focus on ICT continuity",
+        "NIS2: Broader business continuity including crisis management",
+        "DORA: Impact tolerance and RTO/RPO for critical functions",
+        "NIS2: Emergency communication systems requirement"
+      ]
+    },
+    "cybersecurity_risk_management": {
+      "description": "Risk assessment, control implementation, and ongoing risk management",
+      "dora_articles": [
+        "Article 6 - ICT risk management framework",
+        "Article 8 - Identification",
+        "Article 9 - Protection and prevention",
+        "Article 10 - Detection"
+      ],
+      "nis2_articles": [
+        "Article 21(1) - Risk analysis and information system security",
+        "Article 21(2) - Cybersecurity risk management measures"
+      ],
+      "shared_concepts": [
+        "Risk assessment methodology",
+        "Risk-based security controls",
+        "Continuous monitoring",
+        "Security control effectiveness testing",
+        "Proportionate measures",
+        "State-of-the-art practices"
+      ],
+      "scf_controls": ["RSK-01", "RSK-02", "RSK-03", "RSK-04", "GOV-04"],
+      "assessment_approach": "Integrated risk management framework assessment",
+      "key_differences": [
+        "DORA: ICT-specific risk management",
+        "NIS2: Comprehensive cybersecurity risk management",
+        "DORA: Explicit digital operational resilience focus",
+        "NIS2: Proportionate measures based on entity size and risk"
+      ]
+    },
+    "network_security": {
+      "description": "Network segmentation, monitoring, and protection",
+      "dora_articles": ["Article 9 - Protection and prevention (network security aspects)"],
+      "nis2_articles": ["Article 21(2)(d) - Network security"],
+      "shared_concepts": [
+        "Network segmentation",
+        "Network monitoring",
+        "Intrusion detection/prevention",
+        "Network access controls",
+        "Network architecture security"
+      ],
+      "scf_controls": ["NET-01", "NET-02", "NET-04", "NET-06", "MON-01", "MON-08"],
+      "assessment_approach": "Network security architecture and monitoring assessment",
+      "key_differences": [
+        "NIS2: Explicit network segmentation requirement",
+        "DORA: Focus on ICT system resilience"
+      ]
+    },
+    "access_control_and_authentication": {
+      "description": "Identity and access management, multi-factor authentication",
+      "dora_articles": ["Article 9 - Protection and prevention (access control aspects)"],
+      "nis2_articles": [
+        "Article 21(2)(e) - Multi-factor authentication",
+        "Article 21(2)(i) - Human resources security and access control",
+        "Article 21(2)(j) - Access control and asset management"
+      ],
+      "shared_concepts": [
+        "Access control policies",
+        "Multi-factor authentication",
+        "Privileged access management",
+        "Access reviews",
+        "Least privilege principle",
+        "User lifecycle management"
+      ],
+      "scf_controls": ["IAC-01", "IAC-02", "IAC-03", "IAC-04", "IAC-05", "IAC-09", "IAC-10", "IAC-11", "IAC-12"],
+      "assessment_approach": "Comprehensive IAM assessment",
+      "key_differences": [
+        "NIS2: Explicit MFA requirement (Article 21(2)(e))",
+        "NIS2: Secured communications requirement",
+        "DORA: Access control within ICT risk management framework"
+      ]
+    },
+    "vulnerability_and_patch_management": {
+      "description": "Vulnerability scanning, patch management, and remediation",
+      "dora_articles": ["Article 10 - Detection (vulnerability management aspects)"],
+      "nis2_articles": ["Article 21(2)(g) - Vulnerability handling and disclosure"],
+      "shared_concepts": [
+        "Vulnerability scanning",
+        "Patch management",
+        "Vulnerability disclosure",
+        "Security patch SLAs",
+        "Vulnerability remediation tracking"
+      ],
+      "scf_controls": ["TVM-01", "TVM-02", "TVM-03", "TVM-04"],
+      "assessment_approach": "Integrated vulnerability management assessment",
+      "key_differences": [
+        "NIS2: Explicit vulnerability disclosure requirement",
+        "DORA: Focus on ICT system vulnerabilities"
+      ]
+    },
+    "cryptography": {
+      "description": "Encryption, key management, and cryptographic controls",
+      "dora_articles": ["Article 9 - Protection and prevention (cryptographic controls)"],
+      "nis2_articles": [
+        "Article 21(2)(h) - Encryption",
+        "Article 21(2)(m) - Cryptographic policies and procedures"
+      ],
+      "shared_concepts": [
+        "Data encryption (at rest and in transit)",
+        "Cryptographic key management",
+        "Approved cryptographic algorithms",
+        "Certificate management",
+        "Secure communications"
+      ],
+      "scf_controls": ["CRY-01", "CRY-02", "CRY-03", "CRY-04", "CRY-05", "CRY-06", "CRY-08"],
+      "assessment_approach": "Cryptographic controls and key management assessment",
+      "key_differences": [
+        "NIS2: More explicit cryptography requirements",
+        "NIS2: Secured voice, video, text communications",
+        "DORA: Encryption within ICT protection measures"
+      ]
+    },
+    "security_testing_and_assurance": {
+      "description": "Security testing, penetration testing, and control effectiveness",
+      "dora_articles": [
+        "Article 25 - Testing of ICT tools and systems",
+        "Article 26 - Advanced testing of ICT tools, systems and processes based on TLPT"
+      ],
+      "nis2_articles": ["Article 21(2)(k) - Security assessments of effectiveness"],
+      "shared_concepts": [
+        "Regular security testing",
+        "Penetration testing",
+        "Vulnerability assessments",
+        "Control effectiveness reviews",
+        "Threat-led penetration testing (for DORA critical entities)"
+      ],
+      "scf_controls": ["RSK-04", "TVM-04", "TVM-05", "TVM-06", "CPL-02"],
+      "assessment_approach": "Security testing program assessment",
+      "key_differences": [
+        "DORA: Threat-led penetration testing (TLPT) for critical entities",
+        "DORA: Specific testing frequency requirements",
+        "NIS2: General security effectiveness assessment requirement"
+      ]
+    },
+    "training_and_awareness": {
+      "description": "Security awareness training and cyber hygiene",
+      "dora_articles": ["Article 13 - Training and awareness"],
+      "nis2_articles": [
+        "Article 20(2) - Management training",
+        "Article 21(2)(l) - Training and cyber hygiene"
+      ],
+      "shared_concepts": [
+        "Security awareness training",
+        "Role-based training",
+        "Cyber hygiene practices",
+        "Management cybersecurity training",
+        "Training effectiveness measurement"
+      ],
+      "scf_controls": ["HRS-07", "HRS-08", "GOV-06"],
+      "assessment_approach": "Training and awareness program assessment",
+      "key_differences": [
+        "NIS2: Explicit management training requirement",
+        "NIS2: Basic cyber hygiene practices",
+        "DORA: Training aligned with ICT risk management"
+      ]
+    }
+  },
+  "unique_to_dora": {
+    "ict_concentration_risk": {
+      "description": "Assessment and management of concentration risk from ICT third-party dependencies",
+      "articles": ["Article 28.5 - ICT concentration risk"],
+      "requirements": [
+        "Identification of single points of failure",
+        "Assessment of concentration risk at entity level",
+        "Alternative solutions and substitutability assessment",
+        "Mitigation strategies for concentration risk"
+      ],
+      "scf_controls": ["TPM-03", "RSK-06", "BCD-01"],
+      "why_unique": "DORA is focused on preventing systemic risk in the financial sector from over-reliance on limited ICT service providers"
+    },
+    "ict_third_party_service_provider_exit_strategies": {
+      "description": "Detailed exit strategies and transition plans for critical ICT services",
+      "articles": ["Article 28.1.g - Exit strategies"],
+      "requirements": [
+        "Documented exit strategies for all critical ICT third-party services",
+        "Transition plans ensuring business continuity",
+        "Data portability and migration procedures",
+        "Alternative provider identification",
+        "Testing of exit procedures"
+      ],
+      "scf_controls": ["TPM-05", "BCD-03"],
+      "why_unique": "DORA mandates comprehensive exit planning to ensure operational continuity in financial sector"
+    },
+    "ict_third_party_register": {
+      "description": "Register of information on all ICT third-party service providers",
+      "articles": ["Article 28.3 - Register of information"],
+      "requirements": [
+        "Maintain register of all ICT third-party service providers",
+        "Categorize providers based on criticality",
+        "Update register regularly",
+        "Make register available to competent authorities"
+      ],
+      "scf_controls": ["TPM-01", "AST-01", "GOV-02"],
+      "why_unique": "DORA requires formal register for regulatory oversight of systemic ICT risk"
+    },
+    "threat_led_penetration_testing": {
+      "description": "Advanced testing framework for critical entities",
+      "articles": ["Article 26 - TLPT framework"],
+      "requirements": [
+        "Threat-led penetration testing at least every 3 years",
+        "Use of external testers",
+        "Testing based on threat intelligence",
+        "Controlled environment testing",
+        "Remediation and re-testing"
+      ],
+      "scf_controls": ["TVM-05", "TVM-06", "RSK-04"],
+      "why_unique": "DORA mandates advanced, threat-based testing for financial entities due to high risk of targeted attacks"
+    },
+    "ict_related_incident_major_classification": {
+      "description": "Specific classification criteria for major ICT-related incidents",
+      "articles": ["Article 18 - Classification criteria"],
+      "requirements": [
+        "Large number of clients affected",
+        "Duration of incident",
+        "Geographical spread",
+        "Data losses affecting critical operations",
+        "Reputational impact"
+      ],
+      "scf_controls": ["IRO-01", "IRO-07"],
+      "why_unique": "DORA has specific, quantitative criteria for major incident classification in financial sector"
+    },
+    "digital_operational_resilience_testing": {
+      "description": "Comprehensive testing program for ICT systems",
+      "articles": ["Article 24 - General requirements for testing"],
+      "requirements": [
+        "Annual testing program",
+        "Scenario-based testing",
+        "Testing of recovery procedures",
+        "Testing documentation and remediation",
+        "Testing of third-party dependencies"
+      ],
+      "scf_controls": ["TVM-04", "BCD-11", "TPM-03"],
+      "why_unique": "DORA mandates comprehensive, structured testing program specific to digital operational resilience"
+    }
+  },
+  "unique_to_nis2": {
+    "multi_factor_authentication_mandatory": {
+      "description": "Explicit requirement for multi-factor authentication or continuous authentication",
+      "articles": ["Article 21(2)(e) - MFA requirement"],
+      "requirements": [
+        "Multi-factor authentication for access control",
+        "OR continuous authentication solutions",
+        "Secured voice, video, and text communications"
+      ],
+      "scf_controls": ["IAC-09", "IAC-10", "CRY-08"],
+      "why_unique": "NIS2 explicitly mandates MFA, whereas DORA includes it within broader access control requirements"
+    },
+    "vulnerability_disclosure": {
+      "description": "Vulnerability disclosure policies and procedures",
+      "articles": ["Article 21(2)(g) - Vulnerability handling and disclosure"],
+      "requirements": [
+        "Vulnerability disclosure policy",
+        "Coordinated vulnerability disclosure process",
+        "Communication with researchers and public"
+      ],
+      "scf_controls": ["TVM-02", "TVM-03"],
+      "why_unique": "NIS2 explicitly requires vulnerability disclosure programs, important for critical infrastructure"
+    },
+    "basic_cyber_hygiene": {
+      "description": "Basic cyber hygiene practices for all personnel",
+      "articles": ["Article 21(2)(l) - Cyber hygiene"],
+      "requirements": [
+        "Basic cyber hygiene training for all staff",
+        "Practical cybersecurity measures",
+        "Regular awareness updates"
+      ],
+      "scf_controls": ["HRS-07", "HRS-08"],
+      "why_unique": "NIS2 emphasizes foundational cyber hygiene across all sectors"
+    },
+    "secured_emergency_communications": {
+      "description": "Emergency communication systems that remain operational during crises",
+      "articles": ["Article 21(2)(f) - Emergency communications"],
+      "requirements": [
+        "Secured emergency communication systems",
+        "Operational during crisis situations",
+        "Backup communication channels",
+        "Testing of emergency communications"
+      ],
+      "scf_controls": ["BCD-08", "IRO-06"],
+      "why_unique": "NIS2 requires specific emergency communication capabilities for essential services continuity"
+    },
+    "physical_and_environmental_security": {
+      "description": "Physical security of personnel and facilities",
+      "articles": ["Article 21(2)(n) - Physical and environmental security"],
+      "requirements": [
+        "Physical security controls for facilities",
+        "Environmental controls (fire, HVAC, power)",
+        "Protection of network equipment",
+        "Personnel security measures"
+      ],
+      "scf_controls": ["PES-01", "PES-02", "PES-03"],
+      "why_unique": "NIS2 explicitly addresses physical security, important for critical infrastructure protection"
+    },
+    "cyber_threat_notification": {
+      "description": "Notification of significant cyber threats even without incidents",
+      "articles": ["Article 23(7) - Cyber threat notification"],
+      "requirements": [
+        "Report significant cyber threats to authorities",
+        "Threat intelligence sharing",
+        "Proactive threat notification"
+      ],
+      "scf_controls": ["TVM-02", "IRO-09", "THR-01"],
+      "why_unique": "NIS2 requires proactive threat sharing to enable coordinated defense across sectors"
+    },
+    "service_recipient_notification": {
+      "description": "Notification to customers when incidents affect services",
+      "articles": ["Article 23(8) - Service recipient notification"],
+      "requirements": [
+        "Notify service recipients of incidents affecting them",
+        "Enable recipients to take protective measures",
+        "Timely customer communication"
+      ],
+      "scf_controls": ["IRO-06", "BCD-09"],
+      "why_unique": "NIS2 mandates customer notification to enable ecosystem-wide incident response"
+    },
+    "proportionate_measures_based_on_entity_type": {
+      "description": "Proportionate cybersecurity measures based on entity classification",
+      "articles": ["Article 21(3) - Proportionality"],
+      "requirements": [
+        "Measures proportionate to risks faced",
+        "Consider state of the art",
+        "Appropriate to entity size and sector",
+        "Different requirements for essential vs. important entities"
+      ],
+      "scf_controls": ["RSK-02", "GOV-04"],
+      "why_unique": "NIS2 has explicit proportionality requirement recognizing diverse entity sizes and sectors"
+    }
+  },
+  "combined_assessment_strategy": {
+    "approach": "Organizations subject to both DORA and NIS2 should conduct integrated compliance assessment",
+    "benefits": [
+      "Avoid duplicate assessments",
+      "Leverage overlapping controls",
+      "Unified governance and risk management",
+      "Consistent supplier management",
+      "Integrated incident response"
+    ],
+    "recommended_workflow": {
+      "step_1": {
+        "action": "Determine applicability",
+        "tasks": [
+          "Identify if organization is subject to DORA (financial entity)",
+          "Identify if organization is subject to NIS2 (essential/important entity)",
+          "Map internal controls to both frameworks"
+        ]
+      },
+      "step_2": {
+        "action": "Gap assessment",
+        "tasks": [
+          "Assess current state against DORA requirements",
+          "Assess current state against NIS2 requirements",
+          "Identify overlapping requirements",
+          "Identify unique requirements from each regulation"
+        ]
+      },
+      "step_3": {
+        "action": "Integrated control implementation",
+        "tasks": [
+          "Implement common controls that satisfy both regulations",
+          "Implement DORA-specific requirements (e.g., TLPT, exit strategies)",
+          "Implement NIS2-specific requirements (e.g., MFA, physical security)",
+          "Map all controls to SCF for unified framework"
+        ]
+      },
+      "step_4": {
+        "action": "Unified governance",
+        "tasks": [
+          "Establish single governance body for digital resilience and cybersecurity",
+          "Create integrated risk management framework",
+          "Unified third-party risk management program",
+          "Combined incident response and reporting processes"
+        ]
+      },
+      "step_5": {
+        "action": "Testing and monitoring",
+        "tasks": [
+          "Conduct testing that satisfies both DORA and NIS2 requirements",
+          "Unified security monitoring and detection",
+          "Integrated compliance monitoring and reporting"
+        ]
+      },
+      "step_6": {
+        "action": "Reporting and compliance",
+        "tasks": [
+          "Maintain separate reporting to DORA and NIS2 authorities",
+          "Unified internal compliance dashboard",
+          "Regular compliance reviews covering both regulations"
+        ]
+      }
+    },
+    "questionnaire_approach": {
+      "option_1_combined": {
+        "description": "Use combined DORA/NIS2 questionnaire for vendors subject to both",
+        "when_to_use": "When assessing ICT third-party providers serving financial entities that are also essential/important entities",
+        "benefits": ["Single assessment", "Reduced vendor burden", "Comprehensive coverage"],
+        "considerations": ["Longer questionnaire", "Requires expertise in both regulations"]
+      },
+      "option_2_targeted": {
+        "description": "Use separate DORA or NIS2 questionnaire based on primary regulatory driver",
+        "when_to_use": "When one regulation is the primary driver and the other is secondary",
+        "benefits": ["Focused assessment", "Shorter questionnaire", "Clear regulatory mapping"],
+        "considerations": ["May need supplemental questions", "Potential gaps in coverage"]
+      },
+      "option_3_modular": {
+        "description": "Start with common questions, add regulation-specific modules",
+        "when_to_use": "When flexibility is needed for diverse vendor population",
+        "benefits": ["Scalable approach", "Efficient for common controls", "Customizable"],
+        "considerations": ["Requires careful module design", "More complex to administer"]
+      }
+    }
+  },
+  "scf_control_overlap_summary": {
+    "common_scf_domains": {
+      "governance": ["GOV-01", "GOV-02", "GOV-03", "GOV-04", "GOV-06", "GOV-08"],
+      "risk_management": ["RSK-01", "RSK-02", "RSK-03", "RSK-04", "RSK-06", "RSK-07"],
+      "third_party_management": ["TPM-01", "TPM-02", "TPM-03", "TPM-04", "TPM-05", "TPM-06", "TPM-07", "TPM-08"],
+      "incident_response": ["IRO-01", "IRO-02", "IRO-03", "IRO-05", "IRO-06", "IRO-07", "IRO-08", "IRO-09", "IRO-10"],
+      "business_continuity": ["BCD-01", "BCD-02", "BCD-03", "BCD-05", "BCD-06", "BCD-07", "BCD-08", "BCD-09", "BCD-11"],
+      "access_control": ["IAC-01", "IAC-02", "IAC-03", "IAC-04", "IAC-05", "IAC-09", "IAC-10", "IAC-11", "IAC-12"],
+      "network_security": ["NET-01", "NET-02", "NET-04", "NET-06"],
+      "cryptography": ["CRY-01", "CRY-02", "CRY-03", "CRY-04", "CRY-05", "CRY-06", "CRY-08"],
+      "vulnerability_management": ["TVM-01", "TVM-02", "TVM-03", "TVM-04", "TVM-05", "TVM-06"],
+      "monitoring": ["MON-01", "MON-02", "MON-05", "MON-08"],
+      "compliance": ["CPL-01", "CPL-02", "CPL-06"],
+      "human_resources": ["HRS-01", "HRS-02", "HRS-06", "HRS-07", "HRS-08"],
+      "data_protection": ["DCH-01", "DCH-05", "PRI-01"],
+      "physical_security": ["PES-01", "PES-02", "PES-03"],
+      "application_security": ["APP-01", "APP-02"],
+      "asset_management": ["AST-01"],
+      "change_management": ["CHG-01"]
+    },
+    "total_unique_scf_controls": 87,
+    "dora_specific_emphasis": ["TPM-05 (Exit strategies)", "TVM-05/06 (TLPT)", "RSK-06 (Concentration risk)"],
+    "nis2_specific_emphasis": ["IAC-09 (MFA)", "PES-01/02/03 (Physical security)", "THR-01 (Threat notification)"]
+  },
+  "references": {
+    "dora": {
+      "full_title": "Regulation (EU) 2022/2554 - Digital Operational Resilience Act",
+      "publication": "Official Journal of the European Union, 14 December 2022",
+      "entry_into_force": "16 January 2023",
+      "application_date": "17 January 2025",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj"
+    },
+    "nis2": {
+      "full_title": "Directive (EU) 2022/2555 - Network and Information Security Directive 2",
+      "publication": "Official Journal of the European Union, 27 December 2022",
+      "entry_into_force": "16 January 2023",
+      "transposition_deadline": "17 October 2024",
+      "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj"
+    },
+    "scf": {
+      "full_title": "Secure Controls Framework (SCF)",
+      "version": "2024.1",
+      "url": "https://www.securecontrolsframework.com/"
+    }
+  }
+}

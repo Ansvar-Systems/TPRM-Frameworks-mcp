@@ -1,0 +1,47 @@
+{
+  "name": "tprm-frameworks",
+  "version": "0.1.0",
+  "description": "TPRM Frameworks MCP server for vendor risk assessments",
+  "port": 8309,
+  "protocol": "stdio",
+  "health_check": {
+    "enabled": true,
+    "endpoint": "/health",
+    "interval_seconds": 60
+  },
+  "capabilities": {
+    "tools": [
+      "list_frameworks",
+      "generate_questionnaire",
+      "evaluate_response",
+      "map_questionnaire_to_controls",
+      "generate_tprm_report",
+      "get_questionnaire",
+      "search_questions"
+    ],
+    "resources": false,
+    "prompts": false
+  },
+  "integration": {
+    "security_controls_mcp": {
+      "port": 8308,
+      "description": "Maps questionnaire questions to SCF controls",
+      "tools_used": ["get_control", "map_frameworks", "search_controls"]
+    },
+    "vendor_intel_mcp": {
+      "description": "Enriches TPRM reports with vendor intelligence",
+      "tools_used": ["get_vendor_profile", "get_breach_history"]
+    },
+    "eu_regulations_mcp": {
+      "description": "Sources DORA/NIS2 requirements",
+      "tools_used": ["get_dora_requirements", "get_nis2_requirements"]
+    }
+  },
+  "deployment": {
+    "platform": "Ansvar AI",
+    "environment": "production",
+    "startup_command": "python3 -m tprm_frameworks_mcp",
+    "required_dependencies": ["mcp>=0.9.0"],
+    "data_directory": "src/tprm_frameworks_mcp/data"
+  }
+}
