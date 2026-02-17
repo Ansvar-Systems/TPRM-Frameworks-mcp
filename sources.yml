@@ -1,0 +1,85 @@
+# sources.yml — Data provenance for TPRM Frameworks MCP
+# Required by Ansvar MCP Production Audit Standard v1.0
+
+version: "1.0"
+last_updated: "2026-02-17"
+
+sources:
+  caiq_v4:
+    name: "Consensus Assessments Initiative Questionnaire (CAIQ) v4.1"
+    provider: "Cloud Security Alliance (CSA)"
+    authoritative_url: "https://cloudsecurityalliance.org/artifacts/consensus-assessments-initiative-questionnaire-v4-1"
+    license: "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
+    data_file: "src/tprm_frameworks_mcp/data/caiq_v4_full.json"
+    questions: 283
+    domains: 17
+    status: "production"
+    last_verified: "2026-02-17"
+    notes: "Full CCM v4 domain coverage. Parsed from CSA CAIQ v4.1 spreadsheet."
+
+  sig_full:
+    name: "Shared Assessments Standardized Information Gathering (SIG)"
+    provider: "Shared Assessments"
+    authoritative_url: "https://sharedassessments.org/sig/"
+    license: "Proprietary — requires Shared Assessments membership"
+    data_file: "src/tprm_frameworks_mcp/data/sig_full.json"
+    questions: 100
+    status: "placeholder"
+    last_verified: "2026-02-17"
+    notes: "Sample questions only. Full SIG content requires purchased license."
+
+  sig_lite:
+    name: "Shared Assessments SIG Lite"
+    provider: "Shared Assessments"
+    authoritative_url: "https://sharedassessments.org/sig/"
+    license: "Proprietary — requires Shared Assessments membership"
+    data_file: "src/tprm_frameworks_mcp/data/sig_lite.json"
+    questions: 10
+    status: "placeholder"
+    last_verified: "2026-02-17"
+    notes: "Minimal sample for development/testing."
+
+  dora_ict_tpp:
+    name: "DORA ICT Third-Party Provider Assessment"
+    provider: "Ansvar Systems (derived from EU Regulation 2022/2554)"
+    authoritative_url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554"
+    license: "EU Open Data (derived work)"
+    data_file: "src/tprm_frameworks_mcp/data/dora_ict_tpp.json"
+    questions: 72
+    status: "placeholder"
+    last_verified: "2026-02-17"
+    notes: "Assessment questions derived from DORA articles. Not official EU content."
+
+  nis2_supply_chain:
+    name: "NIS2 Supply Chain Assessment"
+    provider: "Ansvar Systems (derived from EU Directive 2022/2555)"
+    authoritative_url: "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2555"
+    license: "EU Open Data (derived work)"
+    data_file: "src/tprm_frameworks_mcp/data/nis2_supply_chain.json"
+    questions: 70
+    status: "placeholder"
+    last_verified: "2026-02-17"
+    notes: "Assessment questions derived from NIS2 articles. Not official EU content."
+
+  scf_mappings:
+    name: "Questionnaire to SCF Control Mappings"
+    provider: "Ansvar Systems"
+    authoritative_url: "https://www.securecontrolsframework.com/"
+    data_file: "src/tprm_frameworks_mcp/data/questionnaire-to-scf.json"
+    status: "production"
+    last_verified: "2026-02-17"
+    notes: "Maps questionnaire questions to SCF control IDs."
+
+  eu_regulations_mapping:
+    name: "EU Regulations Integration Mapping"
+    provider: "Ansvar Systems"
+    data_file: "src/tprm_frameworks_mcp/data/eu-regulations-mapping.json"
+    status: "production"
+    last_verified: "2026-02-17"
+
+  dora_nis2_overlap:
+    name: "DORA/NIS2 Overlap Analysis"
+    provider: "Ansvar Systems"
+    data_file: "src/tprm_frameworks_mcp/data/dora-nis2-overlap.json"
+    status: "production"
+    last_verified: "2026-02-17"
