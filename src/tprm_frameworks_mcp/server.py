@@ -78,35 +78,37 @@ async def list_tools() -> list[Tool]:
         Tool(
             name="list_frameworks",
             description=(
-                "List all available TPRM questionnaire frameworks (SIG, CAIQ, DORA, NIS2, etc.) "
-                "with metadata and current implementation status."
+                "List all available TPRM questionnaire frameworks with metadata. "
+                "Use this FIRST to discover available frameworks (SIG, CAIQ, DORA, NIS2) "
+                "before generating questionnaires. Returns framework names, question counts, "
+                "categories, and implementation status. No parameters required."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {},
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="generate_questionnaire",
             description=(
-                "Generate a tailored vendor assessment questionnaire based on framework, "
-                "scope, entity type, and applicable regulations. Returns a complete "
-                "questionnaire in JSON format with all questions and evaluation rubrics."
+                "Generate a tailored vendor assessment questionnaire. Returns a complete "
+                "questionnaire in JSON with all questions, evaluation rubrics, and a unique "
+                "questionnaire_id needed for evaluate_response. Use list_frameworks first "
+                "to see available frameworks. For DORA/NIS2-specific dynamic generation, "
+                "use generate_dora_questionnaire or generate_nis2_questionnaire instead."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "framework": {
                         "type": "string",
-                        "description": (
-                            "Base framework (sig_full, sig_lite, caiq_v4, vsa, "
-                            "dora_ict_tpp, nis2_supply_chain)"
-                        ),
+                        "description": "Base framework to use for the questionnaire",
                         "enum": [
                             "sig_full",
                             "sig_lite",
                             "caiq_v4",
-                            "vsa",
+
                             "dora_ict_tpp",
                             "nis2_supply_chain",
                         ],
@@ -114,19 +116,15 @@ async def list_tools() -> list[Tool]:
                     "scope": {
                         "type": "string",
                         "description": (
-                            "Assessment scope (full, lite, focused). "
-                            "'full' includes all questions, 'lite' focuses on critical controls, "
-                            "'focused' targets specific categories."
+                            "Assessment scope: 'full' (all questions), 'lite' (critical controls only), "
+                            "'focused' (specific categories — requires 'categories' param)"
                         ),
                         "enum": ["full", "lite", "focused"],
                         "default": "full",
                     },
                     "entity_type": {
                         "type": "string",
-                        "description": (
-                            "Type of vendor being assessed (saas_provider, cloud_provider, "
-                            "ict_provider, data_processor, financial_institution, etc.)"
-                        ),
+                        "description": "Type of vendor being assessed. Affects question prioritization.",
                         "enum": [
                             "saas_provider",
                             "cloud_provider",
@@ -150,84 +148,93 @@ async def list_tools() -> list[Tool]:
                         "type": "array",
                         "items": {"type": "string"},
                         "description": (
-                            "Specific categories to include (only for 'focused' scope). "
+                            "Specific categories to include (only when scope='focused'). "
                             "Use list_frameworks to see available categories per framework."
                         ),
                     },
                 },
                 "required": ["framework"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="evaluate_response",
             description=(
-                "Score and evaluate vendor responses against a questionnaire. "
-                "Uses rubric-based evaluation to flag gaps, generate risk findings, "
-                "and calculate overall risk score. Returns detailed assessment results."
+                "Score and evaluate vendor responses against a generated questionnaire. "
+                "Uses rubric-based evaluation (regex patterns + keyword matching) to produce "
+                "per-question scores, gap findings, and an overall risk level (LOW/MEDIUM/HIGH/CRITICAL). "
+                "Requires a questionnaire_id from generate_questionnaire. Results are persisted "
+                "and can be used with compare_assessments and check_regulatory_compliance."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "questionnaire_id": {
                         "type": "string",
-                        "description": "ID of the generated questionnaire to evaluate against",
+                        "description": "ID from generate_questionnaire output",
+                        "minLength": 1,
                     },
                     "vendor_name": {
                         "type": "string",
                         "description": "Name of the vendor being assessed",
+                        "minLength": 1,
                     },
                     "responses": {
                         "type": "array",
                         "items": {
                             "type": "object",
                             "properties": {
-                                "question_id": {"type": "string"},
-                                "answer": {"type": "string"},
+                                "question_id": {"type": "string", "minLength": 1},
+                                "answer": {"type": "string", "maxLength": 10000},
                                 "supporting_documents": {
                                     "type": "array",
                                     "items": {"type": "string"},
                                 },
-                                "notes": {"type": "string"},
+                                "notes": {"type": "string", "maxLength": 5000},
                             },
                             "required": ["question_id", "answer"],
                         },
-                        "description": "Array of vendor responses to questionnaire questions",
+                        "description": "Array of vendor responses. Each must have question_id and answer.",
+                        "minItems": 1,
                     },
                     "strictness": {
                         "type": "string",
                         "description": (
-                            "Evaluation strictness level: lenient (accept partial answers), "
-                            "moderate (standard), strict (require comprehensive answers)"
+                            "Evaluation strictness: 'lenient' (accept partial answers), "
+                            "'moderate' (balanced), 'strict' (require comprehensive answers)"
                         ),
                         "enum": ["lenient", "moderate", "strict"],
                         "default": "moderate",
                     },
                 },
                 "required": ["questionnaire_id", "responses"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="map_questionnaire_to_controls",
             description=(
                 "Map questionnaire questions to SCF (Secure Controls Framework) controls. "
-                "This bridges TPRM questionnaires to your security-controls-mcp server, "
-                "enabling gap analysis and control coverage assessment."
+                "Bridges TPRM questionnaires to security-controls-mcp for gap analysis. "
+                "Provide EITHER questionnaire_id (from generate_questionnaire) OR framework "
+                "(to map all questions in a framework). Output includes SCF control IDs "
+                "that can be passed to security-controls-mcp.get_control() for details."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "questionnaire_id": {
                         "type": "string",
-                        "description": "Generated questionnaire ID to map (alternative to framework)"
+                        "description": "Generated questionnaire ID to map (provide this OR framework)",
                     },
                     "framework": {
                         "type": "string",
-                        "description": "Questionnaire framework to map",
+                        "description": "Framework to map all questions for (provide this OR questionnaire_id)",
                         "enum": [
                             "sig_full",
                             "sig_lite",
                             "caiq_v4",
-                            "vsa",
+
                             "dora_ict_tpp",
                             "nis2_supply_chain",
                         ],
@@ -235,29 +242,26 @@ async def list_tools() -> list[Tool]:
                     "question_ids": {
                         "type": "array",
                         "items": {"type": "string"},
-                        "description": (
-                            "Optional: specific question IDs to map. "
-                            "If not provided, maps all questions."
-                        ),
+                        "description": "Optional: map only these specific question IDs (subset filtering)",
                     },
                     "control_framework": {
                         "type": "string",
                         "description": (
-                            "Target control framework (scf, iso_27001_2022, nist_800_53_r5, etc.). "
-                            "Defaults to SCF. Use security-controls-mcp to explore control details."
+                            "Target control framework for mapping. Defaults to SCF."
                         ),
                         "default": "scf",
                     },
                 },
-                "required": [],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="generate_tprm_report",
             description=(
-                "Generate comprehensive TPRM report aggregating questionnaire evaluation results, "
-                "vendor intelligence data, and external security posture findings. "
-                "This is the final output tool that synthesizes all assessment data."
+                "Generate a comprehensive TPRM report synthesizing questionnaire evaluations, "
+                "vendor intelligence, and security posture data. This is the final output tool — "
+                "call it AFTER evaluate_response. Optionally enrich with vendor_intel_data from "
+                "vendor-intel-mcp and posture_data from external scans."
             ),
             inputSchema={
                 "type": "object",
@@ -265,20 +269,18 @@ async def list_tools() -> list[Tool]:
                     "vendor_name": {
                         "type": "string",
                         "description": "Name of the vendor being assessed",
+                        "minLength": 1,
                     },
                     "questionnaire_results": {
                         "type": "array",
                         "items": {"type": "string"},
-                        "description": (
-                            "Array of questionnaire evaluation result IDs "
-                            "(from evaluate_response calls)"
-                        ),
+                        "description": "Evaluation result IDs from evaluate_response calls",
                     },
                     "vendor_intel_data": {
                         "type": "object",
                         "description": (
-                            "Optional: Vendor intelligence data from vendor-intel MCP "
-                            "(company profile, breach history, certifications)"
+                            "Optional: Vendor intelligence from vendor-intel-mcp "
+                            "(company_profile, breach_history, certifications)"
                         ),
                     },
                     "posture_data": {
@@ -290,130 +292,146 @@ async def list_tools() -> list[Tool]:
                     },
                     "include_recommendations": {
                         "type": "boolean",
-                        "description": "Include remediation recommendations",
+                        "description": "Include remediation recommendations in the report",
                         "default": True,
                     },
                 },
                 "required": ["vendor_name"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="get_questionnaire",
             description=(
-                "Retrieve a previously generated questionnaire by ID. "
-                "Returns the full questionnaire structure with all questions."
+                "Retrieve a previously generated questionnaire by its ID. "
+                "Returns the full questionnaire structure with all questions, rubrics, and metadata. "
+                "The questionnaire must have been generated in the current session or persisted in storage."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "questionnaire_id": {
                         "type": "string",
-                        "description": "ID of the questionnaire to retrieve",
+                        "description": "ID of the questionnaire (from generate_questionnaire output)",
+                        "minLength": 1,
                     },
                 },
                 "required": ["questionnaire_id"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="search_questions",
             description=(
-                "Search for specific questions across all frameworks by keyword. "
-                "Useful for finding questions about specific topics (e.g., 'encryption', 'MFA')."
+                "Search for questions across all frameworks by keyword or phrase. "
+                "Returns matching questions with their framework, category, rubric, and SCF mappings. "
+                "Use this to find questions on specific topics (e.g., 'encryption', 'MFA', 'incident response') "
+                "without generating a full questionnaire. Returns empty array (not error) if no matches."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "query": {
                         "type": "string",
-                        "description": "Search query (e.g., 'encryption', 'access control')",
+                        "description": "Search keyword or phrase (e.g., 'encryption', 'access control')",
+                        "minLength": 1,
+                        "maxLength": 500,
                     },
                     "framework": {
                         "type": "string",
-                        "description": "Optional: limit search to specific framework",
+                        "description": "Optional: limit search to a specific framework",
                         "enum": [
                             "sig_full",
                             "sig_lite",
                             "caiq_v4",
-                            "vsa",
+
                             "dora_ict_tpp",
                             "nis2_supply_chain",
                         ],
                     },
                     "limit": {
                         "type": "integer",
-                        "description": "Maximum number of results (default: 20)",
+                        "description": "Maximum results to return (default: 20)",
                         "default": 20,
+                        "minimum": 1,
+                        "maximum": 100,
                     },
                 },
                 "required": ["query"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="get_vendor_history",
             description=(
-                "Get assessment history for a vendor, showing improvement trends over time. "
-                "Returns past assessments with scores, dates, risk levels, and trend analysis."
+                "Get assessment history for a vendor showing improvement trends over time. "
+                "Returns past assessments with scores, dates, risk levels, and trend direction. "
+                "Requires the vendor to have been assessed at least once via evaluate_response."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "vendor_name": {
                         "type": "string",
-                        "description": "Name of the vendor to get history for",
+                        "description": "Exact name of the vendor (as used in evaluate_response)",
+                        "minLength": 1,
                     },
                     "limit": {
                         "type": "integer",
-                        "description": "Maximum number of assessments to return (default: 10)",
+                        "description": "Maximum assessments to return (default: 10)",
                         "default": 10,
+                        "minimum": 1,
+                        "maximum": 100,
                     },
                 },
                 "required": ["vendor_name"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="compare_assessments",
             description=(
-                "Compare two assessments for the same vendor to identify improvements "
-                "or degradations. Shows score delta, risk level changes, and specific "
-                "areas that improved or degraded. If assessment IDs are not provided, "
-                "compares the two most recent assessments."
+                "Compare two assessments for the same vendor to identify improvements or degradations. "
+                "Shows score delta, risk level changes, and per-category changes. "
+                "If assessment IDs are omitted, compares the two most recent assessments. "
+                "Requires at least 2 assessments to exist for the vendor."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "vendor_name": {
                         "type": "string",
-                        "description": "Name of the vendor to compare assessments for",
+                        "description": "Name of the vendor",
+                        "minLength": 1,
                     },
                     "assessment_id_1": {
                         "type": "integer",
-                        "description": "Optional: ID of first assessment to compare",
+                        "description": "Optional: ID of first (earlier) assessment",
                     },
                     "assessment_id_2": {
                         "type": "integer",
-                        "description": "Optional: ID of second assessment to compare",
+                        "description": "Optional: ID of second (later) assessment",
                     },
                 },
                 "required": ["vendor_name"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="generate_dora_questionnaire",
             description=(
-                "Generate DORA ICT third-party questionnaire dynamically from EU regulations. "
-                "Fetches regulatory articles from eu-regulations-mcp and converts them into "
-                "actionable assessment questions. Supports filtering by category (ICT_third_party, "
-                "ICT_risk, business_continuity, incident_management, testing)."
+                "Generate a DORA (EU Regulation 2022/2554) questionnaire dynamically. "
+                "Uses EU regulations data to create assessment questions for ICT third-party "
+                "provider evaluation. For static DORA questionnaires, use generate_questionnaire "
+                "with framework='dora_ict_tpp' instead. Requires eu-regulations-mcp to be available "
+                "for full dynamic generation; falls back to static data if unavailable."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "category": {
                         "type": "string",
-                        "description": (
-                            "Category of DORA requirements (ICT_third_party, ICT_risk, "
-                            "business_continuity, incident_management, testing)"
-                        ),
+                        "description": "DORA requirement category to focus on",
                         "enum": [
                             "ICT_third_party",
                             "ICT_risk",
@@ -425,30 +443,28 @@ async def list_tools() -> list[Tool]:
                     },
                     "scope": {
                         "type": "string",
-                        "description": "Assessment scope (full or focused)",
+                        "description": "Assessment scope",
                         "enum": ["full", "focused"],
                         "default": "full",
                     },
                 },
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="generate_nis2_questionnaire",
             description=(
-                "Generate NIS2 supply chain questionnaire dynamically from EU regulations. "
-                "Fetches regulatory articles from eu-regulations-mcp and converts them into "
-                "actionable assessment questions. Supports filtering by category (supply_chain, "
-                "risk_management, governance, incident_response)."
+                "Generate a NIS2 (EU Directive 2022/2555) supply chain questionnaire dynamically. "
+                "Uses EU regulations data to create assessment questions. For static NIS2 questionnaires, "
+                "use generate_questionnaire with framework='nis2_supply_chain' instead. "
+                "Requires eu-regulations-mcp for full dynamic generation."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "category": {
                         "type": "string",
-                        "description": (
-                            "Category of NIS2 requirements (supply_chain, risk_management, "
-                            "governance, incident_response)"
-                        ),
+                        "description": "NIS2 requirement category to focus on",
                         "enum": [
                             "supply_chain",
                             "risk_management",
@@ -459,61 +475,65 @@ async def list_tools() -> list[Tool]:
                     },
                     "scope": {
                         "type": "string",
-                        "description": "Assessment scope (full or focused)",
+                        "description": "Assessment scope",
                         "enum": ["full", "focused"],
                         "default": "full",
                     },
                 },
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="check_regulatory_compliance",
             description=(
-                "Check DORA/NIS2 compliance gaps for a vendor based on assessment results. "
+                "Check DORA or NIS2 compliance gaps based on a completed assessment. "
                 "Analyzes evaluation results to identify which regulatory requirements are met "
-                "and which have gaps. Returns compliance coverage percentage and detailed gap analysis."
+                "and which have gaps. Returns compliance coverage percentage and detailed gap list. "
+                "Requires a completed assessment from evaluate_response."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "assessment_id": {
                         "type": "integer",
-                        "description": "Assessment ID to check compliance for",
+                        "description": "Assessment ID from evaluate_response results",
                     },
                     "regulation": {
                         "type": "string",
-                        "description": "Regulation to check compliance against (DORA or NIS2)",
+                        "description": "Regulation to check compliance against",
                         "enum": ["DORA", "NIS2"],
                     },
                 },
                 "required": ["assessment_id", "regulation"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="get_regulatory_timeline",
             description=(
-                "Get DORA/NIS2 compliance deadlines and milestones. Returns regulatory timeline "
-                "with key dates, implementation milestones, and days until deadline. Useful for "
-                "compliance planning and tracking."
+                "Get DORA or NIS2 compliance deadlines and milestones. Returns key dates, "
+                "implementation milestones, and days until deadline. Use for compliance "
+                "planning and reporting. Does NOT require a prior assessment."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "regulation": {
                         "type": "string",
-                        "description": "Regulation to get timeline for (DORA or NIS2)",
+                        "description": "Regulation to get timeline for",
                         "enum": ["DORA", "NIS2"],
                     },
                 },
                 "required": ["regulation"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="upload_evidence_document",
             description=(
-                "Upload an evidence document supporting a vendor's response to a specific question. "
-                "Stores the document with metadata, SHA256 hash for integrity, and organizes by "
-                "vendor/assessment/question. Supports PDF, PNG, JPEG, DOCX, XLSX, and TXT files up to 50MB."
+                "Upload an evidence document supporting a vendor's questionnaire response. "
+                "Stores with SHA256 hash for integrity verification. Organizes by vendor/assessment/question. "
+                "Max 50MB. Use list_evidence_documents to retrieve uploaded documents."
             ),
             inputSchema={
                 "type": "object",
@@ -521,26 +541,31 @@ async def list_tools() -> list[Tool]:
                     "vendor_name": {
                         "type": "string",
                         "description": "Name of the vendor",
+                        "minLength": 1,
                     },
                     "assessment_id": {
                         "type": "string",
                         "description": "Assessment ID this evidence belongs to",
+                        "minLength": 1,
                     },
                     "question_id": {
                         "type": "string",
                         "description": "Question ID this evidence supports",
+                        "minLength": 1,
                     },
                     "file_content_base64": {
                         "type": "string",
-                        "description": "Base64-encoded file content",
+                        "description": "Base64-encoded file content (max ~67MB encoded for 50MB file)",
+                        "minLength": 1,
                     },
                     "filename": {
                         "type": "string",
-                        "description": "Original filename",
+                        "description": "Original filename with extension",
+                        "minLength": 1,
                     },
                     "mime_type": {
                         "type": "string",
-                        "description": "MIME type of the file (e.g., application/pdf, image/png)",
+                        "description": "MIME type of the file",
                         "enum": [
                             "application/pdf",
                             "image/png",
@@ -552,51 +577,58 @@ async def list_tools() -> list[Tool]:
                     },
                 },
                 "required": ["vendor_name", "assessment_id", "question_id", "file_content_base64", "filename", "mime_type"],
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="list_evidence_documents",
             description=(
-                "List evidence documents with optional filtering by vendor, assessment, or question. "
-                "Shows document metadata including validation status, file details, and upload information."
+                "List evidence documents with optional filtering. Returns metadata including "
+                "validation status, file details, and upload timestamps. All filters are optional — "
+                "call with no params to list all documents."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "vendor_name": {
                         "type": "string",
-                        "description": "Optional: filter by vendor name",
+                        "description": "Filter by vendor name",
                     },
                     "assessment_id": {
                         "type": "string",
-                        "description": "Optional: filter by assessment ID",
+                        "description": "Filter by assessment ID",
                     },
                     "question_id": {
                         "type": "string",
-                        "description": "Optional: filter by question ID",
+                        "description": "Filter by question ID",
                     },
                 },
+                "additionalProperties": False,
             },
         ),
         Tool(
             name="validate_evidence_document",
             description=(
-                "Mark an evidence document as validated by a reviewer. Records who validated "
-                "the document and when. Validated documents are marked with a checkmark in listings."
+                "Mark an evidence document as validated by a reviewer. Records validator identity "
+                "and timestamp. Use after reviewing an uploaded evidence document. "
+                "Get the document_id from list_evidence_documents."
             ),
             inputSchema={
                 "type": "object",
                 "properties": {
                     "document_id": {
                         "type": "string",
-                        "description": "Document ID to validate",
+                        "description": "Document ID (from list_evidence_documents or upload_evidence_document)",
+                        "minLength": 1,
                     },
                     "validated_by": {
                         "type": "string",
-                        "description": "Name/email of the person validating the document",
+                        "description": "Name or email of the reviewer validating this document",
+                        "minLength": 1,
                     },
                 },
                 "required": ["document_id", "validated_by"],
+                "additionalProperties": False,
             },
         ),
     ]
@@ -2100,7 +2132,7 @@ async def health_check() -> dict[str, Any]:
                 "rss_mb": round(memory_info.rss / 1_048_576, 2),
                 "vms_mb": round(memory_info.vms / 1_048_576, 2)
             },
-            "tools_available": 13,
+            "tools_available": 16,
             "timestamp": datetime.now(UTC).isoformat()
         }
     except DataLoadError as e:

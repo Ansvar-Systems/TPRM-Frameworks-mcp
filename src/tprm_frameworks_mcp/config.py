@@ -7,7 +7,7 @@ from pathlib import Path
 @dataclass
 class ServerConfig:
     """Server configuration."""
-    version: str = "0.1.0"
+    version: str = "1.0.0"
     port: int = int(os.getenv("TPRM_PORT", "8309"))
     log_level: str = os.getenv("TPRM_LOG_LEVEL", "INFO")
 

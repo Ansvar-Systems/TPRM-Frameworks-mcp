@@ -1,0 +1,216 @@
+{
+  "version": "1.0",
+  "description": "Golden contract tests for TPRM Frameworks MCP. Each test specifies a tool call and expected response properties.",
+  "tests": [
+    {
+      "id": "GT-001",
+      "description": "list_frameworks returns all frameworks with metadata",
+      "tool": "list_frameworks",
+      "input": {},
+      "expected": {
+        "contains_frameworks": [
+          "sig_lite",
+          "sig_full",
+          "caiq_v4",
+          "dora_ict_tpp",
+          "nis2_supply_chain"
+        ],
+        "min_framework_count": 5
+      }
+    },
+    {
+      "id": "GT-002",
+      "description": "CAIQ v4 full has 283 questions across 17 domains",
+      "tool": "generate_questionnaire",
+      "input": {
+        "framework": "caiq_v4",
+        "scope": "full"
+      },
+      "expected": {
+        "question_count": 283,
+        "has_field": "questionnaire_id"
+      }
+    },
+    {
+      "id": "GT-003",
+      "description": "CAIQ A&A domain question content is accurate",
+      "tool": "search_questions",
+      "input": {
+        "query": "audit planning",
+        "framework": "caiq_v4",
+        "limit": 5
+      },
+      "expected": {
+        "min_results": 1,
+        "first_result_contains": "audit"
+      }
+    },
+    {
+      "id": "GT-004",
+      "description": "SIG Lite framework has exactly 10 questions",
+      "tool": "generate_questionnaire",
+      "input": {
+        "framework": "sig_lite",
+        "scope": "full"
+      },
+      "expected": {
+        "question_count": 10
+      }
+    },
+    {
+      "id": "GT-005",
+      "description": "DORA ICT TPP framework loads with 72 questions",
+      "tool": "generate_questionnaire",
+      "input": {
+        "framework": "dora_ict_tpp",
+        "scope": "full"
+      },
+      "expected": {
+        "question_count": 72
+      }
+    },
+    {
+      "id": "GT-006",
+      "description": "NIS2 supply chain framework loads with 70 questions",
+      "tool": "generate_questionnaire",
+      "input": {
+        "framework": "nis2_supply_chain",
+        "scope": "full"
+      },
+      "expected": {
+        "question_count": 70
+      }
+    },
+    {
+      "id": "GT-007",
+      "description": "SCF mapping returns controls for CAIQ questions",
+      "tool": "map_questionnaire_to_controls",
+      "input": {
+        "framework": "caiq_v4"
+      },
+      "expected": {
+        "has_field": "mappings",
+        "min_mappings": 50
+      }
+    },
+    {
+      "id": "GT-008",
+      "description": "Evaluation with acceptable answers scores >= 80",
+      "tool": "evaluate_response",
+      "input": {
+        "questionnaire_id": "__generate_sig_lite__",
+        "responses": [
+          {
+            "question_id": "sig_lite_1.1",
+            "answer": "Yes, we have a comprehensive information security policy reviewed annually by the CISO"
+          },
+          {
+            "question_id": "sig_lite_1.2",
+            "answer": "Yes, our security policies are reviewed and updated annually"
+          }
+        ],
+        "strictness": "moderate"
+      },
+      "expected": {
+        "min_overall_score": 70
+      }
+    },
+    {
+      "id": "GT-009",
+      "description": "Evaluation with unacceptable answers scores < 40",
+      "tool": "evaluate_response",
+      "input": {
+        "questionnaire_id": "__generate_sig_lite__",
+        "responses": [
+          {
+            "question_id": "sig_lite_1.1",
+            "answer": "No"
+          },
+          {
+            "question_id": "sig_lite_1.2",
+            "answer": "No"
+          }
+        ],
+        "strictness": "strict"
+      },
+      "expected": {
+        "max_overall_score": 40
+      }
+    },
+    {
+      "id": "GT-010",
+      "description": "Search for 'encryption' returns results from multiple frameworks",
+      "tool": "search_questions",
+      "input": {
+        "query": "encryption",
+        "limit": 20
+      },
+      "expected": {
+        "min_results": 3
+      }
+    },
+    {
+      "id": "GT-011",
+      "description": "Search for nonexistent term returns empty results (not error)",
+      "tool": "search_questions",
+      "input": {
+        "query": "xyznonexistent123",
+        "limit": 5
+      },
+      "expected": {
+        "exact_result_count": 0,
+        "no_error": true
+      }
+    },
+    {
+      "id": "GT-012",
+      "description": "Invalid framework returns clear error message",
+      "tool": "generate_questionnaire",
+      "input": {
+        "framework": "invalid_framework_xyz"
+      },
+      "expected": {
+        "is_error": true,
+        "error_contains": "not found"
+      }
+    },
+    {
+      "id": "GT-013",
+      "description": "CAIQ question has SCF control mappings",
+      "tool": "search_questions",
+      "input": {
+        "query": "access control",
+        "framework": "caiq_v4",
+        "limit": 1
+      },
+      "expected": {
+        "min_results": 1,
+        "first_result_has_field": "scf_control_mappings"
+      }
+    },
+    {
+      "id": "GT-014",
+      "description": "DORA regulatory timeline returns valid dates",
+      "tool": "get_regulatory_timeline",
+      "input": {
+        "regulation": "DORA"
+      },
+      "expected": {
+        "has_field": "milestones",
+        "no_error": true
+      }
+    },
+    {
+      "id": "GT-015",
+      "description": "NIS2 regulatory timeline returns valid dates",
+      "tool": "get_regulatory_timeline",
+      "input": {
+        "regulation": "NIS2"
+      },
+      "expected": {
+        "has_field": "milestones",
+        "no_error": true
+      }
+    }
+  ]
+}

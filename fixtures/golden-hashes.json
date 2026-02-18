@@ -1,0 +1,47 @@
+{
+  "caiq_v4.json": {
+    "sha256": "c29e2bd023840be26e9ef1f2c8ca079bfacb04b9522e17d6c21d63493062b7da",
+    "size_bytes": 9571,
+    "generated_at": "2026-02-18"
+  },
+  "caiq_v4_full.json": {
+    "sha256": "9e30614abbfa92833255eef0844b400af006288000b970b88ac27e8d23920d95",
+    "size_bytes": 521446,
+    "generated_at": "2026-02-18"
+  },
+  "dora-nis2-overlap.json": {
+    "sha256": "32caf600ce5f3fdc791cea2703adf0da6c25b7da19036ed6c917d2ae79344b44",
+    "size_bytes": 27151,
+    "generated_at": "2026-02-18"
+  },
+  "dora_ict_tpp.json": {
+    "sha256": "60000e4ba1a3e1b55f64919177e5059aa5712b8487e93f5c83176d5627a26961",
+    "size_bytes": 127954,
+    "generated_at": "2026-02-18"
+  },
+  "eu-regulations-mapping.json": {
+    "sha256": "5a5220e2ef4d1b825eb583b13f85c08b996b7e0b93d3f4a7332da279ef8b5dcc",
+    "size_bytes": 12962,
+    "generated_at": "2026-02-18"
+  },
+  "nis2_supply_chain.json": {
+    "sha256": "b0144beeb23bef934c7a67097cd25128256e811ddbe9e5686bbede7291725d3d",
+    "size_bytes": 112555,
+    "generated_at": "2026-02-18"
+  },
+  "questionnaire-to-scf.json": {
+    "sha256": "71cd03586f2a85a5d5f58e381edfae061c534a184621bf89bbe99c4b41ee22b3",
+    "size_bytes": 32756,
+    "generated_at": "2026-02-18"
+  },
+  "sig_full.json": {
+    "sha256": "75bf07936443864e30847d9e4ef72f905437b2a053f5708f2df06ffb3e06b6cc",
+    "size_bytes": 88511,
+    "generated_at": "2026-02-18"
+  },
+  "sig_lite.json": {
+    "sha256": "32ca30e3d095ea493aac31ad9c202661c6853ca5fe98da2f4f93cdb3902f62c5",
+    "size_bytes": 9751,
+    "generated_at": "2026-02-18"
+  }
+}

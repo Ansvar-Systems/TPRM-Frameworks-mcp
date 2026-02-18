@@ -1,6 +1,6 @@
 [project]
 name = "tprm-frameworks-mcp"
-version = "0.1.0"
+version = "1.0.0"
 description = "MCP server for TPRM workflows - questionnaire generation, vendor assessment, and compliance mapping"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -10,7 +10,7 @@ authors = [
 ]
 keywords = ["mcp", "tprm", "vendor-risk", "sig", "caiq", "dora", "nis2", "third-party-risk"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
@@ -22,6 +22,8 @@ dependencies = [
     "mcp>=0.9.0",
     "python-json-logger>=2.0.7",
     "psutil>=5.9.0",
+    "starlette>=0.37.0",
+    "uvicorn>=0.29.0",
 ]
 
 [project.optional-dependencies]

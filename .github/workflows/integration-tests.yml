@@ -7,10 +7,15 @@ on:
     branches: [ main, develop ]
   workflow_dispatch:  # Allow manual trigger
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   test:
     name: Integration Tests (Python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     strategy:
       fail-fast: false
@@ -41,6 +46,10 @@ jobs:
         test -f src/tprm_frameworks_mcp/data/dora_ict_tpp.json
         test -f src/tprm_frameworks_mcp/data/nis2_supply_chain.json
         echo "✓ All required data files present"
+
+    - name: Run golden contract tests
+      run: |
+        pytest tests/test_golden.py -v --tb=short
 
     - name: Run fast integration tests
       run: |
@@ -93,7 +102,7 @@ jobs:
       run: |
         pytest tests/integration_test.py::TestSalesforceDoraScenario -v -s --tb=short
 
-    - name: Verify all 7 tools are operational
+    - name: Verify all 16 tools are operational
       run: |
         pytest tests/integration_test.py::TestMCPToolAvailability -v --tb=short
 

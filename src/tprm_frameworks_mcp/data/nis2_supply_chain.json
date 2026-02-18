@@ -2812,7 +2812,7 @@
       }
     },
     {
-      "id": "NIS2-21.2.k",
+      "id": "NIS2-21.2.k.2",
       "category": "Cybersecurity Risk Management (Article 21)",
       "subcategory": "Security Awareness & Training",
       "question_text": "Does your organization provide cybersecurity awareness training and education programs for all personnel as required by NIS2?",
@@ -2865,7 +2865,7 @@
       }
     },
     {
-      "id": "NIS2-21.2.l",
+      "id": "NIS2-21.2.l.2",
       "category": "Cybersecurity Risk Management (Article 21)",
       "subcategory": "Physical Security",
       "question_text": "Are appropriate physical security controls implemented to protect critical ICT infrastructure and data centers?",
@@ -2918,7 +2918,7 @@
       }
     },
     {
-      "id": "NIS2-21.2.m",
+      "id": "NIS2-21.2.m.2",
       "category": "Cybersecurity Risk Management (Article 21)",
       "subcategory": "Change Management",
       "question_text": "Is there a formal change management process for ICT systems that includes security impact analysis?",
@@ -2971,7 +2971,7 @@
       }
     },
     {
-      "id": "NIS2-21.2.n",
+      "id": "NIS2-21.2.n.2",
       "category": "Cybersecurity Risk Management (Article 21)",
       "subcategory": "Asset Management",
       "question_text": "Do you maintain an accurate inventory of all ICT assets including hardware, software, and data?",

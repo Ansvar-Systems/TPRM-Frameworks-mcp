@@ -1,9 +1,20 @@
 {
   "name": "tprm-frameworks",
-  "version": "0.1.0",
-  "description": "TPRM Frameworks MCP server for vendor risk assessments",
+  "version": "1.0.0",
+  "description": "TPRM Frameworks MCP server for vendor risk assessments — questionnaire generation, evaluation, SCF control mapping, DORA/NIS2 compliance, and evidence management",
   "port": 8309,
   "protocol": "stdio",
+  "transport": {
+    "stdio": {
+      "command": "python3",
+      "args": ["-m", "tprm_frameworks_mcp"]
+    },
+    "http": {
+      "command": "python3",
+      "args": ["-m", "tprm_frameworks_mcp", "--transport", "http"],
+      "endpoint": "/health"
+    }
+  },
   "health_check": {
     "enabled": true,
     "endpoint": "/health",
@@ -17,7 +28,16 @@
       "map_questionnaire_to_controls",
       "generate_tprm_report",
       "get_questionnaire",
-      "search_questions"
+      "search_questions",
+      "get_vendor_history",
+      "compare_assessments",
+      "generate_dora_questionnaire",
+      "generate_nis2_questionnaire",
+      "check_regulatory_compliance",
+      "get_regulatory_timeline",
+      "upload_evidence_document",
+      "list_evidence_documents",
+      "validate_evidence_document"
     ],
     "resources": false,
     "prompts": false
@@ -33,7 +53,7 @@
       "tools_used": ["get_vendor_profile", "get_breach_history"]
     },
     "eu_regulations_mcp": {
-      "description": "Sources DORA/NIS2 requirements",
+      "description": "Sources DORA/NIS2 requirements for dynamic questionnaire generation",
       "tools_used": ["get_dora_requirements", "get_nis2_requirements"]
     }
   },
@@ -41,7 +61,7 @@
     "platform": "Ansvar AI",
     "environment": "production",
     "startup_command": "python3 -m tprm_frameworks_mcp",
-    "required_dependencies": ["mcp>=0.9.0"],
+    "required_dependencies": ["mcp>=0.9.0", "starlette>=0.37.0", "uvicorn>=0.29.0"],
     "data_directory": "src/tprm_frameworks_mcp/data"
   }
 }

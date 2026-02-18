@@ -32,7 +32,7 @@ from tprm_frameworks_mcp.models import (
 
 
 class TestMCPToolAvailability:
-    """Test that all 7 MCP tools are available and callable."""
+    """Test that all 16 MCP tools are available and callable."""
 
     @pytest.mark.asyncio
     async def test_list_tools_count(self, mcp_list_tools):
@@ -768,7 +768,7 @@ class TestPhase0Validation:
 
     @pytest.mark.asyncio
     async def test_all_tools_callable(self, mcp_list_tools, mcp_call_tool):
-        """Verify all 7 tools can be called successfully."""
+        """Verify all 16 tools can be called successfully."""
         tools = mcp_list_tools
 
         test_calls = [

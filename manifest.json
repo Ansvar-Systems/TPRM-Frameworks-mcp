@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "tprm-frameworks-mcp",
   "display_name": "TPRM Frameworks MCP Server",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "MCP server for TPRM workflows - questionnaire generation, vendor assessment, and compliance mapping",
   "author": {
     "name": "Ansvar Systems",
@@ -27,7 +27,24 @@
       }
     }
   },
-  "tools": [],
+  "tools": [
+    "list_frameworks",
+    "generate_questionnaire",
+    "evaluate_response",
+    "map_questionnaire_to_controls",
+    "generate_tprm_report",
+    "get_questionnaire",
+    "search_questions",
+    "get_vendor_history",
+    "compare_assessments",
+    "generate_dora_questionnaire",
+    "generate_nis2_questionnaire",
+    "check_regulatory_compliance",
+    "get_regulatory_timeline",
+    "upload_evidence_document",
+    "list_evidence_documents",
+    "validate_evidence_document"
+  ],
   "compatibility": {
     "platforms": ["darwin", "win32", "linux"],
     "runtimes": {

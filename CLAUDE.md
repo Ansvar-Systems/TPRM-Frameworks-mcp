@@ -8,7 +8,7 @@ This is an MCP (Model Context Protocol) server for Third-Party Risk Management (
 
 ### Core Components
 
-1. **server.py**: Main MCP server with 7 tools
+1. **server.py**: Main MCP server with 16 tools
 2. **data_loader.py**: Loads questionnaire frameworks from JSON
 3. **models.py**: Data classes for questionnaires, questions, assessments
 4. **evaluation/rubric.py**: Rule-based evaluation engine
