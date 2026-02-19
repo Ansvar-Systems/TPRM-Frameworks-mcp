@@ -56,3 +56,4 @@ secrets/
 # Build artifacts
 *.tar.gz
 *.whl
+.serena/
