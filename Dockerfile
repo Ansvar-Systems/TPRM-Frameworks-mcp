@@ -15,7 +15,7 @@ COPY pyproject.toml ./
 COPY src/ ./src/
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -e .
+RUN pip install --upgrade pip && pip install --no-cache-dir --timeout=120 --retries=5 -e .
 
 # Create data directory for future SQLite storage (Phase 1)
 RUN mkdir -p /app/data
