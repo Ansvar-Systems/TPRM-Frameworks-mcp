@@ -62,17 +62,13 @@ evaluator = EvaluationRubric()
 storage = TPRMStorage()
 evidence_storage = EvidenceStorage()
 
-# Create server instance
-app = Server("tprm-frameworks-mcp")
-
 SERVER_VERSION = config.server.version
 
 # In-memory cache for backward compatibility (storage is primary source)
 generated_questionnaires: dict[str, Questionnaire] = {}
 
 
-@app.list_tools()
-async def list_tools() -> list[Tool]:
+async def _get_tool_definitions() -> list[Tool]:
     """List available TPRM tools."""
     return [
         Tool(
@@ -634,8 +630,7 @@ async def list_tools() -> list[Tool]:
     ]
 
 
-@app.call_tool()
-async def call_tool(name: str, arguments: dict) -> list[TextContent]:
+async def _dispatch_tool_call(name: str, arguments: dict) -> list[TextContent]:
     """Handle tool calls."""
     start_time = time.time()
     request_id = str(uuid.uuid4())[:8]
@@ -2087,10 +2082,37 @@ async def _handle_tool_call(name: str, arguments: dict) -> list[TextContent]:
         raise ValueError(f"Unknown tool: {name}")
 
 
-@app.list_resources()
-async def list_resources() -> list:
+async def _list_resources() -> list:
     """List available resources (health check endpoint)."""
     return []
+
+
+def create_mcp_server() -> Server:
+    """Create a fresh MCP Server instance with all handlers registered.
+
+    Returns a new Server each call. The Python SDK's StreamableHTTPSessionManager
+    handles concurrent sessions against a single instance, but the factory keeps
+    handler registration separate from instance lifecycle.
+    """
+    server = Server("tprm-frameworks-mcp")
+
+    @server.list_tools()
+    async def list_tools() -> list[Tool]:
+        return await _get_tool_definitions()
+
+    @server.call_tool()
+    async def call_tool(name: str, arguments: dict) -> list[TextContent]:
+        return await _dispatch_tool_call(name, arguments)
+
+    @server.list_resources()
+    async def list_resources() -> list:
+        return await _list_resources()
+
+    return server
+
+
+# Module-level instance for stdio mode (single transport, no concurrency issue)
+app = create_mcp_server()
 
 
 async def health_check() -> dict[str, Any]:

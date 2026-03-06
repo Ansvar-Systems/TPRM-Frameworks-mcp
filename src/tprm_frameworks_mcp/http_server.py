@@ -14,13 +14,14 @@ from mcp.server.streamable_http_manager import StreamableHTTPSessionManager
 
 from .config import config
 from .logging_config import setup_logging
-from .server import app as mcp_server, health_check, SERVER_VERSION
+from .server import create_mcp_server, health_check, SERVER_VERSION
 
 logger = setup_logging()
 
 
 async def _run_streamable_http(host: str, port: int) -> None:
     """Run MCP server using Streamable HTTP transport."""
+    mcp_server = create_mcp_server()
     session_manager = StreamableHTTPSessionManager(
         app=mcp_server,
         json_response=True,
