@@ -1,79 +1,96 @@
 """Streamable HTTP transport for TPRM Frameworks MCP server.
 
-Enables the server to run as an HTTP endpoint (for Vercel, Docker, or standalone)
-in addition to the default stdio transport.
+Enables the server to run as an HTTP endpoint (for Docker or standalone)
+in addition to the default stdio transport. Uses a raw ASGI app with
+StreamableHTTPSessionManager to handle MCP protocol requests at /mcp.
 """
 
-import contextlib
+import asyncio
 import json
-import time
 from datetime import datetime, UTC
 
 import uvicorn
-from starlette.applications import Starlette
-from starlette.requests import Request
-from starlette.responses import JSONResponse
-from starlette.routing import Route
+from mcp.server.streamable_http_manager import StreamableHTTPSessionManager
 
 from .config import config
 from .logging_config import setup_logging
+from .server import app as mcp_server, health_check, SERVER_VERSION
 
 logger = setup_logging()
 
-# Lazy-import to share tool definitions with stdio server
-from .server import health_check, SERVER_VERSION
 
-
-async def health_endpoint(request: Request) -> JSONResponse:
-    """Health endpoint returning structured JSON status.
-
-    Returns:
-        JSON with status (ok/degraded/stale), version, uptime, framework count,
-        tool count, and data freshness timestamp.
-    """
-    try:
-        health = await health_check()
-        status = "ok" if health["status"] == "healthy" else "degraded"
-
-        return JSONResponse({
-            "status": status,
-            "version": SERVER_VERSION,
-            "timestamp": datetime.now(UTC).isoformat(),
-            "frameworks_loaded": health.get("frameworks", {}).get("loaded", 0),
-            "tools_available": health.get("tools_available", 0),
-            "storage": health.get("storage", {}).get("status", "unknown"),
-            "memory_mb": health.get("memory", {}).get("rss_mb", 0),
-        })
-    except Exception as e:
-        logger.error(f"Health check failed: {e}")
-        return JSONResponse(
-            {"status": "error", "error": str(e)},
-            status_code=503,
-        )
-
-
-@contextlib.asynccontextmanager
-async def lifespan(app: Starlette):
-    """Manage server lifecycle."""
-    logger.info("TPRM Frameworks MCP HTTP server starting", extra={"version": SERVER_VERSION})
-    yield
-    logger.info("TPRM Frameworks MCP HTTP server shutting down")
-
-
-def create_http_app() -> Starlette:
-    """Create the Starlette ASGI application with MCP and health routes."""
-    app = Starlette(
-        routes=[
-            Route("/health", health_endpoint, methods=["GET"]),
-        ],
-        lifespan=lifespan,
+async def _run_streamable_http(host: str, port: int) -> None:
+    """Run MCP server using Streamable HTTP transport."""
+    session_manager = StreamableHTTPSessionManager(
+        app=mcp_server,
+        json_response=True,
     )
-    return app
+
+    async def asgi_app(scope, receive, send):
+        """Raw ASGI app with /mcp and /health routing."""
+        if scope["type"] == "lifespan":
+            msg = await receive()
+            if msg["type"] == "lifespan.startup":
+                scope["state"] = scope.get("state", {})
+                scope["state"]["_sm_cm"] = session_manager.run()
+                await scope["state"]["_sm_cm"].__aenter__()
+                logger.info(
+                    "TPRM Frameworks MCP HTTP server started",
+                    extra={"version": SERVER_VERSION, "host": host, "port": port},
+                )
+                await send({"type": "lifespan.startup.complete"})
+            msg = await receive()
+            if msg["type"] == "lifespan.shutdown":
+                await scope["state"]["_sm_cm"].__aexit__(None, None, None)
+                logger.info("TPRM Frameworks MCP HTTP server shut down")
+                await send({"type": "lifespan.shutdown.complete"})
+            return
+
+        if scope["type"] != "http":
+            return
+
+        path = scope.get("path", "")
+
+        if path == "/health":
+            try:
+                health = await health_check()
+                status = "ok" if health["status"] == "healthy" else "degraded"
+                body = json.dumps({
+                    "status": status,
+                    "version": SERVER_VERSION,
+                    "timestamp": datetime.now(UTC).isoformat(),
+                    "frameworks_loaded": health.get("frameworks", {}).get("loaded", 0),
+                    "tools_available": health.get("tools_available", 0),
+                }).encode()
+            except Exception as e:
+                body = json.dumps({"status": "error", "error": str(e)}).encode()
+            await send({
+                "type": "http.response.start",
+                "status": 200,
+                "headers": [[b"content-type", b"application/json"]],
+            })
+            await send({"type": "http.response.body", "body": body})
+            return
+
+        if path in ("/mcp", "/mcp/"):
+            await session_manager.handle_request(scope, receive, send)
+            return
+
+        body = json.dumps({"error": "not found"}).encode()
+        await send({
+            "type": "http.response.start",
+            "status": 404,
+            "headers": [[b"content-type", b"application/json"]],
+        })
+        await send({"type": "http.response.body", "body": body})
+
+    uvi_config = uvicorn.Config(asgi_app, host=host, port=port, log_level="info")
+    server = uvicorn.Server(uvi_config)
+    await server.serve()
 
 
 def run_http_server(host: str = "0.0.0.0", port: int | None = None):
     """Run the HTTP server with uvicorn."""
     port = port or config.server.port
-    app = create_http_app()
-    logger.info(f"Starting HTTP server on {host}:{port}")
-    uvicorn.run(app, host=host, port=port)
+    logger.info(f"Starting HTTP server on {host}:{port} with MCP routes at /mcp")
+    asyncio.run(_run_streamable_http(host, port))
