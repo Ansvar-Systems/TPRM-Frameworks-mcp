@@ -51,6 +51,7 @@ from .storage import (
     StorageError,
     TPRMStorage,
 )
+from .citation import build_citation
 from .storage_evidence import EvidenceStorage
 
 # Setup logging
@@ -1416,6 +1417,12 @@ async def _handle_tool_call(name: str, arguments: dict) -> list[TextContent]:
                 }
                 for q in questionnaire.questions
             ],
+            "_citation": build_citation(
+                questionnaire.id,
+                f"{questionnaire.metadata.framework.value} Questionnaire ({questionnaire.metadata.version})",
+                "get_questionnaire",
+                {"questionnaire_id": questionnaire.id},
+            ),
         }
 
         return [
